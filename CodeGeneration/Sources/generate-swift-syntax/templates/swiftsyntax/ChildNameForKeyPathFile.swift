@@ -24,15 +24,16 @@ let childNameForKeyPathFile = SourceFileSyntax(leadingTrivia: copyrightHeader) {
     public func childName(_ keyPath: AnyKeyPath) -> String?
     """
   ) {
-    try! SwitchExprSyntax("switch keyPath") {
-      for (identifier, cases) in syntaxNodeCases() {
-        SwitchCaseSyntax(
-            """
-            case \(raw: cases.joined(separator: ",\n")):
-              return \(literal: identifier)
-            """
-          )
-      }
+    try! VariableDeclSyntax("let keyPathString = \"\\(keyPath)\"")
+    try! SwitchExprSyntax("switch keyPathString") {
+      let cases = cases().joined(separator: ",\n")
+      SwitchCaseSyntax(
+        """
+        case \(raw: cases):
+          guard let identifier = keyPathString.split(separator: ".", maxSplits: 1).last else { return nil }
+          return String(identifier)
+        """
+      )
       SwitchCaseSyntax(
         """
         default:
@@ -43,12 +44,17 @@ let childNameForKeyPathFile = SourceFileSyntax(leadingTrivia: copyrightHeader) {
   }
 }
 
-private func syntaxNodeCases() -> [(key: String, value: [String])] {
-  var results = [String:[String]]()
+private func cases() -> [String] {
+  var equal = [String]()
   for node in NON_BASE_SYNTAX_NODES.compactMap(\.layoutNode) {
     for child in node.children {
-      results[child.identifier.description, default: []].append("\\\(node.type.syntaxBaseName).\(child.memberCallName)")
+      let childMemberCallName = "\(child.memberCallName)"
+      if childMemberCallName == child.identifier.description {
+        equal.append("\"\\\\\(node.type.syntaxBaseName).\(childMemberCallName)\"")
+      } else {
+        fatalError("unequal")
+      }
     }
   }
-  return results.sorted(by: { $0.key < $1.key })
+  return equal
 }
