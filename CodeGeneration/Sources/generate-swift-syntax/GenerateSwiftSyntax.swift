@@ -152,20 +152,32 @@ struct GenerateSwiftSyntax: AsyncParsableCommand {
         renamedChildrenBuilderCompatibilityFile
       ),
     ]
-    // This split of letters produces files for the syntax nodes that have about equal size, which improves compile time
 
-    fileSpecs += ["AB", "C", "D", "EF", "GHI", "JKLMN", "OP", "QRS", "TUVWXYZ"].flatMap {
-      (letters: String) -> [GeneratedFileSpec] in
-      [
-        GeneratedFileSpec(
-          swiftSyntaxGeneratedDir + ["syntaxNodes", "SyntaxNodes\(letters).swift"],
-          syntaxNode(nodesStartingWith: Array(letters))
-        ),
-        GeneratedFileSpec(
-          swiftSyntaxGeneratedDir + ["raw", "RawSyntaxNodes\(letters).swift"],
-          rawSyntaxNodesFile(nodesStartingWith: Array(letters))
-        ),
-      ]
+    let nodes = [
+      ("common", COMMON_NODES),
+      ("expr", EXPR_NODES),
+      ("decl", DECL_NODES),
+      ("attr", ATTRIBUTE_NODES),
+      ("stmt", STMT_NODES),
+      ("generic", GENERIC_NODES),
+      ("type", TYPE_NODES),
+      ("pattern", PATTERN_NODES),
+      ("availability", AVAILABILITY_NODES),
+      ("compiler", COMPILER_NODES),
+    ]
+    for (folder, allNodes) in nodes {
+      for node in allNodes {
+        if let layoutNode = node.layoutNode {
+          fileSpecs.append(GeneratedFileSpec(
+            swiftSyntaxGeneratedDir + ["syntaxNodes", "SyntaxNodes", folder, "\(node.kind.syntaxType).swift"],
+            syntaxNode(node: layoutNode)
+          ))
+        }
+        fileSpecs.append(GeneratedFileSpec(
+          swiftSyntaxGeneratedDir + ["raw", "RawSyntaxNodes", folder, "\(node.kind.raw.syntaxType).swift"],
+          rawSyntaxNodesFile(node: node)
+        ))
+      }
     }
 
     let modules = Set(fileSpecs.compactMap { $0.pathComponents.first })

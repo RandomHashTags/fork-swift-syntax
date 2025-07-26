@@ -15,11 +15,9 @@ import SwiftSyntaxBuilder
 import SyntaxSupport
 import Utils
 
-func rawSyntaxNodesFile(nodesStartingWith: [Character]) -> SourceFileSyntax {
+func rawSyntaxNodesFile(node: Node) -> SourceFileSyntax {
   return SourceFileSyntax(leadingTrivia: copyrightHeader) {
-    for node in SYNTAX_NODES
-    where node.kind.isBase
-      && nodesStartingWith.contains(node.kind.syntaxType.description.droppingLeadingUnderscores.first!)
+    if node.kind.isBase
       && !node.kind.isDeprecated
     {
       DeclSyntax(
@@ -30,173 +28,170 @@ func rawSyntaxNodesFile(nodesStartingWith: [Character]) -> SourceFileSyntax {
       )
     }
 
-    for node in SYNTAX_NODES
-    where nodesStartingWith.contains(node.kind.syntaxType.description.droppingLeadingUnderscores.first!) {
-      try! StructDeclSyntax(
+    try! StructDeclSyntax(
+      """
+      \(node.apiAttributes(forRaw: true))\
+      public struct \(node.kind.raw.syntaxType): \(node.kind.isBase ? node.kind.raw.protocolType : node.base.raw.protocolType)
+      """
+    ) {
+      for childNodeChoices in node.childrenNodeChoices(forRaw: true) {
+        childNodeChoices.rawEnumDecl
+      }
+
+      DeclSyntax(
         """
-        \(node.apiAttributes(forRaw: true))\
-        public struct \(node.kind.raw.syntaxType): \(node.kind.isBase ? node.kind.raw.protocolType : node.base.raw.protocolType)
-        """
-      ) {
-        for childNodeChoices in node.childrenNodeChoices(forRaw: true) {
-          childNodeChoices.rawEnumDecl
+        @_spi(RawSyntax)
+        public var layoutView: RawSyntaxLayoutView {
+          return raw.layoutView!
         }
+        """
+      )
 
-        DeclSyntax(
-          """
-          @_spi(RawSyntax)
-          public var layoutView: RawSyntaxLayoutView {
-            return raw.layoutView!
-          }
-          """
-        )
+      try FunctionDeclSyntax("public static func isKindOf(_ raw: RawSyntax) -> Bool") {
+        if node.kind.isBase {
 
-        try FunctionDeclSyntax("public static func isKindOf(_ raw: RawSyntax) -> Bool") {
-          if node.kind.isBase {
-
-            let cases = SwitchCaseItemListSyntax {
-              for n in SYNTAX_NODES where n.base == node.kind {
-                SwitchCaseItemSyntax(
-                  pattern: ExpressionPatternSyntax(
-                    expression: ExprSyntax(".\(n.memberCallName)")
-                  )
+          let cases = SwitchCaseItemListSyntax {
+            for n in SYNTAX_NODES where n.base == node.kind {
+              SwitchCaseItemSyntax(
+                pattern: ExpressionPatternSyntax(
+                  expression: ExprSyntax(".\(n.memberCallName)")
                 )
-              }
+              )
             }
-
-            ExprSyntax(
-              """
-              switch raw.kind {
-              case \(cases): return true
-              default: return false
-              }
-              """
-            )
-          } else {
-            StmtSyntax("return raw.kind == .\(node.memberCallName)")
           }
+
+          ExprSyntax(
+            """
+            switch raw.kind {
+            case \(cases): return true
+            default: return false
+            }
+            """
+          )
+        } else {
+          StmtSyntax("return raw.kind == .\(node.memberCallName)")
         }
+      }
 
-        DeclSyntax("public var raw: RawSyntax")
+      DeclSyntax("public var raw: RawSyntax")
 
+      DeclSyntax(
+        """
+        init(raw: RawSyntax) {
+          precondition(Self.isKindOf(raw))
+          self.raw = raw
+        }
+        """
+      )
+
+      DeclSyntax(
+        """
+        private init(unchecked raw: RawSyntax) {
+          self.raw = raw
+        }
+        """
+      )
+
+      DeclSyntax(
+        """
+        public init?(_ other: some RawSyntaxNodeProtocol) {
+          guard Self.isKindOf(other.raw) else { return nil }
+          self.init(unchecked: other.raw)
+        }
+        """
+      )
+
+      if node.kind.isBase {
         DeclSyntax(
           """
-          init(raw: RawSyntax) {
-            precondition(Self.isKindOf(raw))
-            self.raw = raw
-          }
-          """
-        )
-
-        DeclSyntax(
-          """
-          private init(unchecked raw: RawSyntax) {
-            self.raw = raw
-          }
-          """
-        )
-
-        DeclSyntax(
-          """
-          public init?(_ other: some RawSyntaxNodeProtocol) {
-            guard Self.isKindOf(other.raw) else { return nil }
+          public init(_ other: some \(node.kind.raw.protocolType)) {
             self.init(unchecked: other.raw)
           }
           """
         )
+      }
 
-        if node.kind.isBase {
-          DeclSyntax(
-            """
-            public init(_ other: some \(node.kind.raw.protocolType)) {
-              self.init(unchecked: other.raw)
+      if let node = node.collectionNode {
+        let element = node.elementChoices.only != nil ? node.elementChoices.only!.raw.syntaxType : "Element"
+        DeclSyntax(
+          """
+          public init(elements: [\(element)], arena: __shared RawSyntaxArena) {
+            let raw = RawSyntax.makeLayout(
+              kind: .\(node.memberCallName), uninitializedCount: elements.count, arena: arena) { layout in
+                guard var ptr = layout.baseAddress else { return }
+                for elem in elements {
+                  ptr.initialize(to: elem.raw)
+                  ptr += 1
+                }
             }
-            """
-          )
-        }
-
-        if let node = node.collectionNode {
-          let element = node.elementChoices.only != nil ? node.elementChoices.only!.raw.syntaxType : "Element"
-          DeclSyntax(
-            """
-            public init(elements: [\(element)], arena: __shared RawSyntaxArena) {
-              let raw = RawSyntax.makeLayout(
-                kind: .\(node.memberCallName), uninitializedCount: elements.count, arena: arena) { layout in
-                  guard var ptr = layout.baseAddress else { return }
-                  for elem in elements {
-                    ptr.initialize(to: elem.raw)
-                    ptr += 1
-                  }
-              }
-              self.init(unchecked: raw)
-            }
-            """
-          )
-
-          DeclSyntax(
-            """
-            public var elements: [Raw\(node.collectionElementType.syntaxBaseName)] {
-              layoutView.children.map { Raw\(node.collectionElementType.syntaxBaseName)(raw: $0!) }
-            }
-            """
-          )
-        }
-
-        if let node = node.layoutNode {
-          let params = FunctionParameterListSyntax {
-            for child in node.children {
-              FunctionParameterSyntax(
-                firstName: child.isUnexpectedNodes ? .wildcardToken(trailingTrivia: .space) : child.labelDeclName,
-                secondName: child.isUnexpectedNodes ? child.labelDeclName : nil,
-                colon: .colonToken(),
-                type: child.rawParameterType,
-                defaultValue: child.isUnexpectedNodes ? child.defaultInitialization : nil
-              )
-            }
-
-            FunctionParameterSyntax("arena: __shared RawSyntaxArena")
+            self.init(unchecked: raw)
           }
-          try InitializerDeclSyntax("public init(\(params))") {
-            if !node.children.isEmpty {
-              let list = ExprListSyntax {
-                ExprSyntax("layout.initialize(repeating: nil)")
-                for (index, child) in node.children.enumerated() {
-                  let optionalMark = child.isOptional ? "?" : ""
+          """
+        )
 
-                  ExprSyntax(
-                    "layout[\(raw: index)] = \(child.baseCallName)\(raw: optionalMark).raw"
-                  )
-                  .with(\.leadingTrivia, .newline)
-                }
-              }
+        DeclSyntax(
+          """
+          public var elements: [Raw\(node.collectionElementType.syntaxBaseName)] {
+            layoutView.children.map { Raw\(node.collectionElementType.syntaxBaseName)(raw: $0!) }
+          }
+          """
+        )
+      }
 
-              DeclSyntax(
-                """
-                let raw = RawSyntax.makeLayout(
-                  kind: .\(node.memberCallName), uninitializedCount: \(raw: node.children.count), arena: arena) { layout in
-                  \(list)
-                }
-                """
-              )
-            } else {
-              DeclSyntax("let raw = RawSyntax.makeEmptyLayout(kind: .\(node.memberCallName), arena: arena)")
-            }
-            ExprSyntax("self.init(unchecked: raw)")
+      if let node = node.layoutNode {
+        let params = FunctionParameterListSyntax {
+          for child in node.children {
+            FunctionParameterSyntax(
+              firstName: child.isUnexpectedNodes ? .wildcardToken(trailingTrivia: .space) : child.labelDeclName,
+              secondName: child.isUnexpectedNodes ? child.labelDeclName : nil,
+              colon: .colonToken(),
+              type: child.rawParameterType,
+              defaultValue: child.isUnexpectedNodes ? child.defaultInitialization : nil
+            )
           }
 
-          for (index, child) in node.children.enumerated() {
-            try VariableDeclSyntax(
-              "public var \(child.varDeclName): Raw\(child.buildableType.buildable)"
-            ) {
-              let exclamationMark = child.isOptional ? "" : "!"
+          FunctionParameterSyntax("arena: __shared RawSyntaxArena")
+        }
+        try InitializerDeclSyntax("public init(\(params))") {
+          if !node.children.isEmpty {
+            let list = ExprListSyntax {
+              ExprSyntax("layout.initialize(repeating: nil)")
+              for (index, child) in node.children.enumerated() {
+                let optionalMark = child.isOptional ? "?" : ""
 
-              if child.syntaxNodeKind == .syntax {
-                ExprSyntax("layoutView.children[\(raw: index)]\(raw: exclamationMark)")
-              } else {
                 ExprSyntax(
-                  "layoutView.children[\(raw: index)].map(\(child.syntaxNodeKind.raw.syntaxType).init(raw:))\(raw: exclamationMark)"
+                  "layout[\(raw: index)] = \(child.baseCallName)\(raw: optionalMark).raw"
                 )
+                .with(\.leadingTrivia, .newline)
               }
+            }
+
+            DeclSyntax(
+              """
+              let raw = RawSyntax.makeLayout(
+                kind: .\(node.memberCallName), uninitializedCount: \(raw: node.children.count), arena: arena) { layout in
+                \(list)
+              }
+              """
+            )
+          } else {
+            DeclSyntax("let raw = RawSyntax.makeEmptyLayout(kind: .\(node.memberCallName), arena: arena)")
+          }
+          ExprSyntax("self.init(unchecked: raw)")
+        }
+
+        for (index, child) in node.children.enumerated() {
+          try VariableDeclSyntax(
+            "public var \(child.varDeclName): Raw\(child.buildableType.buildable)"
+          ) {
+            let exclamationMark = child.isOptional ? "" : "!"
+
+            if child.syntaxNodeKind == .syntax {
+              ExprSyntax("layoutView.children[\(raw: index)]\(raw: exclamationMark)")
+            } else {
+              ExprSyntax(
+                "layoutView.children[\(raw: index)].map(\(child.syntaxNodeKind.raw.syntaxType).init(raw:))\(raw: exclamationMark)"
+              )
             }
           }
         }
