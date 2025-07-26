@@ -25,15 +25,13 @@ let childNameForKeyPathFile = SourceFileSyntax(leadingTrivia: copyrightHeader) {
     """
   ) {
     try! SwitchExprSyntax("switch keyPath") {
-      for node in NON_BASE_SYNTAX_NODES.compactMap(\.layoutNode) {
-        for child in node.children {
-          SwitchCaseSyntax(
+      for (identifier, cases) in syntaxNodeCases() {
+        SwitchCaseSyntax(
             """
-            case \\\(node.type.syntaxBaseName).\(child.memberCallName):
-              return \(literal: child.identifier.description)
+            case \(raw: cases.joined(separator: ",\n")):
+              return \(literal: identifier)
             """
           )
-        }
       }
       SwitchCaseSyntax(
         """
@@ -43,4 +41,14 @@ let childNameForKeyPathFile = SourceFileSyntax(leadingTrivia: copyrightHeader) {
       )
     }
   }
+}
+
+private func syntaxNodeCases() -> [(key: String, value: [String])] {
+  var results = [String:[String]]()
+  for node in NON_BASE_SYNTAX_NODES.compactMap(\.layoutNode) {
+    for child in node.children {
+      results[child.identifier.description, default: []].append("\\\(node.type.syntaxBaseName).\(child.memberCallName)")
+    }
+  }
+  return results.sorted(by: { $0.key < $1.key })
 }

@@ -18,3564 +18,2610 @@
 @_spi(RawSyntax)
 public func childName(_ keyPath: AnyKeyPath) -> String? {
   switch keyPath {
-  case \ABIAttributeArgumentsSyntax.unexpectedBeforeProvider:
-    return "unexpectedBeforeProvider"
-  case \ABIAttributeArgumentsSyntax.provider:
-    return "provider"
-  case \ABIAttributeArgumentsSyntax.unexpectedAfterProvider:
-    return "unexpectedAfterProvider"
-  case \AccessorBlockFileSyntax.unexpectedBeforeLeftBrace:
-    return "unexpectedBeforeLeftBrace"
-  case \AccessorBlockFileSyntax.leftBrace:
-    return "leftBrace"
-  case \AccessorBlockFileSyntax.unexpectedBetweenLeftBraceAndAccessors:
-    return "unexpectedBetweenLeftBraceAndAccessors"
-  case \AccessorBlockFileSyntax.accessors:
-    return "accessors"
-  case \AccessorBlockFileSyntax.unexpectedBetweenAccessorsAndRightBrace:
-    return "unexpectedBetweenAccessorsAndRightBrace"
-  case \AccessorBlockFileSyntax.rightBrace:
-    return "rightBrace"
-  case \AccessorBlockFileSyntax.unexpectedBetweenRightBraceAndEndOfFileToken:
-    return "unexpectedBetweenRightBraceAndEndOfFileToken"
-  case \AccessorBlockFileSyntax.endOfFileToken:
-    return "endOfFileToken"
-  case \AccessorBlockFileSyntax.unexpectedAfterEndOfFileToken:
-    return "unexpectedAfterEndOfFileToken"
-  case \AccessorBlockSyntax.unexpectedBeforeLeftBrace:
-    return "unexpectedBeforeLeftBrace"
-  case \AccessorBlockSyntax.leftBrace:
-    return "leftBrace"
-  case \AccessorBlockSyntax.unexpectedBetweenLeftBraceAndAccessors:
-    return "unexpectedBetweenLeftBraceAndAccessors"
-  case \AccessorBlockSyntax.accessors:
-    return "accessors"
-  case \AccessorBlockSyntax.unexpectedBetweenAccessorsAndRightBrace:
-    return "unexpectedBetweenAccessorsAndRightBrace"
-  case \AccessorBlockSyntax.rightBrace:
-    return "rightBrace"
-  case \AccessorBlockSyntax.unexpectedAfterRightBrace:
-    return "unexpectedAfterRightBrace"
-  case \AccessorDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \AccessorDeclSyntax.attributes:
-    return "attributes"
-  case \AccessorDeclSyntax.unexpectedBetweenAttributesAndModifier:
-    return "unexpectedBetweenAttributesAndModifier"
-  case \AccessorDeclSyntax.modifier:
-    return "modifier"
-  case \AccessorDeclSyntax.unexpectedBetweenModifierAndAccessorSpecifier:
-    return "unexpectedBetweenModifierAndAccessorSpecifier"
-  case \AccessorDeclSyntax.accessorSpecifier:
+  case \PatternBindingSyntax.accessorBlock,
+  \SubscriptDeclSyntax.accessorBlock:
+    return "accessorBlock"
+  case \AccessorDeclSyntax.accessorSpecifier,
+  \DerivativeAttributeArgumentsSyntax.accessorSpecifier:
     return "accessorSpecifier"
-  case \AccessorDeclSyntax.unexpectedBetweenAccessorSpecifierAndParameters:
-    return "unexpectedBetweenAccessorSpecifierAndParameters"
-  case \AccessorDeclSyntax.parameters:
-    return "parameters"
-  case \AccessorDeclSyntax.unexpectedBetweenParametersAndEffectSpecifiers:
-    return "unexpectedBetweenParametersAndEffectSpecifiers"
-  case \AccessorDeclSyntax.effectSpecifiers:
-    return "effectSpecifiers"
-  case \AccessorDeclSyntax.unexpectedBetweenEffectSpecifiersAndBody:
-    return "unexpectedBetweenEffectSpecifiersAndBody"
-  case \AccessorDeclSyntax.body:
-    return "body"
-  case \AccessorDeclSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \AccessorEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier:
-    return "unexpectedBeforeAsyncSpecifier"
-  case \AccessorEffectSpecifiersSyntax.asyncSpecifier:
-    return "asyncSpecifier"
-  case \AccessorEffectSpecifiersSyntax.unexpectedBetweenAsyncSpecifierAndThrowsClause:
-    return "unexpectedBetweenAsyncSpecifierAndThrowsClause"
-  case \AccessorEffectSpecifiersSyntax.throwsClause:
-    return "throwsClause"
-  case \AccessorEffectSpecifiersSyntax.unexpectedAfterThrowsClause:
-    return "unexpectedAfterThrowsClause"
-  case \AccessorParametersSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \AccessorParametersSyntax.leftParen:
-    return "leftParen"
-  case \AccessorParametersSyntax.unexpectedBetweenLeftParenAndName:
-    return "unexpectedBetweenLeftParenAndName"
-  case \AccessorParametersSyntax.name:
-    return "name"
-  case \AccessorParametersSyntax.unexpectedBetweenNameAndRightParen:
-    return "unexpectedBetweenNameAndRightParen"
-  case \AccessorParametersSyntax.rightParen:
-    return "rightParen"
-  case \AccessorParametersSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \ActorDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ActorDeclSyntax.attributes:
-    return "attributes"
-  case \ActorDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \ActorDeclSyntax.modifiers:
-    return "modifiers"
-  case \ActorDeclSyntax.unexpectedBetweenModifiersAndActorKeyword:
-    return "unexpectedBetweenModifiersAndActorKeyword"
+  case \AccessorBlockFileSyntax.accessors,
+  \AccessorBlockSyntax.accessors:
+    return "accessors"
   case \ActorDeclSyntax.actorKeyword:
     return "actorKeyword"
-  case \ActorDeclSyntax.unexpectedBetweenActorKeywordAndName:
-    return "unexpectedBetweenActorKeywordAndName"
-  case \ActorDeclSyntax.name:
-    return "name"
-  case \ActorDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \ActorDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \ActorDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause:
-    return "unexpectedBetweenGenericParameterClauseAndInheritanceClause"
-  case \ActorDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \ActorDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
-    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
-  case \ActorDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \ActorDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
-    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
-  case \ActorDeclSyntax.memberBlock:
-    return "memberBlock"
-  case \ActorDeclSyntax.unexpectedAfterMemberBlock:
-    return "unexpectedAfterMemberBlock"
-  case \ArrayElementSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \ArrayElementSyntax.expression:
-    return "expression"
-  case \ArrayElementSyntax.unexpectedBetweenExpressionAndTrailingComma:
-    return "unexpectedBetweenExpressionAndTrailingComma"
-  case \ArrayElementSyntax.trailingComma:
-    return "trailingComma"
-  case \ArrayElementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ArrayExprSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \ArrayExprSyntax.leftSquare:
-    return "leftSquare"
-  case \ArrayExprSyntax.unexpectedBetweenLeftSquareAndElements:
-    return "unexpectedBetweenLeftSquareAndElements"
-  case \ArrayExprSyntax.elements:
-    return "elements"
-  case \ArrayExprSyntax.unexpectedBetweenElementsAndRightSquare:
-    return "unexpectedBetweenElementsAndRightSquare"
-  case \ArrayExprSyntax.rightSquare:
-    return "rightSquare"
-  case \ArrayExprSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \ArrayTypeSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \ArrayTypeSyntax.leftSquare:
-    return "leftSquare"
-  case \ArrayTypeSyntax.unexpectedBetweenLeftSquareAndElement:
-    return "unexpectedBetweenLeftSquareAndElement"
-  case \ArrayTypeSyntax.element:
-    return "element"
-  case \ArrayTypeSyntax.unexpectedBetweenElementAndRightSquare:
-    return "unexpectedBetweenElementAndRightSquare"
-  case \ArrayTypeSyntax.rightSquare:
-    return "rightSquare"
-  case \ArrayTypeSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \ArrowExprSyntax.unexpectedBeforeEffectSpecifiers:
-    return "unexpectedBeforeEffectSpecifiers"
-  case \ArrowExprSyntax.effectSpecifiers:
-    return "effectSpecifiers"
-  case \ArrowExprSyntax.unexpectedBetweenEffectSpecifiersAndArrow:
-    return "unexpectedBetweenEffectSpecifiersAndArrow"
-  case \ArrowExprSyntax.arrow:
-    return "arrow"
-  case \ArrowExprSyntax.unexpectedAfterArrow:
-    return "unexpectedAfterArrow"
-  case \AsExprSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \AsExprSyntax.expression:
-    return "expression"
-  case \AsExprSyntax.unexpectedBetweenExpressionAndAsKeyword:
-    return "unexpectedBetweenExpressionAndAsKeyword"
-  case \AsExprSyntax.asKeyword:
-    return "asKeyword"
-  case \AsExprSyntax.unexpectedBetweenAsKeywordAndQuestionOrExclamationMark:
-    return "unexpectedBetweenAsKeywordAndQuestionOrExclamationMark"
-  case \AsExprSyntax.questionOrExclamationMark:
-    return "questionOrExclamationMark"
-  case \AsExprSyntax.unexpectedBetweenQuestionOrExclamationMarkAndType:
-    return "unexpectedBetweenQuestionOrExclamationMarkAndType"
-  case \AsExprSyntax.type:
-    return "type"
-  case \AsExprSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \AssignmentExprSyntax.unexpectedBeforeEqual:
-    return "unexpectedBeforeEqual"
-  case \AssignmentExprSyntax.equal:
-    return "equal"
-  case \AssignmentExprSyntax.unexpectedAfterEqual:
-    return "unexpectedAfterEqual"
-  case \AssociatedTypeDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \AssociatedTypeDeclSyntax.attributes:
-    return "attributes"
-  case \AssociatedTypeDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \AssociatedTypeDeclSyntax.modifiers:
-    return "modifiers"
-  case \AssociatedTypeDeclSyntax.unexpectedBetweenModifiersAndAssociatedtypeKeyword:
-    return "unexpectedBetweenModifiersAndAssociatedtypeKeyword"
-  case \AssociatedTypeDeclSyntax.associatedtypeKeyword:
-    return "associatedtypeKeyword"
-  case \AssociatedTypeDeclSyntax.unexpectedBetweenAssociatedtypeKeywordAndName:
-    return "unexpectedBetweenAssociatedtypeKeywordAndName"
-  case \AssociatedTypeDeclSyntax.name:
-    return "name"
-  case \AssociatedTypeDeclSyntax.unexpectedBetweenNameAndInheritanceClause:
-    return "unexpectedBetweenNameAndInheritanceClause"
-  case \AssociatedTypeDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \AssociatedTypeDeclSyntax.unexpectedBetweenInheritanceClauseAndInitializer:
-    return "unexpectedBetweenInheritanceClauseAndInitializer"
-  case \AssociatedTypeDeclSyntax.initializer:
-    return "initializer"
-  case \AssociatedTypeDeclSyntax.unexpectedBetweenInitializerAndGenericWhereClause:
-    return "unexpectedBetweenInitializerAndGenericWhereClause"
-  case \AssociatedTypeDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \AssociatedTypeDeclSyntax.unexpectedAfterGenericWhereClause:
-    return "unexpectedAfterGenericWhereClause"
-  case \AttributeClauseFileSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \AttributeClauseFileSyntax.attributes:
-    return "attributes"
-  case \AttributeClauseFileSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \AttributeClauseFileSyntax.modifiers:
-    return "modifiers"
-  case \AttributeClauseFileSyntax.unexpectedBetweenModifiersAndEndOfFileToken:
-    return "unexpectedBetweenModifiersAndEndOfFileToken"
-  case \AttributeClauseFileSyntax.endOfFileToken:
-    return "endOfFileToken"
-  case \AttributeClauseFileSyntax.unexpectedAfterEndOfFileToken:
-    return "unexpectedAfterEndOfFileToken"
-  case \AttributeSyntax.unexpectedBeforeAtSign:
-    return "unexpectedBeforeAtSign"
-  case \AttributeSyntax.atSign:
-    return "atSign"
-  case \AttributeSyntax.unexpectedBetweenAtSignAndAttributeName:
-    return "unexpectedBetweenAtSignAndAttributeName"
-  case \AttributeSyntax.attributeName:
-    return "attributeName"
-  case \AttributeSyntax.unexpectedBetweenAttributeNameAndLeftParen:
-    return "unexpectedBetweenAttributeNameAndLeftParen"
-  case \AttributeSyntax.leftParen:
-    return "leftParen"
-  case \AttributeSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \AttributeSyntax.arguments:
-    return "arguments"
-  case \AttributeSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \AttributeSyntax.rightParen:
-    return "rightParen"
-  case \AttributeSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \AttributedTypeSyntax.unexpectedBeforeSpecifiers:
-    return "unexpectedBeforeSpecifiers"
-  case \AttributedTypeSyntax.specifiers:
-    return "specifiers"
-  case \AttributedTypeSyntax.unexpectedBetweenSpecifiersAndAttributes:
-    return "unexpectedBetweenSpecifiersAndAttributes"
-  case \AttributedTypeSyntax.attributes:
-    return "attributes"
-  case \AttributedTypeSyntax.unexpectedBetweenAttributesAndLateSpecifiers:
-    return "unexpectedBetweenAttributesAndLateSpecifiers"
-  case \AttributedTypeSyntax.lateSpecifiers:
-    return "lateSpecifiers"
-  case \AttributedTypeSyntax.unexpectedBetweenLateSpecifiersAndBaseType:
-    return "unexpectedBetweenLateSpecifiersAndBaseType"
-  case \AttributedTypeSyntax.baseType:
-    return "baseType"
-  case \AttributedTypeSyntax.unexpectedAfterBaseType:
-    return "unexpectedAfterBaseType"
-  case \AvailabilityArgumentSyntax.unexpectedBeforeArgument:
-    return "unexpectedBeforeArgument"
-  case \AvailabilityArgumentSyntax.argument:
-    return "argument"
-  case \AvailabilityArgumentSyntax.unexpectedBetweenArgumentAndTrailingComma:
-    return "unexpectedBetweenArgumentAndTrailingComma"
-  case \AvailabilityArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \AvailabilityArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \AvailabilityConditionSyntax.unexpectedBeforeAvailabilityKeyword:
-    return "unexpectedBeforeAvailabilityKeyword"
-  case \AvailabilityConditionSyntax.availabilityKeyword:
-    return "availabilityKeyword"
-  case \AvailabilityConditionSyntax.unexpectedBetweenAvailabilityKeywordAndLeftParen:
-    return "unexpectedBetweenAvailabilityKeywordAndLeftParen"
-  case \AvailabilityConditionSyntax.leftParen:
-    return "leftParen"
-  case \AvailabilityConditionSyntax.unexpectedBetweenLeftParenAndAvailabilityArguments:
-    return "unexpectedBetweenLeftParenAndAvailabilityArguments"
-  case \AvailabilityConditionSyntax.availabilityArguments:
-    return "availabilityArguments"
-  case \AvailabilityConditionSyntax.unexpectedBetweenAvailabilityArgumentsAndRightParen:
-    return "unexpectedBetweenAvailabilityArgumentsAndRightParen"
-  case \AvailabilityConditionSyntax.rightParen:
-    return "rightParen"
-  case \AvailabilityConditionSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \AvailabilityLabeledArgumentSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \AvailabilityLabeledArgumentSyntax.label:
-    return "label"
-  case \AvailabilityLabeledArgumentSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \AvailabilityLabeledArgumentSyntax.colon:
-    return "colon"
-  case \AvailabilityLabeledArgumentSyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \AvailabilityLabeledArgumentSyntax.value:
-    return "value"
-  case \AvailabilityLabeledArgumentSyntax.unexpectedAfterValue:
-    return "unexpectedAfterValue"
-  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBeforePlatformVersion:
-    return "unexpectedBeforePlatformVersion"
-  case \AvailabilityMacroDefinitionFileSyntax.platformVersion:
-    return "platformVersion"
-  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBetweenPlatformVersionAndColon:
-    return "unexpectedBetweenPlatformVersionAndColon"
-  case \AvailabilityMacroDefinitionFileSyntax.colon:
-    return "colon"
-  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBetweenColonAndSpecs:
-    return "unexpectedBetweenColonAndSpecs"
-  case \AvailabilityMacroDefinitionFileSyntax.specs:
-    return "specs"
-  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBetweenSpecsAndEndOfFileToken:
-    return "unexpectedBetweenSpecsAndEndOfFileToken"
-  case \AvailabilityMacroDefinitionFileSyntax.endOfFileToken:
-    return "endOfFileToken"
-  case \AvailabilityMacroDefinitionFileSyntax.unexpectedAfterEndOfFileToken:
-    return "unexpectedAfterEndOfFileToken"
-  case \AwaitExprSyntax.unexpectedBeforeAwaitKeyword:
-    return "unexpectedBeforeAwaitKeyword"
-  case \AwaitExprSyntax.awaitKeyword:
-    return "awaitKeyword"
-  case \AwaitExprSyntax.unexpectedBetweenAwaitKeywordAndExpression:
-    return "unexpectedBetweenAwaitKeywordAndExpression"
-  case \AwaitExprSyntax.expression:
-    return "expression"
-  case \AwaitExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \BackDeployedAttributeArgumentsSyntax.unexpectedBeforeBeforeLabel:
-    return "unexpectedBeforeBeforeLabel"
-  case \BackDeployedAttributeArgumentsSyntax.beforeLabel:
-    return "beforeLabel"
-  case \BackDeployedAttributeArgumentsSyntax.unexpectedBetweenBeforeLabelAndColon:
-    return "unexpectedBetweenBeforeLabelAndColon"
-  case \BackDeployedAttributeArgumentsSyntax.colon:
-    return "colon"
-  case \BackDeployedAttributeArgumentsSyntax.unexpectedBetweenColonAndPlatforms:
-    return "unexpectedBetweenColonAndPlatforms"
-  case \BackDeployedAttributeArgumentsSyntax.platforms:
-    return "platforms"
-  case \BackDeployedAttributeArgumentsSyntax.unexpectedAfterPlatforms:
-    return "unexpectedAfterPlatforms"
-  case \BinaryOperatorExprSyntax.unexpectedBeforeOperator:
-    return "unexpectedBeforeOperator"
-  case \BinaryOperatorExprSyntax.operator:
-    return "operator"
-  case \BinaryOperatorExprSyntax.unexpectedAfterOperator:
-    return "unexpectedAfterOperator"
-  case \BooleanLiteralExprSyntax.unexpectedBeforeLiteral:
-    return "unexpectedBeforeLiteral"
-  case \BooleanLiteralExprSyntax.literal:
-    return "literal"
-  case \BooleanLiteralExprSyntax.unexpectedAfterLiteral:
-    return "unexpectedAfterLiteral"
-  case \BorrowExprSyntax.unexpectedBeforeBorrowKeyword:
-    return "unexpectedBeforeBorrowKeyword"
-  case \BorrowExprSyntax.borrowKeyword:
-    return "borrowKeyword"
-  case \BorrowExprSyntax.unexpectedBetweenBorrowKeywordAndExpression:
-    return "unexpectedBetweenBorrowKeywordAndExpression"
-  case \BorrowExprSyntax.expression:
-    return "expression"
-  case \BorrowExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \BreakStmtSyntax.unexpectedBeforeBreakKeyword:
-    return "unexpectedBeforeBreakKeyword"
-  case \BreakStmtSyntax.breakKeyword:
-    return "breakKeyword"
-  case \BreakStmtSyntax.unexpectedBetweenBreakKeywordAndLabel:
-    return "unexpectedBetweenBreakKeywordAndLabel"
-  case \BreakStmtSyntax.label:
-    return "label"
-  case \BreakStmtSyntax.unexpectedAfterLabel:
-    return "unexpectedAfterLabel"
-  case \_CanImportExprSyntax.unexpectedBeforeCanImportKeyword:
-    return "unexpectedBeforeCanImportKeyword"
-  case \_CanImportExprSyntax.canImportKeyword:
-    return "canImportKeyword"
-  case \_CanImportExprSyntax.unexpectedBetweenCanImportKeywordAndLeftParen:
-    return "unexpectedBetweenCanImportKeywordAndLeftParen"
-  case \_CanImportExprSyntax.leftParen:
-    return "leftParen"
-  case \_CanImportExprSyntax.unexpectedBetweenLeftParenAndImportPath:
-    return "unexpectedBetweenLeftParenAndImportPath"
-  case \_CanImportExprSyntax.importPath:
-    return "importPath"
-  case \_CanImportExprSyntax.unexpectedBetweenImportPathAndVersionInfo:
-    return "unexpectedBetweenImportPathAndVersionInfo"
-  case \_CanImportExprSyntax.versionInfo:
-    return "versionInfo"
-  case \_CanImportExprSyntax.unexpectedBetweenVersionInfoAndRightParen:
-    return "unexpectedBetweenVersionInfoAndRightParen"
-  case \_CanImportExprSyntax.rightParen:
-    return "rightParen"
-  case \_CanImportExprSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \_CanImportVersionInfoSyntax.unexpectedBeforeComma:
-    return "unexpectedBeforeComma"
-  case \_CanImportVersionInfoSyntax.comma:
-    return "comma"
-  case \_CanImportVersionInfoSyntax.unexpectedBetweenCommaAndLabel:
-    return "unexpectedBetweenCommaAndLabel"
-  case \_CanImportVersionInfoSyntax.label:
-    return "label"
-  case \_CanImportVersionInfoSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \_CanImportVersionInfoSyntax.colon:
-    return "colon"
-  case \_CanImportVersionInfoSyntax.unexpectedBetweenColonAndVersion:
-    return "unexpectedBetweenColonAndVersion"
-  case \_CanImportVersionInfoSyntax.version:
-    return "version"
-  case \_CanImportVersionInfoSyntax.unexpectedAfterVersion:
-    return "unexpectedAfterVersion"
-  case \CatchClauseSyntax.unexpectedBeforeCatchKeyword:
-    return "unexpectedBeforeCatchKeyword"
-  case \CatchClauseSyntax.catchKeyword:
-    return "catchKeyword"
-  case \CatchClauseSyntax.unexpectedBetweenCatchKeywordAndCatchItems:
-    return "unexpectedBetweenCatchKeywordAndCatchItems"
-  case \CatchClauseSyntax.catchItems:
-    return "catchItems"
-  case \CatchClauseSyntax.unexpectedBetweenCatchItemsAndBody:
-    return "unexpectedBetweenCatchItemsAndBody"
-  case \CatchClauseSyntax.body:
-    return "body"
-  case \CatchClauseSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \CatchItemSyntax.unexpectedBeforePattern:
-    return "unexpectedBeforePattern"
-  case \CatchItemSyntax.pattern:
-    return "pattern"
-  case \CatchItemSyntax.unexpectedBetweenPatternAndWhereClause:
-    return "unexpectedBetweenPatternAndWhereClause"
-  case \CatchItemSyntax.whereClause:
-    return "whereClause"
-  case \CatchItemSyntax.unexpectedBetweenWhereClauseAndTrailingComma:
-    return "unexpectedBetweenWhereClauseAndTrailingComma"
-  case \CatchItemSyntax.trailingComma:
-    return "trailingComma"
-  case \CatchItemSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ClassDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ClassDeclSyntax.attributes:
-    return "attributes"
-  case \ClassDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \ClassDeclSyntax.modifiers:
-    return "modifiers"
-  case \ClassDeclSyntax.unexpectedBetweenModifiersAndClassKeyword:
-    return "unexpectedBetweenModifiersAndClassKeyword"
-  case \ClassDeclSyntax.classKeyword:
-    return "classKeyword"
-  case \ClassDeclSyntax.unexpectedBetweenClassKeywordAndName:
-    return "unexpectedBetweenClassKeywordAndName"
-  case \ClassDeclSyntax.name:
-    return "name"
-  case \ClassDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \ClassDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \ClassDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause:
-    return "unexpectedBetweenGenericParameterClauseAndInheritanceClause"
-  case \ClassDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \ClassDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
-    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
-  case \ClassDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \ClassDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
-    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
-  case \ClassDeclSyntax.memberBlock:
-    return "memberBlock"
-  case \ClassDeclSyntax.unexpectedAfterMemberBlock:
-    return "unexpectedAfterMemberBlock"
-  case \ClassRestrictionTypeSyntax.unexpectedBeforeClassKeyword:
-    return "unexpectedBeforeClassKeyword"
-  case \ClassRestrictionTypeSyntax.classKeyword:
-    return "classKeyword"
-  case \ClassRestrictionTypeSyntax.unexpectedAfterClassKeyword:
-    return "unexpectedAfterClassKeyword"
-  case \ClosureCaptureClauseSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \ClosureCaptureClauseSyntax.leftSquare:
-    return "leftSquare"
-  case \ClosureCaptureClauseSyntax.unexpectedBetweenLeftSquareAndItems:
-    return "unexpectedBetweenLeftSquareAndItems"
-  case \ClosureCaptureClauseSyntax.items:
-    return "items"
-  case \ClosureCaptureClauseSyntax.unexpectedBetweenItemsAndRightSquare:
-    return "unexpectedBetweenItemsAndRightSquare"
-  case \ClosureCaptureClauseSyntax.rightSquare:
-    return "rightSquare"
-  case \ClosureCaptureClauseSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \ClosureCaptureSpecifierSyntax.unexpectedBeforeSpecifier:
-    return "unexpectedBeforeSpecifier"
-  case \ClosureCaptureSpecifierSyntax.specifier:
-    return "specifier"
-  case \ClosureCaptureSpecifierSyntax.unexpectedBetweenSpecifierAndLeftParen:
-    return "unexpectedBetweenSpecifierAndLeftParen"
-  case \ClosureCaptureSpecifierSyntax.leftParen:
-    return "leftParen"
-  case \ClosureCaptureSpecifierSyntax.unexpectedBetweenLeftParenAndDetail:
-    return "unexpectedBetweenLeftParenAndDetail"
-  case \ClosureCaptureSpecifierSyntax.detail:
-    return "detail"
-  case \ClosureCaptureSpecifierSyntax.unexpectedBetweenDetailAndRightParen:
-    return "unexpectedBetweenDetailAndRightParen"
-  case \ClosureCaptureSpecifierSyntax.rightParen:
-    return "rightParen"
-  case \ClosureCaptureSpecifierSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \ClosureCaptureSyntax.unexpectedBeforeSpecifier:
-    return "unexpectedBeforeSpecifier"
-  case \ClosureCaptureSyntax.specifier:
-    return "specifier"
-  case \ClosureCaptureSyntax.unexpectedBetweenSpecifierAndName:
-    return "unexpectedBetweenSpecifierAndName"
-  case \ClosureCaptureSyntax.name:
-    return "name"
-  case \ClosureCaptureSyntax.unexpectedBetweenNameAndInitializer:
-    return "unexpectedBetweenNameAndInitializer"
-  case \ClosureCaptureSyntax.initializer:
-    return "initializer"
-  case \ClosureCaptureSyntax.unexpectedBetweenInitializerAndTrailingComma:
-    return "unexpectedBetweenInitializerAndTrailingComma"
-  case \ClosureCaptureSyntax.trailingComma:
-    return "trailingComma"
-  case \ClosureCaptureSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ClosureExprSyntax.unexpectedBeforeLeftBrace:
-    return "unexpectedBeforeLeftBrace"
-  case \ClosureExprSyntax.leftBrace:
-    return "leftBrace"
-  case \ClosureExprSyntax.unexpectedBetweenLeftBraceAndSignature:
-    return "unexpectedBetweenLeftBraceAndSignature"
-  case \ClosureExprSyntax.signature:
-    return "signature"
-  case \ClosureExprSyntax.unexpectedBetweenSignatureAndStatements:
-    return "unexpectedBetweenSignatureAndStatements"
-  case \ClosureExprSyntax.statements:
-    return "statements"
-  case \ClosureExprSyntax.unexpectedBetweenStatementsAndRightBrace:
-    return "unexpectedBetweenStatementsAndRightBrace"
-  case \ClosureExprSyntax.rightBrace:
-    return "rightBrace"
-  case \ClosureExprSyntax.unexpectedAfterRightBrace:
-    return "unexpectedAfterRightBrace"
-  case \ClosureParameterClauseSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \ClosureParameterClauseSyntax.leftParen:
-    return "leftParen"
-  case \ClosureParameterClauseSyntax.unexpectedBetweenLeftParenAndParameters:
-    return "unexpectedBetweenLeftParenAndParameters"
-  case \ClosureParameterClauseSyntax.parameters:
-    return "parameters"
-  case \ClosureParameterClauseSyntax.unexpectedBetweenParametersAndRightParen:
-    return "unexpectedBetweenParametersAndRightParen"
-  case \ClosureParameterClauseSyntax.rightParen:
-    return "rightParen"
-  case \ClosureParameterClauseSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \ClosureParameterSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ClosureParameterSyntax.attributes:
-    return "attributes"
-  case \ClosureParameterSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \ClosureParameterSyntax.modifiers:
-    return "modifiers"
-  case \ClosureParameterSyntax.unexpectedBetweenModifiersAndFirstName:
-    return "unexpectedBetweenModifiersAndFirstName"
-  case \ClosureParameterSyntax.firstName:
-    return "firstName"
-  case \ClosureParameterSyntax.unexpectedBetweenFirstNameAndSecondName:
-    return "unexpectedBetweenFirstNameAndSecondName"
-  case \ClosureParameterSyntax.secondName:
-    return "secondName"
-  case \ClosureParameterSyntax.unexpectedBetweenSecondNameAndColon:
-    return "unexpectedBetweenSecondNameAndColon"
-  case \ClosureParameterSyntax.colon:
-    return "colon"
-  case \ClosureParameterSyntax.unexpectedBetweenColonAndType:
-    return "unexpectedBetweenColonAndType"
-  case \ClosureParameterSyntax.type:
-    return "type"
-  case \ClosureParameterSyntax.unexpectedBetweenTypeAndEllipsis:
-    return "unexpectedBetweenTypeAndEllipsis"
-  case \ClosureParameterSyntax.ellipsis:
-    return "ellipsis"
-  case \ClosureParameterSyntax.unexpectedBetweenEllipsisAndTrailingComma:
-    return "unexpectedBetweenEllipsisAndTrailingComma"
-  case \ClosureParameterSyntax.trailingComma:
-    return "trailingComma"
-  case \ClosureParameterSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ClosureShorthandParameterSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \ClosureShorthandParameterSyntax.name:
-    return "name"
-  case \ClosureShorthandParameterSyntax.unexpectedBetweenNameAndTrailingComma:
-    return "unexpectedBetweenNameAndTrailingComma"
-  case \ClosureShorthandParameterSyntax.trailingComma:
-    return "trailingComma"
-  case \ClosureShorthandParameterSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ClosureSignatureSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ClosureSignatureSyntax.attributes:
-    return "attributes"
-  case \ClosureSignatureSyntax.unexpectedBetweenAttributesAndCapture:
-    return "unexpectedBetweenAttributesAndCapture"
-  case \ClosureSignatureSyntax.capture:
-    return "capture"
-  case \ClosureSignatureSyntax.unexpectedBetweenCaptureAndParameterClause:
-    return "unexpectedBetweenCaptureAndParameterClause"
-  case \ClosureSignatureSyntax.parameterClause:
-    return "parameterClause"
-  case \ClosureSignatureSyntax.unexpectedBetweenParameterClauseAndEffectSpecifiers:
-    return "unexpectedBetweenParameterClauseAndEffectSpecifiers"
-  case \ClosureSignatureSyntax.effectSpecifiers:
-    return "effectSpecifiers"
-  case \ClosureSignatureSyntax.unexpectedBetweenEffectSpecifiersAndReturnClause:
-    return "unexpectedBetweenEffectSpecifiersAndReturnClause"
-  case \ClosureSignatureSyntax.returnClause:
-    return "returnClause"
-  case \ClosureSignatureSyntax.unexpectedBetweenReturnClauseAndInKeyword:
-    return "unexpectedBetweenReturnClauseAndInKeyword"
-  case \ClosureSignatureSyntax.inKeyword:
-    return "inKeyword"
-  case \ClosureSignatureSyntax.unexpectedAfterInKeyword:
-    return "unexpectedAfterInKeyword"
-  case \CodeBlockFileSyntax.unexpectedBeforeBody:
-    return "unexpectedBeforeBody"
-  case \CodeBlockFileSyntax.body:
-    return "body"
-  case \CodeBlockFileSyntax.unexpectedBetweenBodyAndEndOfFileToken:
-    return "unexpectedBetweenBodyAndEndOfFileToken"
-  case \CodeBlockFileSyntax.endOfFileToken:
-    return "endOfFileToken"
-  case \CodeBlockFileSyntax.unexpectedAfterEndOfFileToken:
-    return "unexpectedAfterEndOfFileToken"
-  case \CodeBlockItemSyntax.unexpectedBeforeItem:
-    return "unexpectedBeforeItem"
-  case \CodeBlockItemSyntax.item:
-    return "item"
-  case \CodeBlockItemSyntax.unexpectedBetweenItemAndSemicolon:
-    return "unexpectedBetweenItemAndSemicolon"
-  case \CodeBlockItemSyntax.semicolon:
-    return "semicolon"
-  case \CodeBlockItemSyntax.unexpectedAfterSemicolon:
-    return "unexpectedAfterSemicolon"
-  case \CodeBlockSyntax.unexpectedBeforeLeftBrace:
-    return "unexpectedBeforeLeftBrace"
-  case \CodeBlockSyntax.leftBrace:
-    return "leftBrace"
-  case \CodeBlockSyntax.unexpectedBetweenLeftBraceAndStatements:
-    return "unexpectedBetweenLeftBraceAndStatements"
-  case \CodeBlockSyntax.statements:
-    return "statements"
-  case \CodeBlockSyntax.unexpectedBetweenStatementsAndRightBrace:
-    return "unexpectedBetweenStatementsAndRightBrace"
-  case \CodeBlockSyntax.rightBrace:
-    return "rightBrace"
-  case \CodeBlockSyntax.unexpectedAfterRightBrace:
-    return "unexpectedAfterRightBrace"
-  case \CompositionTypeElementSyntax.unexpectedBeforeType:
-    return "unexpectedBeforeType"
-  case \CompositionTypeElementSyntax.type:
-    return "type"
-  case \CompositionTypeElementSyntax.unexpectedBetweenTypeAndAmpersand:
-    return "unexpectedBetweenTypeAndAmpersand"
-  case \CompositionTypeElementSyntax.ampersand:
-    return "ampersand"
-  case \CompositionTypeElementSyntax.unexpectedAfterAmpersand:
-    return "unexpectedAfterAmpersand"
-  case \CompositionTypeSyntax.unexpectedBeforeElements:
-    return "unexpectedBeforeElements"
-  case \CompositionTypeSyntax.elements:
-    return "elements"
-  case \CompositionTypeSyntax.unexpectedAfterElements:
-    return "unexpectedAfterElements"
-  case \ConditionElementSyntax.unexpectedBeforeCondition:
-    return "unexpectedBeforeCondition"
-  case \ConditionElementSyntax.condition:
-    return "condition"
-  case \ConditionElementSyntax.unexpectedBetweenConditionAndTrailingComma:
-    return "unexpectedBetweenConditionAndTrailingComma"
-  case \ConditionElementSyntax.trailingComma:
-    return "trailingComma"
-  case \ConditionElementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ConformanceRequirementSyntax.unexpectedBeforeLeftType:
-    return "unexpectedBeforeLeftType"
-  case \ConformanceRequirementSyntax.leftType:
-    return "leftType"
-  case \ConformanceRequirementSyntax.unexpectedBetweenLeftTypeAndColon:
-    return "unexpectedBetweenLeftTypeAndColon"
-  case \ConformanceRequirementSyntax.colon:
-    return "colon"
-  case \ConformanceRequirementSyntax.unexpectedBetweenColonAndRightType:
-    return "unexpectedBetweenColonAndRightType"
-  case \ConformanceRequirementSyntax.rightType:
-    return "rightType"
-  case \ConformanceRequirementSyntax.unexpectedAfterRightType:
-    return "unexpectedAfterRightType"
-  case \ConsumeExprSyntax.unexpectedBeforeConsumeKeyword:
-    return "unexpectedBeforeConsumeKeyword"
-  case \ConsumeExprSyntax.consumeKeyword:
-    return "consumeKeyword"
-  case \ConsumeExprSyntax.unexpectedBetweenConsumeKeywordAndExpression:
-    return "unexpectedBetweenConsumeKeywordAndExpression"
-  case \ConsumeExprSyntax.expression:
-    return "expression"
-  case \ConsumeExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \ContinueStmtSyntax.unexpectedBeforeContinueKeyword:
-    return "unexpectedBeforeContinueKeyword"
-  case \ContinueStmtSyntax.continueKeyword:
-    return "continueKeyword"
-  case \ContinueStmtSyntax.unexpectedBetweenContinueKeywordAndLabel:
-    return "unexpectedBetweenContinueKeywordAndLabel"
-  case \ContinueStmtSyntax.label:
-    return "label"
-  case \ContinueStmtSyntax.unexpectedAfterLabel:
-    return "unexpectedAfterLabel"
-  case \CopyExprSyntax.unexpectedBeforeCopyKeyword:
-    return "unexpectedBeforeCopyKeyword"
-  case \CopyExprSyntax.copyKeyword:
-    return "copyKeyword"
-  case \CopyExprSyntax.unexpectedBetweenCopyKeywordAndExpression:
-    return "unexpectedBetweenCopyKeywordAndExpression"
-  case \CopyExprSyntax.expression:
-    return "expression"
-  case \CopyExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \DeclModifierDetailSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \DeclModifierDetailSyntax.leftParen:
-    return "leftParen"
-  case \DeclModifierDetailSyntax.unexpectedBetweenLeftParenAndDetail:
-    return "unexpectedBetweenLeftParenAndDetail"
-  case \DeclModifierDetailSyntax.detail:
-    return "detail"
-  case \DeclModifierDetailSyntax.unexpectedBetweenDetailAndRightParen:
-    return "unexpectedBetweenDetailAndRightParen"
-  case \DeclModifierDetailSyntax.rightParen:
-    return "rightParen"
-  case \DeclModifierDetailSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \DeclModifierSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \DeclModifierSyntax.name:
-    return "name"
-  case \DeclModifierSyntax.unexpectedBetweenNameAndDetail:
-    return "unexpectedBetweenNameAndDetail"
-  case \DeclModifierSyntax.detail:
-    return "detail"
-  case \DeclModifierSyntax.unexpectedAfterDetail:
-    return "unexpectedAfterDetail"
-  case \DeclNameArgumentSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \DeclNameArgumentSyntax.name:
-    return "name"
-  case \DeclNameArgumentSyntax.unexpectedBetweenNameAndColon:
-    return "unexpectedBetweenNameAndColon"
-  case \DeclNameArgumentSyntax.colon:
-    return "colon"
-  case \DeclNameArgumentSyntax.unexpectedAfterColon:
-    return "unexpectedAfterColon"
-  case \DeclNameArgumentsSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \DeclNameArgumentsSyntax.leftParen:
-    return "leftParen"
-  case \DeclNameArgumentsSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \DeclNameArgumentsSyntax.arguments:
-    return "arguments"
-  case \DeclNameArgumentsSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \DeclNameArgumentsSyntax.rightParen:
-    return "rightParen"
-  case \DeclNameArgumentsSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \DeclReferenceExprSyntax.unexpectedBeforeBaseName:
-    return "unexpectedBeforeBaseName"
-  case \DeclReferenceExprSyntax.baseName:
-    return "baseName"
-  case \DeclReferenceExprSyntax.unexpectedBetweenBaseNameAndArgumentNames:
-    return "unexpectedBetweenBaseNameAndArgumentNames"
-  case \DeclReferenceExprSyntax.argumentNames:
-    return "argumentNames"
-  case \DeclReferenceExprSyntax.unexpectedAfterArgumentNames:
-    return "unexpectedAfterArgumentNames"
-  case \DeferStmtSyntax.unexpectedBeforeDeferKeyword:
-    return "unexpectedBeforeDeferKeyword"
-  case \DeferStmtSyntax.deferKeyword:
-    return "deferKeyword"
-  case \DeferStmtSyntax.unexpectedBetweenDeferKeywordAndBody:
-    return "unexpectedBetweenDeferKeywordAndBody"
-  case \DeferStmtSyntax.body:
-    return "body"
-  case \DeferStmtSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \DeinitializerDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \DeinitializerDeclSyntax.attributes:
-    return "attributes"
-  case \DeinitializerDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \DeinitializerDeclSyntax.modifiers:
-    return "modifiers"
-  case \DeinitializerDeclSyntax.unexpectedBetweenModifiersAndDeinitKeyword:
-    return "unexpectedBetweenModifiersAndDeinitKeyword"
-  case \DeinitializerDeclSyntax.deinitKeyword:
-    return "deinitKeyword"
-  case \DeinitializerDeclSyntax.unexpectedBetweenDeinitKeywordAndEffectSpecifiers:
-    return "unexpectedBetweenDeinitKeywordAndEffectSpecifiers"
-  case \DeinitializerDeclSyntax.effectSpecifiers:
-    return "effectSpecifiers"
-  case \DeinitializerDeclSyntax.unexpectedBetweenEffectSpecifiersAndBody:
-    return "unexpectedBetweenEffectSpecifiersAndBody"
-  case \DeinitializerDeclSyntax.body:
-    return "body"
-  case \DeinitializerDeclSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \DeinitializerEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier:
-    return "unexpectedBeforeAsyncSpecifier"
-  case \DeinitializerEffectSpecifiersSyntax.asyncSpecifier:
-    return "asyncSpecifier"
-  case \DeinitializerEffectSpecifiersSyntax.unexpectedAfterAsyncSpecifier:
-    return "unexpectedAfterAsyncSpecifier"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBeforeOfLabel:
-    return "unexpectedBeforeOfLabel"
-  case \DerivativeAttributeArgumentsSyntax.ofLabel:
-    return "ofLabel"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenOfLabelAndColon:
-    return "unexpectedBetweenOfLabelAndColon"
-  case \DerivativeAttributeArgumentsSyntax.colon:
-    return "colon"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenColonAndOriginalDeclName:
-    return "unexpectedBetweenColonAndOriginalDeclName"
-  case \DerivativeAttributeArgumentsSyntax.originalDeclName:
-    return "originalDeclName"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenOriginalDeclNameAndPeriod:
-    return "unexpectedBetweenOriginalDeclNameAndPeriod"
-  case \DerivativeAttributeArgumentsSyntax.period:
-    return "period"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenPeriodAndAccessorSpecifier:
-    return "unexpectedBetweenPeriodAndAccessorSpecifier"
-  case \DerivativeAttributeArgumentsSyntax.accessorSpecifier:
-    return "accessorSpecifier"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenAccessorSpecifierAndComma:
-    return "unexpectedBetweenAccessorSpecifierAndComma"
-  case \DerivativeAttributeArgumentsSyntax.comma:
-    return "comma"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenCommaAndArguments:
-    return "unexpectedBetweenCommaAndArguments"
-  case \DerivativeAttributeArgumentsSyntax.arguments:
-    return "arguments"
-  case \DerivativeAttributeArgumentsSyntax.unexpectedAfterArguments:
-    return "unexpectedAfterArguments"
-  case \DesignatedTypeSyntax.unexpectedBeforeLeadingComma:
-    return "unexpectedBeforeLeadingComma"
-  case \DesignatedTypeSyntax.leadingComma:
-    return "leadingComma"
-  case \DesignatedTypeSyntax.unexpectedBetweenLeadingCommaAndName:
-    return "unexpectedBetweenLeadingCommaAndName"
-  case \DesignatedTypeSyntax.name:
-    return "name"
-  case \DesignatedTypeSyntax.unexpectedAfterName:
-    return "unexpectedAfterName"
-  case \DictionaryElementSyntax.unexpectedBeforeKey:
-    return "unexpectedBeforeKey"
-  case \DictionaryElementSyntax.key:
-    return "key"
-  case \DictionaryElementSyntax.unexpectedBetweenKeyAndColon:
-    return "unexpectedBetweenKeyAndColon"
-  case \DictionaryElementSyntax.colon:
-    return "colon"
-  case \DictionaryElementSyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \DictionaryElementSyntax.value:
-    return "value"
-  case \DictionaryElementSyntax.unexpectedBetweenValueAndTrailingComma:
-    return "unexpectedBetweenValueAndTrailingComma"
-  case \DictionaryElementSyntax.trailingComma:
-    return "trailingComma"
-  case \DictionaryElementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \DictionaryExprSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \DictionaryExprSyntax.leftSquare:
-    return "leftSquare"
-  case \DictionaryExprSyntax.unexpectedBetweenLeftSquareAndContent:
-    return "unexpectedBetweenLeftSquareAndContent"
-  case \DictionaryExprSyntax.content:
-    return "content"
-  case \DictionaryExprSyntax.unexpectedBetweenContentAndRightSquare:
-    return "unexpectedBetweenContentAndRightSquare"
-  case \DictionaryExprSyntax.rightSquare:
-    return "rightSquare"
-  case \DictionaryExprSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \DictionaryTypeSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \DictionaryTypeSyntax.leftSquare:
-    return "leftSquare"
-  case \DictionaryTypeSyntax.unexpectedBetweenLeftSquareAndKey:
-    return "unexpectedBetweenLeftSquareAndKey"
-  case \DictionaryTypeSyntax.key:
-    return "key"
-  case \DictionaryTypeSyntax.unexpectedBetweenKeyAndColon:
-    return "unexpectedBetweenKeyAndColon"
-  case \DictionaryTypeSyntax.colon:
-    return "colon"
-  case \DictionaryTypeSyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \DictionaryTypeSyntax.value:
-    return "value"
-  case \DictionaryTypeSyntax.unexpectedBetweenValueAndRightSquare:
-    return "unexpectedBetweenValueAndRightSquare"
-  case \DictionaryTypeSyntax.rightSquare:
-    return "rightSquare"
-  case \DictionaryTypeSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \DifferentiabilityArgumentSyntax.unexpectedBeforeArgument:
-    return "unexpectedBeforeArgument"
-  case \DifferentiabilityArgumentSyntax.argument:
-    return "argument"
-  case \DifferentiabilityArgumentSyntax.unexpectedBetweenArgumentAndTrailingComma:
-    return "unexpectedBetweenArgumentAndTrailingComma"
-  case \DifferentiabilityArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \DifferentiabilityArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \DifferentiabilityArgumentsSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \DifferentiabilityArgumentsSyntax.leftParen:
-    return "leftParen"
-  case \DifferentiabilityArgumentsSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \DifferentiabilityArgumentsSyntax.arguments:
-    return "arguments"
-  case \DifferentiabilityArgumentsSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \DifferentiabilityArgumentsSyntax.rightParen:
-    return "rightParen"
-  case \DifferentiabilityArgumentsSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedBeforeWrtLabel:
-    return "unexpectedBeforeWrtLabel"
-  case \DifferentiabilityWithRespectToArgumentSyntax.wrtLabel:
-    return "wrtLabel"
-  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedBetweenWrtLabelAndColon:
-    return "unexpectedBetweenWrtLabelAndColon"
-  case \DifferentiabilityWithRespectToArgumentSyntax.colon:
-    return "colon"
-  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedBetweenColonAndArguments:
-    return "unexpectedBetweenColonAndArguments"
-  case \DifferentiabilityWithRespectToArgumentSyntax.arguments:
-    return "arguments"
-  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedAfterArguments:
-    return "unexpectedAfterArguments"
-  case \DifferentiableAttributeArgumentsSyntax.unexpectedBeforeKindSpecifier:
-    return "unexpectedBeforeKindSpecifier"
-  case \DifferentiableAttributeArgumentsSyntax.kindSpecifier:
-    return "kindSpecifier"
-  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenKindSpecifierAndKindSpecifierComma:
-    return "unexpectedBetweenKindSpecifierAndKindSpecifierComma"
-  case \DifferentiableAttributeArgumentsSyntax.kindSpecifierComma:
-    return "kindSpecifierComma"
-  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenKindSpecifierCommaAndArguments:
-    return "unexpectedBetweenKindSpecifierCommaAndArguments"
-  case \DifferentiableAttributeArgumentsSyntax.arguments:
-    return "arguments"
-  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenArgumentsAndArgumentsComma:
-    return "unexpectedBetweenArgumentsAndArgumentsComma"
-  case \DifferentiableAttributeArgumentsSyntax.argumentsComma:
-    return "argumentsComma"
-  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenArgumentsCommaAndGenericWhereClause:
-    return "unexpectedBetweenArgumentsCommaAndGenericWhereClause"
-  case \DifferentiableAttributeArgumentsSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \DifferentiableAttributeArgumentsSyntax.unexpectedAfterGenericWhereClause:
-    return "unexpectedAfterGenericWhereClause"
-  case \DiscardAssignmentExprSyntax.unexpectedBeforeWildcard:
-    return "unexpectedBeforeWildcard"
-  case \DiscardAssignmentExprSyntax.wildcard:
-    return "wildcard"
-  case \DiscardAssignmentExprSyntax.unexpectedAfterWildcard:
-    return "unexpectedAfterWildcard"
-  case \DiscardStmtSyntax.unexpectedBeforeDiscardKeyword:
-    return "unexpectedBeforeDiscardKeyword"
-  case \DiscardStmtSyntax.discardKeyword:
-    return "discardKeyword"
-  case \DiscardStmtSyntax.unexpectedBetweenDiscardKeywordAndExpression:
-    return "unexpectedBetweenDiscardKeywordAndExpression"
-  case \DiscardStmtSyntax.expression:
-    return "expression"
-  case \DiscardStmtSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \DoExprSyntax.unexpectedBeforeDoKeyword:
-    return "unexpectedBeforeDoKeyword"
-  case \DoExprSyntax.doKeyword:
-    return "doKeyword"
-  case \DoExprSyntax.unexpectedBetweenDoKeywordAndBody:
-    return "unexpectedBetweenDoKeywordAndBody"
-  case \DoExprSyntax.body:
-    return "body"
-  case \DoExprSyntax.unexpectedBetweenBodyAndCatchClauses:
-    return "unexpectedBetweenBodyAndCatchClauses"
-  case \DoExprSyntax.catchClauses:
-    return "catchClauses"
-  case \DoExprSyntax.unexpectedAfterCatchClauses:
-    return "unexpectedAfterCatchClauses"
-  case \DoStmtSyntax.unexpectedBeforeDoKeyword:
-    return "unexpectedBeforeDoKeyword"
-  case \DoStmtSyntax.doKeyword:
-    return "doKeyword"
-  case \DoStmtSyntax.unexpectedBetweenDoKeywordAndThrowsClause:
-    return "unexpectedBetweenDoKeywordAndThrowsClause"
-  case \DoStmtSyntax.throwsClause:
-    return "throwsClause"
-  case \DoStmtSyntax.unexpectedBetweenThrowsClauseAndBody:
-    return "unexpectedBetweenThrowsClauseAndBody"
-  case \DoStmtSyntax.body:
-    return "body"
-  case \DoStmtSyntax.unexpectedBetweenBodyAndCatchClauses:
-    return "unexpectedBetweenBodyAndCatchClauses"
-  case \DoStmtSyntax.catchClauses:
-    return "catchClauses"
-  case \DoStmtSyntax.unexpectedAfterCatchClauses:
-    return "unexpectedAfterCatchClauses"
-  case \DocumentationAttributeArgumentSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \DocumentationAttributeArgumentSyntax.label:
-    return "label"
-  case \DocumentationAttributeArgumentSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \DocumentationAttributeArgumentSyntax.colon:
-    return "colon"
-  case \DocumentationAttributeArgumentSyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \DocumentationAttributeArgumentSyntax.value:
-    return "value"
-  case \DocumentationAttributeArgumentSyntax.unexpectedBetweenValueAndTrailingComma:
-    return "unexpectedBetweenValueAndTrailingComma"
-  case \DocumentationAttributeArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \DocumentationAttributeArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedBeforeForLabel:
-    return "unexpectedBeforeForLabel"
-  case \DynamicReplacementAttributeArgumentsSyntax.forLabel:
-    return "forLabel"
-  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedBetweenForLabelAndColon:
-    return "unexpectedBetweenForLabelAndColon"
-  case \DynamicReplacementAttributeArgumentsSyntax.colon:
-    return "colon"
-  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedBetweenColonAndDeclName:
-    return "unexpectedBetweenColonAndDeclName"
-  case \DynamicReplacementAttributeArgumentsSyntax.declName:
-    return "declName"
-  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedAfterDeclName:
-    return "unexpectedAfterDeclName"
-  case \EditorPlaceholderDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \EditorPlaceholderDeclSyntax.attributes:
-    return "attributes"
-  case \EditorPlaceholderDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \EditorPlaceholderDeclSyntax.modifiers:
-    return "modifiers"
-  case \EditorPlaceholderDeclSyntax.unexpectedBetweenModifiersAndPlaceholder:
-    return "unexpectedBetweenModifiersAndPlaceholder"
-  case \EditorPlaceholderDeclSyntax.placeholder:
-    return "placeholder"
-  case \EditorPlaceholderDeclSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \EditorPlaceholderExprSyntax.unexpectedBeforePlaceholder:
-    return "unexpectedBeforePlaceholder"
-  case \EditorPlaceholderExprSyntax.placeholder:
-    return "placeholder"
-  case \EditorPlaceholderExprSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \EnumCaseDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \EnumCaseDeclSyntax.attributes:
-    return "attributes"
-  case \EnumCaseDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \EnumCaseDeclSyntax.modifiers:
-    return "modifiers"
-  case \EnumCaseDeclSyntax.unexpectedBetweenModifiersAndCaseKeyword:
-    return "unexpectedBetweenModifiersAndCaseKeyword"
-  case \EnumCaseDeclSyntax.caseKeyword:
-    return "caseKeyword"
-  case \EnumCaseDeclSyntax.unexpectedBetweenCaseKeywordAndElements:
-    return "unexpectedBetweenCaseKeywordAndElements"
-  case \EnumCaseDeclSyntax.elements:
-    return "elements"
-  case \EnumCaseDeclSyntax.unexpectedAfterElements:
-    return "unexpectedAfterElements"
-  case \EnumCaseElementSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \EnumCaseElementSyntax.name:
-    return "name"
-  case \EnumCaseElementSyntax.unexpectedBetweenNameAndParameterClause:
-    return "unexpectedBetweenNameAndParameterClause"
-  case \EnumCaseElementSyntax.parameterClause:
-    return "parameterClause"
-  case \EnumCaseElementSyntax.unexpectedBetweenParameterClauseAndRawValue:
-    return "unexpectedBetweenParameterClauseAndRawValue"
-  case \EnumCaseElementSyntax.rawValue:
-    return "rawValue"
-  case \EnumCaseElementSyntax.unexpectedBetweenRawValueAndTrailingComma:
-    return "unexpectedBetweenRawValueAndTrailingComma"
-  case \EnumCaseElementSyntax.trailingComma:
-    return "trailingComma"
-  case \EnumCaseElementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \EnumCaseParameterClauseSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \EnumCaseParameterClauseSyntax.leftParen:
-    return "leftParen"
-  case \EnumCaseParameterClauseSyntax.unexpectedBetweenLeftParenAndParameters:
-    return "unexpectedBetweenLeftParenAndParameters"
-  case \EnumCaseParameterClauseSyntax.parameters:
-    return "parameters"
-  case \EnumCaseParameterClauseSyntax.unexpectedBetweenParametersAndRightParen:
-    return "unexpectedBetweenParametersAndRightParen"
-  case \EnumCaseParameterClauseSyntax.rightParen:
-    return "rightParen"
-  case \EnumCaseParameterClauseSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \EnumCaseParameterSyntax.unexpectedBeforeModifiers:
-    return "unexpectedBeforeModifiers"
-  case \EnumCaseParameterSyntax.modifiers:
-    return "modifiers"
-  case \EnumCaseParameterSyntax.unexpectedBetweenModifiersAndFirstName:
-    return "unexpectedBetweenModifiersAndFirstName"
-  case \EnumCaseParameterSyntax.firstName:
-    return "firstName"
-  case \EnumCaseParameterSyntax.unexpectedBetweenFirstNameAndSecondName:
-    return "unexpectedBetweenFirstNameAndSecondName"
-  case \EnumCaseParameterSyntax.secondName:
-    return "secondName"
-  case \EnumCaseParameterSyntax.unexpectedBetweenSecondNameAndColon:
-    return "unexpectedBetweenSecondNameAndColon"
-  case \EnumCaseParameterSyntax.colon:
-    return "colon"
-  case \EnumCaseParameterSyntax.unexpectedBetweenColonAndType:
-    return "unexpectedBetweenColonAndType"
-  case \EnumCaseParameterSyntax.type:
-    return "type"
-  case \EnumCaseParameterSyntax.unexpectedBetweenTypeAndDefaultValue:
-    return "unexpectedBetweenTypeAndDefaultValue"
-  case \EnumCaseParameterSyntax.defaultValue:
-    return "defaultValue"
-  case \EnumCaseParameterSyntax.unexpectedBetweenDefaultValueAndTrailingComma:
-    return "unexpectedBetweenDefaultValueAndTrailingComma"
-  case \EnumCaseParameterSyntax.trailingComma:
-    return "trailingComma"
-  case \EnumCaseParameterSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \EnumDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \EnumDeclSyntax.attributes:
-    return "attributes"
-  case \EnumDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \EnumDeclSyntax.modifiers:
-    return "modifiers"
-  case \EnumDeclSyntax.unexpectedBetweenModifiersAndEnumKeyword:
-    return "unexpectedBetweenModifiersAndEnumKeyword"
-  case \EnumDeclSyntax.enumKeyword:
-    return "enumKeyword"
-  case \EnumDeclSyntax.unexpectedBetweenEnumKeywordAndName:
-    return "unexpectedBetweenEnumKeywordAndName"
-  case \EnumDeclSyntax.name:
-    return "name"
-  case \EnumDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \EnumDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \EnumDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause:
-    return "unexpectedBetweenGenericParameterClauseAndInheritanceClause"
-  case \EnumDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \EnumDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
-    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
-  case \EnumDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \EnumDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
-    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
-  case \EnumDeclSyntax.memberBlock:
-    return "memberBlock"
-  case \EnumDeclSyntax.unexpectedAfterMemberBlock:
-    return "unexpectedAfterMemberBlock"
-  case \ExpressionPatternSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \ExpressionPatternSyntax.expression:
-    return "expression"
-  case \ExpressionPatternSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \ExpressionSegmentSyntax.unexpectedBeforeBackslash:
-    return "unexpectedBeforeBackslash"
-  case \ExpressionSegmentSyntax.backslash:
-    return "backslash"
-  case \ExpressionSegmentSyntax.unexpectedBetweenBackslashAndPounds:
-    return "unexpectedBetweenBackslashAndPounds"
-  case \ExpressionSegmentSyntax.pounds:
-    return "pounds"
-  case \ExpressionSegmentSyntax.unexpectedBetweenPoundsAndLeftParen:
-    return "unexpectedBetweenPoundsAndLeftParen"
-  case \ExpressionSegmentSyntax.leftParen:
-    return "leftParen"
-  case \ExpressionSegmentSyntax.unexpectedBetweenLeftParenAndExpressions:
-    return "unexpectedBetweenLeftParenAndExpressions"
-  case \ExpressionSegmentSyntax.expressions:
-    return "expressions"
-  case \ExpressionSegmentSyntax.unexpectedBetweenExpressionsAndRightParen:
-    return "unexpectedBetweenExpressionsAndRightParen"
-  case \ExpressionSegmentSyntax.rightParen:
-    return "rightParen"
-  case \ExpressionSegmentSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \ExpressionStmtSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \ExpressionStmtSyntax.expression:
-    return "expression"
-  case \ExpressionStmtSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \ExtensionDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ExtensionDeclSyntax.attributes:
-    return "attributes"
-  case \ExtensionDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \ExtensionDeclSyntax.modifiers:
-    return "modifiers"
-  case \ExtensionDeclSyntax.unexpectedBetweenModifiersAndExtensionKeyword:
-    return "unexpectedBetweenModifiersAndExtensionKeyword"
-  case \ExtensionDeclSyntax.extensionKeyword:
-    return "extensionKeyword"
-  case \ExtensionDeclSyntax.unexpectedBetweenExtensionKeywordAndExtendedType:
-    return "unexpectedBetweenExtensionKeywordAndExtendedType"
-  case \ExtensionDeclSyntax.extendedType:
-    return "extendedType"
-  case \ExtensionDeclSyntax.unexpectedBetweenExtendedTypeAndInheritanceClause:
-    return "unexpectedBetweenExtendedTypeAndInheritanceClause"
-  case \ExtensionDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \ExtensionDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
-    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
-  case \ExtensionDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \ExtensionDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
-    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
-  case \ExtensionDeclSyntax.memberBlock:
-    return "memberBlock"
-  case \ExtensionDeclSyntax.unexpectedAfterMemberBlock:
-    return "unexpectedAfterMemberBlock"
-  case \FallThroughStmtSyntax.unexpectedBeforeFallthroughKeyword:
-    return "unexpectedBeforeFallthroughKeyword"
-  case \FallThroughStmtSyntax.fallthroughKeyword:
-    return "fallthroughKeyword"
-  case \FallThroughStmtSyntax.unexpectedAfterFallthroughKeyword:
-    return "unexpectedAfterFallthroughKeyword"
-  case \FloatLiteralExprSyntax.unexpectedBeforeLiteral:
-    return "unexpectedBeforeLiteral"
-  case \FloatLiteralExprSyntax.literal:
-    return "literal"
-  case \FloatLiteralExprSyntax.unexpectedAfterLiteral:
-    return "unexpectedAfterLiteral"
-  case \ForStmtSyntax.unexpectedBeforeForKeyword:
-    return "unexpectedBeforeForKeyword"
-  case \ForStmtSyntax.forKeyword:
-    return "forKeyword"
-  case \ForStmtSyntax.unexpectedBetweenForKeywordAndTryKeyword:
-    return "unexpectedBetweenForKeywordAndTryKeyword"
-  case \ForStmtSyntax.tryKeyword:
-    return "tryKeyword"
-  case \ForStmtSyntax.unexpectedBetweenTryKeywordAndAwaitKeyword:
-    return "unexpectedBetweenTryKeywordAndAwaitKeyword"
-  case \ForStmtSyntax.awaitKeyword:
-    return "awaitKeyword"
-  case \ForStmtSyntax.unexpectedBetweenAwaitKeywordAndUnsafeKeyword:
-    return "unexpectedBetweenAwaitKeywordAndUnsafeKeyword"
-  case \ForStmtSyntax.unsafeKeyword:
-    return "unsafeKeyword"
-  case \ForStmtSyntax.unexpectedBetweenUnsafeKeywordAndCaseKeyword:
-    return "unexpectedBetweenUnsafeKeywordAndCaseKeyword"
-  case \ForStmtSyntax.caseKeyword:
-    return "caseKeyword"
-  case \ForStmtSyntax.unexpectedBetweenCaseKeywordAndPattern:
-    return "unexpectedBetweenCaseKeywordAndPattern"
-  case \ForStmtSyntax.pattern:
-    return "pattern"
-  case \ForStmtSyntax.unexpectedBetweenPatternAndTypeAnnotation:
-    return "unexpectedBetweenPatternAndTypeAnnotation"
-  case \ForStmtSyntax.typeAnnotation:
-    return "typeAnnotation"
-  case \ForStmtSyntax.unexpectedBetweenTypeAnnotationAndInKeyword:
-    return "unexpectedBetweenTypeAnnotationAndInKeyword"
-  case \ForStmtSyntax.inKeyword:
-    return "inKeyword"
-  case \ForStmtSyntax.unexpectedBetweenInKeywordAndSequence:
-    return "unexpectedBetweenInKeywordAndSequence"
-  case \ForStmtSyntax.sequence:
-    return "sequence"
-  case \ForStmtSyntax.unexpectedBetweenSequenceAndWhereClause:
-    return "unexpectedBetweenSequenceAndWhereClause"
-  case \ForStmtSyntax.whereClause:
-    return "whereClause"
-  case \ForStmtSyntax.unexpectedBetweenWhereClauseAndBody:
-    return "unexpectedBetweenWhereClauseAndBody"
-  case \ForStmtSyntax.body:
-    return "body"
-  case \ForStmtSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \ForceUnwrapExprSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \ForceUnwrapExprSyntax.expression:
-    return "expression"
-  case \ForceUnwrapExprSyntax.unexpectedBetweenExpressionAndExclamationMark:
-    return "unexpectedBetweenExpressionAndExclamationMark"
-  case \ForceUnwrapExprSyntax.exclamationMark:
-    return "exclamationMark"
-  case \ForceUnwrapExprSyntax.unexpectedAfterExclamationMark:
-    return "unexpectedAfterExclamationMark"
-  case \FunctionCallExprSyntax.unexpectedBeforeCalledExpression:
-    return "unexpectedBeforeCalledExpression"
-  case \FunctionCallExprSyntax.calledExpression:
-    return "calledExpression"
-  case \FunctionCallExprSyntax.unexpectedBetweenCalledExpressionAndLeftParen:
-    return "unexpectedBetweenCalledExpressionAndLeftParen"
-  case \FunctionCallExprSyntax.leftParen:
-    return "leftParen"
-  case \FunctionCallExprSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \FunctionCallExprSyntax.arguments:
-    return "arguments"
-  case \FunctionCallExprSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \FunctionCallExprSyntax.rightParen:
-    return "rightParen"
-  case \FunctionCallExprSyntax.unexpectedBetweenRightParenAndTrailingClosure:
-    return "unexpectedBetweenRightParenAndTrailingClosure"
-  case \FunctionCallExprSyntax.trailingClosure:
-    return "trailingClosure"
-  case \FunctionCallExprSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures:
-    return "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures"
-  case \FunctionCallExprSyntax.additionalTrailingClosures:
+  case \FunctionCallExprSyntax.additionalTrailingClosures,
+  \MacroExpansionDeclSyntax.additionalTrailingClosures,
+  \MacroExpansionExprSyntax.additionalTrailingClosures,
+  \SubscriptCallExprSyntax.additionalTrailingClosures:
     return "additionalTrailingClosures"
-  case \FunctionCallExprSyntax.unexpectedAfterAdditionalTrailingClosures:
-    return "unexpectedAfterAdditionalTrailingClosures"
-  case \FunctionDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \FunctionDeclSyntax.attributes:
-    return "attributes"
-  case \FunctionDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \FunctionDeclSyntax.modifiers:
-    return "modifiers"
-  case \FunctionDeclSyntax.unexpectedBetweenModifiersAndFuncKeyword:
-    return "unexpectedBetweenModifiersAndFuncKeyword"
-  case \FunctionDeclSyntax.funcKeyword:
-    return "funcKeyword"
-  case \FunctionDeclSyntax.unexpectedBetweenFuncKeywordAndName:
-    return "unexpectedBetweenFuncKeywordAndName"
-  case \FunctionDeclSyntax.name:
-    return "name"
-  case \FunctionDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \FunctionDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \FunctionDeclSyntax.unexpectedBetweenGenericParameterClauseAndSignature:
-    return "unexpectedBetweenGenericParameterClauseAndSignature"
-  case \FunctionDeclSyntax.signature:
-    return "signature"
-  case \FunctionDeclSyntax.unexpectedBetweenSignatureAndGenericWhereClause:
-    return "unexpectedBetweenSignatureAndGenericWhereClause"
-  case \FunctionDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \FunctionDeclSyntax.unexpectedBetweenGenericWhereClauseAndBody:
-    return "unexpectedBetweenGenericWhereClauseAndBody"
-  case \FunctionDeclSyntax.body:
-    return "body"
-  case \FunctionDeclSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \FunctionEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier:
-    return "unexpectedBeforeAsyncSpecifier"
-  case \FunctionEffectSpecifiersSyntax.asyncSpecifier:
-    return "asyncSpecifier"
-  case \FunctionEffectSpecifiersSyntax.unexpectedBetweenAsyncSpecifierAndThrowsClause:
-    return "unexpectedBetweenAsyncSpecifierAndThrowsClause"
-  case \FunctionEffectSpecifiersSyntax.throwsClause:
-    return "throwsClause"
-  case \FunctionEffectSpecifiersSyntax.unexpectedAfterThrowsClause:
-    return "unexpectedAfterThrowsClause"
-  case \FunctionParameterClauseSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \FunctionParameterClauseSyntax.leftParen:
-    return "leftParen"
-  case \FunctionParameterClauseSyntax.unexpectedBetweenLeftParenAndParameters:
-    return "unexpectedBetweenLeftParenAndParameters"
-  case \FunctionParameterClauseSyntax.parameters:
-    return "parameters"
-  case \FunctionParameterClauseSyntax.unexpectedBetweenParametersAndRightParen:
-    return "unexpectedBetweenParametersAndRightParen"
-  case \FunctionParameterClauseSyntax.rightParen:
-    return "rightParen"
-  case \FunctionParameterClauseSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \FunctionParameterSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \FunctionParameterSyntax.attributes:
-    return "attributes"
-  case \FunctionParameterSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \FunctionParameterSyntax.modifiers:
-    return "modifiers"
-  case \FunctionParameterSyntax.unexpectedBetweenModifiersAndFirstName:
-    return "unexpectedBetweenModifiersAndFirstName"
-  case \FunctionParameterSyntax.firstName:
-    return "firstName"
-  case \FunctionParameterSyntax.unexpectedBetweenFirstNameAndSecondName:
-    return "unexpectedBetweenFirstNameAndSecondName"
-  case \FunctionParameterSyntax.secondName:
-    return "secondName"
-  case \FunctionParameterSyntax.unexpectedBetweenSecondNameAndColon:
-    return "unexpectedBetweenSecondNameAndColon"
-  case \FunctionParameterSyntax.colon:
-    return "colon"
-  case \FunctionParameterSyntax.unexpectedBetweenColonAndType:
-    return "unexpectedBetweenColonAndType"
-  case \FunctionParameterSyntax.type:
-    return "type"
-  case \FunctionParameterSyntax.unexpectedBetweenTypeAndEllipsis:
-    return "unexpectedBetweenTypeAndEllipsis"
-  case \FunctionParameterSyntax.ellipsis:
-    return "ellipsis"
-  case \FunctionParameterSyntax.unexpectedBetweenEllipsisAndDefaultValue:
-    return "unexpectedBetweenEllipsisAndDefaultValue"
-  case \FunctionParameterSyntax.defaultValue:
-    return "defaultValue"
-  case \FunctionParameterSyntax.unexpectedBetweenDefaultValueAndTrailingComma:
-    return "unexpectedBetweenDefaultValueAndTrailingComma"
-  case \FunctionParameterSyntax.trailingComma:
-    return "trailingComma"
-  case \FunctionParameterSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \FunctionSignatureSyntax.unexpectedBeforeParameterClause:
-    return "unexpectedBeforeParameterClause"
-  case \FunctionSignatureSyntax.parameterClause:
-    return "parameterClause"
-  case \FunctionSignatureSyntax.unexpectedBetweenParameterClauseAndEffectSpecifiers:
-    return "unexpectedBetweenParameterClauseAndEffectSpecifiers"
-  case \FunctionSignatureSyntax.effectSpecifiers:
-    return "effectSpecifiers"
-  case \FunctionSignatureSyntax.unexpectedBetweenEffectSpecifiersAndReturnClause:
-    return "unexpectedBetweenEffectSpecifiersAndReturnClause"
-  case \FunctionSignatureSyntax.returnClause:
-    return "returnClause"
-  case \FunctionSignatureSyntax.unexpectedAfterReturnClause:
-    return "unexpectedAfterReturnClause"
-  case \FunctionTypeSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \FunctionTypeSyntax.leftParen:
-    return "leftParen"
-  case \FunctionTypeSyntax.unexpectedBetweenLeftParenAndParameters:
-    return "unexpectedBetweenLeftParenAndParameters"
-  case \FunctionTypeSyntax.parameters:
-    return "parameters"
-  case \FunctionTypeSyntax.unexpectedBetweenParametersAndRightParen:
-    return "unexpectedBetweenParametersAndRightParen"
-  case \FunctionTypeSyntax.rightParen:
-    return "rightParen"
-  case \FunctionTypeSyntax.unexpectedBetweenRightParenAndEffectSpecifiers:
-    return "unexpectedBetweenRightParenAndEffectSpecifiers"
-  case \FunctionTypeSyntax.effectSpecifiers:
-    return "effectSpecifiers"
-  case \FunctionTypeSyntax.unexpectedBetweenEffectSpecifiersAndReturnClause:
-    return "unexpectedBetweenEffectSpecifiersAndReturnClause"
-  case \FunctionTypeSyntax.returnClause:
-    return "returnClause"
-  case \FunctionTypeSyntax.unexpectedAfterReturnClause:
-    return "unexpectedAfterReturnClause"
-  case \GenericArgumentClauseSyntax.unexpectedBeforeLeftAngle:
-    return "unexpectedBeforeLeftAngle"
-  case \GenericArgumentClauseSyntax.leftAngle:
-    return "leftAngle"
-  case \GenericArgumentClauseSyntax.unexpectedBetweenLeftAngleAndArguments:
-    return "unexpectedBetweenLeftAngleAndArguments"
-  case \GenericArgumentClauseSyntax.arguments:
-    return "arguments"
-  case \GenericArgumentClauseSyntax.unexpectedBetweenArgumentsAndRightAngle:
-    return "unexpectedBetweenArgumentsAndRightAngle"
-  case \GenericArgumentClauseSyntax.rightAngle:
-    return "rightAngle"
-  case \GenericArgumentClauseSyntax.unexpectedAfterRightAngle:
-    return "unexpectedAfterRightAngle"
-  case \GenericArgumentSyntax.unexpectedBeforeArgument:
-    return "unexpectedBeforeArgument"
-  case \GenericArgumentSyntax.argument:
-    return "argument"
-  case \GenericArgumentSyntax.unexpectedBetweenArgumentAndTrailingComma:
-    return "unexpectedBetweenArgumentAndTrailingComma"
-  case \GenericArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \GenericArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \GenericParameterClauseSyntax.unexpectedBeforeLeftAngle:
-    return "unexpectedBeforeLeftAngle"
-  case \GenericParameterClauseSyntax.leftAngle:
-    return "leftAngle"
-  case \GenericParameterClauseSyntax.unexpectedBetweenLeftAngleAndParameters:
-    return "unexpectedBetweenLeftAngleAndParameters"
-  case \GenericParameterClauseSyntax.parameters:
-    return "parameters"
-  case \GenericParameterClauseSyntax.unexpectedBetweenParametersAndGenericWhereClause:
-    return "unexpectedBetweenParametersAndGenericWhereClause"
-  case \GenericParameterClauseSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \GenericParameterClauseSyntax.unexpectedBetweenGenericWhereClauseAndRightAngle:
-    return "unexpectedBetweenGenericWhereClauseAndRightAngle"
-  case \GenericParameterClauseSyntax.rightAngle:
-    return "rightAngle"
-  case \GenericParameterClauseSyntax.unexpectedAfterRightAngle:
-    return "unexpectedAfterRightAngle"
-  case \GenericParameterSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \GenericParameterSyntax.attributes:
-    return "attributes"
-  case \GenericParameterSyntax.unexpectedBetweenAttributesAndSpecifier:
-    return "unexpectedBetweenAttributesAndSpecifier"
-  case \GenericParameterSyntax.specifier:
-    return "specifier"
-  case \GenericParameterSyntax.unexpectedBetweenSpecifierAndName:
-    return "unexpectedBetweenSpecifierAndName"
-  case \GenericParameterSyntax.name:
-    return "name"
-  case \GenericParameterSyntax.unexpectedBetweenNameAndColon:
-    return "unexpectedBetweenNameAndColon"
-  case \GenericParameterSyntax.colon:
-    return "colon"
-  case \GenericParameterSyntax.unexpectedBetweenColonAndInheritedType:
-    return "unexpectedBetweenColonAndInheritedType"
-  case \GenericParameterSyntax.inheritedType:
-    return "inheritedType"
-  case \GenericParameterSyntax.unexpectedBetweenInheritedTypeAndTrailingComma:
-    return "unexpectedBetweenInheritedTypeAndTrailingComma"
-  case \GenericParameterSyntax.trailingComma:
-    return "trailingComma"
-  case \GenericParameterSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \GenericRequirementSyntax.unexpectedBeforeRequirement:
-    return "unexpectedBeforeRequirement"
-  case \GenericRequirementSyntax.requirement:
-    return "requirement"
-  case \GenericRequirementSyntax.unexpectedBetweenRequirementAndTrailingComma:
-    return "unexpectedBetweenRequirementAndTrailingComma"
-  case \GenericRequirementSyntax.trailingComma:
-    return "trailingComma"
-  case \GenericRequirementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \GenericSpecializationExprSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \GenericSpecializationExprSyntax.expression:
-    return "expression"
-  case \GenericSpecializationExprSyntax.unexpectedBetweenExpressionAndGenericArgumentClause:
-    return "unexpectedBetweenExpressionAndGenericArgumentClause"
-  case \GenericSpecializationExprSyntax.genericArgumentClause:
-    return "genericArgumentClause"
-  case \GenericSpecializationExprSyntax.unexpectedAfterGenericArgumentClause:
-    return "unexpectedAfterGenericArgumentClause"
-  case \GenericWhereClauseSyntax.unexpectedBeforeWhereKeyword:
-    return "unexpectedBeforeWhereKeyword"
-  case \GenericWhereClauseSyntax.whereKeyword:
-    return "whereKeyword"
-  case \GenericWhereClauseSyntax.unexpectedBetweenWhereKeywordAndRequirements:
-    return "unexpectedBetweenWhereKeywordAndRequirements"
-  case \GenericWhereClauseSyntax.requirements:
-    return "requirements"
-  case \GenericWhereClauseSyntax.unexpectedAfterRequirements:
-    return "unexpectedAfterRequirements"
-  case \GuardStmtSyntax.unexpectedBeforeGuardKeyword:
-    return "unexpectedBeforeGuardKeyword"
-  case \GuardStmtSyntax.guardKeyword:
-    return "guardKeyword"
-  case \GuardStmtSyntax.unexpectedBetweenGuardKeywordAndConditions:
-    return "unexpectedBetweenGuardKeywordAndConditions"
-  case \GuardStmtSyntax.conditions:
-    return "conditions"
-  case \GuardStmtSyntax.unexpectedBetweenConditionsAndElseKeyword:
-    return "unexpectedBetweenConditionsAndElseKeyword"
-  case \GuardStmtSyntax.elseKeyword:
-    return "elseKeyword"
-  case \GuardStmtSyntax.unexpectedBetweenElseKeywordAndBody:
-    return "unexpectedBetweenElseKeywordAndBody"
-  case \GuardStmtSyntax.body:
-    return "body"
-  case \GuardStmtSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \IdentifierPatternSyntax.unexpectedBeforeIdentifier:
-    return "unexpectedBeforeIdentifier"
-  case \IdentifierPatternSyntax.identifier:
-    return "identifier"
-  case \IdentifierPatternSyntax.unexpectedAfterIdentifier:
-    return "unexpectedAfterIdentifier"
-  case \IdentifierTypeSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \IdentifierTypeSyntax.name:
-    return "name"
-  case \IdentifierTypeSyntax.unexpectedBetweenNameAndGenericArgumentClause:
-    return "unexpectedBetweenNameAndGenericArgumentClause"
-  case \IdentifierTypeSyntax.genericArgumentClause:
-    return "genericArgumentClause"
-  case \IdentifierTypeSyntax.unexpectedAfterGenericArgumentClause:
-    return "unexpectedAfterGenericArgumentClause"
-  case \IfConfigClauseSyntax.unexpectedBeforePoundKeyword:
-    return "unexpectedBeforePoundKeyword"
-  case \IfConfigClauseSyntax.poundKeyword:
-    return "poundKeyword"
-  case \IfConfigClauseSyntax.unexpectedBetweenPoundKeywordAndCondition:
-    return "unexpectedBetweenPoundKeywordAndCondition"
-  case \IfConfigClauseSyntax.condition:
-    return "condition"
-  case \IfConfigClauseSyntax.unexpectedBetweenConditionAndElements:
-    return "unexpectedBetweenConditionAndElements"
-  case \IfConfigClauseSyntax.elements:
-    return "elements"
-  case \IfConfigClauseSyntax.unexpectedAfterElements:
-    return "unexpectedAfterElements"
-  case \IfConfigDeclSyntax.unexpectedBeforeClauses:
-    return "unexpectedBeforeClauses"
-  case \IfConfigDeclSyntax.clauses:
-    return "clauses"
-  case \IfConfigDeclSyntax.unexpectedBetweenClausesAndPoundEndif:
-    return "unexpectedBetweenClausesAndPoundEndif"
-  case \IfConfigDeclSyntax.poundEndif:
-    return "poundEndif"
-  case \IfConfigDeclSyntax.unexpectedAfterPoundEndif:
-    return "unexpectedAfterPoundEndif"
-  case \IfExprSyntax.unexpectedBeforeIfKeyword:
-    return "unexpectedBeforeIfKeyword"
-  case \IfExprSyntax.ifKeyword:
-    return "ifKeyword"
-  case \IfExprSyntax.unexpectedBetweenIfKeywordAndConditions:
-    return "unexpectedBetweenIfKeywordAndConditions"
-  case \IfExprSyntax.conditions:
-    return "conditions"
-  case \IfExprSyntax.unexpectedBetweenConditionsAndBody:
-    return "unexpectedBetweenConditionsAndBody"
-  case \IfExprSyntax.body:
-    return "body"
-  case \IfExprSyntax.unexpectedBetweenBodyAndElseKeyword:
-    return "unexpectedBetweenBodyAndElseKeyword"
-  case \IfExprSyntax.elseKeyword:
-    return "elseKeyword"
-  case \IfExprSyntax.unexpectedBetweenElseKeywordAndElseBody:
-    return "unexpectedBetweenElseKeywordAndElseBody"
-  case \IfExprSyntax.elseBody:
-    return "elseBody"
-  case \IfExprSyntax.unexpectedAfterElseBody:
-    return "unexpectedAfterElseBody"
-  case \ImplementsAttributeArgumentsSyntax.unexpectedBeforeType:
-    return "unexpectedBeforeType"
-  case \ImplementsAttributeArgumentsSyntax.type:
-    return "type"
-  case \ImplementsAttributeArgumentsSyntax.unexpectedBetweenTypeAndComma:
-    return "unexpectedBetweenTypeAndComma"
-  case \ImplementsAttributeArgumentsSyntax.comma:
-    return "comma"
-  case \ImplementsAttributeArgumentsSyntax.unexpectedBetweenCommaAndDeclName:
-    return "unexpectedBetweenCommaAndDeclName"
-  case \ImplementsAttributeArgumentsSyntax.declName:
-    return "declName"
-  case \ImplementsAttributeArgumentsSyntax.unexpectedAfterDeclName:
-    return "unexpectedAfterDeclName"
-  case \ImplicitlyUnwrappedOptionalTypeSyntax.unexpectedBeforeWrappedType:
-    return "unexpectedBeforeWrappedType"
-  case \ImplicitlyUnwrappedOptionalTypeSyntax.wrappedType:
-    return "wrappedType"
-  case \ImplicitlyUnwrappedOptionalTypeSyntax.unexpectedBetweenWrappedTypeAndExclamationMark:
-    return "unexpectedBetweenWrappedTypeAndExclamationMark"
-  case \ImplicitlyUnwrappedOptionalTypeSyntax.exclamationMark:
-    return "exclamationMark"
-  case \ImplicitlyUnwrappedOptionalTypeSyntax.unexpectedAfterExclamationMark:
-    return "unexpectedAfterExclamationMark"
-  case \ImportDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ImportDeclSyntax.attributes:
-    return "attributes"
-  case \ImportDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \ImportDeclSyntax.modifiers:
-    return "modifiers"
-  case \ImportDeclSyntax.unexpectedBetweenModifiersAndImportKeyword:
-    return "unexpectedBetweenModifiersAndImportKeyword"
-  case \ImportDeclSyntax.importKeyword:
-    return "importKeyword"
-  case \ImportDeclSyntax.unexpectedBetweenImportKeywordAndImportKindSpecifier:
-    return "unexpectedBetweenImportKeywordAndImportKindSpecifier"
-  case \ImportDeclSyntax.importKindSpecifier:
-    return "importKindSpecifier"
-  case \ImportDeclSyntax.unexpectedBetweenImportKindSpecifierAndPath:
-    return "unexpectedBetweenImportKindSpecifierAndPath"
-  case \ImportDeclSyntax.path:
-    return "path"
-  case \ImportDeclSyntax.unexpectedAfterPath:
-    return "unexpectedAfterPath"
-  case \ImportPathComponentSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \ImportPathComponentSyntax.name:
-    return "name"
-  case \ImportPathComponentSyntax.unexpectedBetweenNameAndTrailingPeriod:
-    return "unexpectedBetweenNameAndTrailingPeriod"
-  case \ImportPathComponentSyntax.trailingPeriod:
-    return "trailingPeriod"
-  case \ImportPathComponentSyntax.unexpectedAfterTrailingPeriod:
-    return "unexpectedAfterTrailingPeriod"
-  case \InOutExprSyntax.unexpectedBeforeAmpersand:
-    return "unexpectedBeforeAmpersand"
-  case \InOutExprSyntax.ampersand:
-    return "ampersand"
-  case \InOutExprSyntax.unexpectedBetweenAmpersandAndExpression:
-    return "unexpectedBetweenAmpersandAndExpression"
-  case \InOutExprSyntax.expression:
-    return "expression"
-  case \InOutExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \InfixOperatorExprSyntax.unexpectedBeforeLeftOperand:
-    return "unexpectedBeforeLeftOperand"
-  case \InfixOperatorExprSyntax.leftOperand:
-    return "leftOperand"
-  case \InfixOperatorExprSyntax.unexpectedBetweenLeftOperandAndOperator:
-    return "unexpectedBetweenLeftOperandAndOperator"
-  case \InfixOperatorExprSyntax.operator:
-    return "operator"
-  case \InfixOperatorExprSyntax.unexpectedBetweenOperatorAndRightOperand:
-    return "unexpectedBetweenOperatorAndRightOperand"
-  case \InfixOperatorExprSyntax.rightOperand:
-    return "rightOperand"
-  case \InfixOperatorExprSyntax.unexpectedAfterRightOperand:
-    return "unexpectedAfterRightOperand"
-  case \InheritanceClauseSyntax.unexpectedBeforeColon:
-    return "unexpectedBeforeColon"
-  case \InheritanceClauseSyntax.colon:
-    return "colon"
-  case \InheritanceClauseSyntax.unexpectedBetweenColonAndInheritedTypes:
-    return "unexpectedBetweenColonAndInheritedTypes"
-  case \InheritanceClauseSyntax.inheritedTypes:
-    return "inheritedTypes"
-  case \InheritanceClauseSyntax.unexpectedAfterInheritedTypes:
-    return "unexpectedAfterInheritedTypes"
-  case \InheritedTypeSyntax.unexpectedBeforeType:
-    return "unexpectedBeforeType"
-  case \InheritedTypeSyntax.type:
-    return "type"
-  case \InheritedTypeSyntax.unexpectedBetweenTypeAndTrailingComma:
-    return "unexpectedBetweenTypeAndTrailingComma"
-  case \InheritedTypeSyntax.trailingComma:
-    return "trailingComma"
-  case \InheritedTypeSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \InitializerClauseSyntax.unexpectedBeforeEqual:
-    return "unexpectedBeforeEqual"
-  case \InitializerClauseSyntax.equal:
-    return "equal"
-  case \InitializerClauseSyntax.unexpectedBetweenEqualAndValue:
-    return "unexpectedBetweenEqualAndValue"
-  case \InitializerClauseSyntax.value:
-    return "value"
-  case \InitializerClauseSyntax.unexpectedAfterValue:
-    return "unexpectedAfterValue"
-  case \InitializerDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \InitializerDeclSyntax.attributes:
-    return "attributes"
-  case \InitializerDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \InitializerDeclSyntax.modifiers:
-    return "modifiers"
-  case \InitializerDeclSyntax.unexpectedBetweenModifiersAndInitKeyword:
-    return "unexpectedBetweenModifiersAndInitKeyword"
-  case \InitializerDeclSyntax.initKeyword:
-    return "initKeyword"
-  case \InitializerDeclSyntax.unexpectedBetweenInitKeywordAndOptionalMark:
-    return "unexpectedBetweenInitKeywordAndOptionalMark"
-  case \InitializerDeclSyntax.optionalMark:
-    return "optionalMark"
-  case \InitializerDeclSyntax.unexpectedBetweenOptionalMarkAndGenericParameterClause:
-    return "unexpectedBetweenOptionalMarkAndGenericParameterClause"
-  case \InitializerDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \InitializerDeclSyntax.unexpectedBetweenGenericParameterClauseAndSignature:
-    return "unexpectedBetweenGenericParameterClauseAndSignature"
-  case \InitializerDeclSyntax.signature:
-    return "signature"
-  case \InitializerDeclSyntax.unexpectedBetweenSignatureAndGenericWhereClause:
-    return "unexpectedBetweenSignatureAndGenericWhereClause"
-  case \InitializerDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \InitializerDeclSyntax.unexpectedBetweenGenericWhereClauseAndBody:
-    return "unexpectedBetweenGenericWhereClauseAndBody"
-  case \InitializerDeclSyntax.body:
-    return "body"
-  case \InitializerDeclSyntax.unexpectedAfterBody:
-    return "unexpectedAfterBody"
-  case \InlineArrayTypeSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \InlineArrayTypeSyntax.leftSquare:
-    return "leftSquare"
-  case \InlineArrayTypeSyntax.unexpectedBetweenLeftSquareAndCount:
-    return "unexpectedBetweenLeftSquareAndCount"
-  case \InlineArrayTypeSyntax.count:
-    return "count"
-  case \InlineArrayTypeSyntax.unexpectedBetweenCountAndSeparator:
-    return "unexpectedBetweenCountAndSeparator"
-  case \InlineArrayTypeSyntax.separator:
-    return "separator"
-  case \InlineArrayTypeSyntax.unexpectedBetweenSeparatorAndElement:
-    return "unexpectedBetweenSeparatorAndElement"
-  case \InlineArrayTypeSyntax.element:
-    return "element"
-  case \InlineArrayTypeSyntax.unexpectedBetweenElementAndRightSquare:
-    return "unexpectedBetweenElementAndRightSquare"
-  case \InlineArrayTypeSyntax.rightSquare:
-    return "rightSquare"
-  case \InlineArrayTypeSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \IntegerLiteralExprSyntax.unexpectedBeforeLiteral:
-    return "unexpectedBeforeLiteral"
-  case \IntegerLiteralExprSyntax.literal:
-    return "literal"
-  case \IntegerLiteralExprSyntax.unexpectedAfterLiteral:
-    return "unexpectedAfterLiteral"
-  case \IsExprSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \IsExprSyntax.expression:
-    return "expression"
-  case \IsExprSyntax.unexpectedBetweenExpressionAndIsKeyword:
-    return "unexpectedBetweenExpressionAndIsKeyword"
-  case \IsExprSyntax.isKeyword:
-    return "isKeyword"
-  case \IsExprSyntax.unexpectedBetweenIsKeywordAndType:
-    return "unexpectedBetweenIsKeywordAndType"
-  case \IsExprSyntax.type:
-    return "type"
-  case \IsExprSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \IsTypePatternSyntax.unexpectedBeforeIsKeyword:
-    return "unexpectedBeforeIsKeyword"
-  case \IsTypePatternSyntax.isKeyword:
-    return "isKeyword"
-  case \IsTypePatternSyntax.unexpectedBetweenIsKeywordAndType:
-    return "unexpectedBetweenIsKeywordAndType"
-  case \IsTypePatternSyntax.type:
-    return "type"
-  case \IsTypePatternSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \KeyPathComponentSyntax.unexpectedBeforePeriod:
-    return "unexpectedBeforePeriod"
-  case \KeyPathComponentSyntax.period:
-    return "period"
-  case \KeyPathComponentSyntax.unexpectedBetweenPeriodAndComponent:
-    return "unexpectedBetweenPeriodAndComponent"
-  case \KeyPathComponentSyntax.component:
-    return "component"
-  case \KeyPathComponentSyntax.unexpectedAfterComponent:
-    return "unexpectedAfterComponent"
-  case \KeyPathExprSyntax.unexpectedBeforeBackslash:
-    return "unexpectedBeforeBackslash"
-  case \KeyPathExprSyntax.backslash:
-    return "backslash"
-  case \KeyPathExprSyntax.unexpectedBetweenBackslashAndRoot:
-    return "unexpectedBetweenBackslashAndRoot"
-  case \KeyPathExprSyntax.root:
-    return "root"
-  case \KeyPathExprSyntax.unexpectedBetweenRootAndComponents:
-    return "unexpectedBetweenRootAndComponents"
-  case \KeyPathExprSyntax.components:
-    return "components"
-  case \KeyPathExprSyntax.unexpectedAfterComponents:
-    return "unexpectedAfterComponents"
-  case \KeyPathMethodComponentSyntax.unexpectedBeforeDeclName:
-    return "unexpectedBeforeDeclName"
-  case \KeyPathMethodComponentSyntax.declName:
-    return "declName"
-  case \KeyPathMethodComponentSyntax.unexpectedBetweenDeclNameAndLeftParen:
-    return "unexpectedBetweenDeclNameAndLeftParen"
-  case \KeyPathMethodComponentSyntax.leftParen:
-    return "leftParen"
-  case \KeyPathMethodComponentSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \KeyPathMethodComponentSyntax.arguments:
-    return "arguments"
-  case \KeyPathMethodComponentSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \KeyPathMethodComponentSyntax.rightParen:
-    return "rightParen"
-  case \KeyPathMethodComponentSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \KeyPathOptionalComponentSyntax.unexpectedBeforeQuestionOrExclamationMark:
-    return "unexpectedBeforeQuestionOrExclamationMark"
-  case \KeyPathOptionalComponentSyntax.questionOrExclamationMark:
-    return "questionOrExclamationMark"
-  case \KeyPathOptionalComponentSyntax.unexpectedAfterQuestionOrExclamationMark:
-    return "unexpectedAfterQuestionOrExclamationMark"
-  case \KeyPathPropertyComponentSyntax.unexpectedBeforeDeclName:
-    return "unexpectedBeforeDeclName"
-  case \KeyPathPropertyComponentSyntax.declName:
-    return "declName"
-  case \KeyPathPropertyComponentSyntax.unexpectedBetweenDeclNameAndGenericArgumentClause:
-    return "unexpectedBetweenDeclNameAndGenericArgumentClause"
-  case \KeyPathPropertyComponentSyntax.genericArgumentClause:
-    return "genericArgumentClause"
-  case \KeyPathPropertyComponentSyntax.unexpectedAfterGenericArgumentClause:
-    return "unexpectedAfterGenericArgumentClause"
-  case \KeyPathSubscriptComponentSyntax.unexpectedBeforeLeftSquare:
-    return "unexpectedBeforeLeftSquare"
-  case \KeyPathSubscriptComponentSyntax.leftSquare:
-    return "leftSquare"
-  case \KeyPathSubscriptComponentSyntax.unexpectedBetweenLeftSquareAndArguments:
-    return "unexpectedBetweenLeftSquareAndArguments"
-  case \KeyPathSubscriptComponentSyntax.arguments:
-    return "arguments"
-  case \KeyPathSubscriptComponentSyntax.unexpectedBetweenArgumentsAndRightSquare:
-    return "unexpectedBetweenArgumentsAndRightSquare"
-  case \KeyPathSubscriptComponentSyntax.rightSquare:
-    return "rightSquare"
-  case \KeyPathSubscriptComponentSyntax.unexpectedAfterRightSquare:
-    return "unexpectedAfterRightSquare"
-  case \LabeledExprSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \LabeledExprSyntax.label:
-    return "label"
-  case \LabeledExprSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \LabeledExprSyntax.colon:
-    return "colon"
-  case \LabeledExprSyntax.unexpectedBetweenColonAndExpression:
-    return "unexpectedBetweenColonAndExpression"
-  case \LabeledExprSyntax.expression:
-    return "expression"
-  case \LabeledExprSyntax.unexpectedBetweenExpressionAndTrailingComma:
-    return "unexpectedBetweenExpressionAndTrailingComma"
-  case \LabeledExprSyntax.trailingComma:
-    return "trailingComma"
-  case \LabeledExprSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \LabeledSpecializeArgumentSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \LabeledSpecializeArgumentSyntax.label:
-    return "label"
-  case \LabeledSpecializeArgumentSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \LabeledSpecializeArgumentSyntax.colon:
-    return "colon"
-  case \LabeledSpecializeArgumentSyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \LabeledSpecializeArgumentSyntax.value:
-    return "value"
-  case \LabeledSpecializeArgumentSyntax.unexpectedBetweenValueAndTrailingComma:
-    return "unexpectedBetweenValueAndTrailingComma"
-  case \LabeledSpecializeArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \LabeledSpecializeArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \LabeledStmtSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \LabeledStmtSyntax.label:
-    return "label"
-  case \LabeledStmtSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \LabeledStmtSyntax.colon:
-    return "colon"
-  case \LabeledStmtSyntax.unexpectedBetweenColonAndStatement:
-    return "unexpectedBetweenColonAndStatement"
-  case \LabeledStmtSyntax.statement:
-    return "statement"
-  case \LabeledStmtSyntax.unexpectedAfterStatement:
-    return "unexpectedAfterStatement"
-  case \LayoutRequirementSyntax.unexpectedBeforeType:
-    return "unexpectedBeforeType"
-  case \LayoutRequirementSyntax.type:
-    return "type"
-  case \LayoutRequirementSyntax.unexpectedBetweenTypeAndColon:
-    return "unexpectedBetweenTypeAndColon"
-  case \LayoutRequirementSyntax.colon:
-    return "colon"
-  case \LayoutRequirementSyntax.unexpectedBetweenColonAndLayoutSpecifier:
-    return "unexpectedBetweenColonAndLayoutSpecifier"
-  case \LayoutRequirementSyntax.layoutSpecifier:
-    return "layoutSpecifier"
-  case \LayoutRequirementSyntax.unexpectedBetweenLayoutSpecifierAndLeftParen:
-    return "unexpectedBetweenLayoutSpecifierAndLeftParen"
-  case \LayoutRequirementSyntax.leftParen:
-    return "leftParen"
-  case \LayoutRequirementSyntax.unexpectedBetweenLeftParenAndSize:
-    return "unexpectedBetweenLeftParenAndSize"
-  case \LayoutRequirementSyntax.size:
-    return "size"
-  case \LayoutRequirementSyntax.unexpectedBetweenSizeAndComma:
-    return "unexpectedBetweenSizeAndComma"
-  case \LayoutRequirementSyntax.comma:
-    return "comma"
-  case \LayoutRequirementSyntax.unexpectedBetweenCommaAndAlignment:
-    return "unexpectedBetweenCommaAndAlignment"
   case \LayoutRequirementSyntax.alignment:
     return "alignment"
-  case \LayoutRequirementSyntax.unexpectedBetweenAlignmentAndRightParen:
-    return "unexpectedBetweenAlignmentAndRightParen"
-  case \LayoutRequirementSyntax.rightParen:
-    return "rightParen"
-  case \LayoutRequirementSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \LifetimeSpecifierArgumentSyntax.unexpectedBeforeParameter:
-    return "unexpectedBeforeParameter"
-  case \LifetimeSpecifierArgumentSyntax.parameter:
-    return "parameter"
-  case \LifetimeSpecifierArgumentSyntax.unexpectedBetweenParameterAndTrailingComma:
-    return "unexpectedBetweenParameterAndTrailingComma"
-  case \LifetimeSpecifierArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \LifetimeSpecifierArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \LifetimeTypeSpecifierSyntax.unexpectedBeforeDependsOnKeyword:
-    return "unexpectedBeforeDependsOnKeyword"
-  case \LifetimeTypeSpecifierSyntax.dependsOnKeyword:
-    return "dependsOnKeyword"
-  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenDependsOnKeywordAndLeftParen:
-    return "unexpectedBetweenDependsOnKeywordAndLeftParen"
-  case \LifetimeTypeSpecifierSyntax.leftParen:
-    return "leftParen"
-  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenLeftParenAndScopedKeyword:
-    return "unexpectedBetweenLeftParenAndScopedKeyword"
-  case \LifetimeTypeSpecifierSyntax.scopedKeyword:
-    return "scopedKeyword"
-  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenScopedKeywordAndArguments:
-    return "unexpectedBetweenScopedKeywordAndArguments"
-  case \LifetimeTypeSpecifierSyntax.arguments:
-    return "arguments"
-  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \LifetimeTypeSpecifierSyntax.rightParen:
-    return "rightParen"
-  case \LifetimeTypeSpecifierSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \MacroDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \MacroDeclSyntax.attributes:
-    return "attributes"
-  case \MacroDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \MacroDeclSyntax.modifiers:
-    return "modifiers"
-  case \MacroDeclSyntax.unexpectedBetweenModifiersAndMacroKeyword:
-    return "unexpectedBetweenModifiersAndMacroKeyword"
-  case \MacroDeclSyntax.macroKeyword:
-    return "macroKeyword"
-  case \MacroDeclSyntax.unexpectedBetweenMacroKeywordAndName:
-    return "unexpectedBetweenMacroKeywordAndName"
-  case \MacroDeclSyntax.name:
-    return "name"
-  case \MacroDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \MacroDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \MacroDeclSyntax.unexpectedBetweenGenericParameterClauseAndSignature:
-    return "unexpectedBetweenGenericParameterClauseAndSignature"
-  case \MacroDeclSyntax.signature:
-    return "signature"
-  case \MacroDeclSyntax.unexpectedBetweenSignatureAndDefinition:
-    return "unexpectedBetweenSignatureAndDefinition"
-  case \MacroDeclSyntax.definition:
-    return "definition"
-  case \MacroDeclSyntax.unexpectedBetweenDefinitionAndGenericWhereClause:
-    return "unexpectedBetweenDefinitionAndGenericWhereClause"
-  case \MacroDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \MacroDeclSyntax.unexpectedAfterGenericWhereClause:
-    return "unexpectedAfterGenericWhereClause"
-  case \MacroExpansionDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \MacroExpansionDeclSyntax.attributes:
-    return "attributes"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \MacroExpansionDeclSyntax.modifiers:
-    return "modifiers"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenModifiersAndPound:
-    return "unexpectedBetweenModifiersAndPound"
-  case \MacroExpansionDeclSyntax.pound:
-    return "pound"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenPoundAndMacroName:
-    return "unexpectedBetweenPoundAndMacroName"
-  case \MacroExpansionDeclSyntax.macroName:
-    return "macroName"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenMacroNameAndGenericArgumentClause:
-    return "unexpectedBetweenMacroNameAndGenericArgumentClause"
-  case \MacroExpansionDeclSyntax.genericArgumentClause:
-    return "genericArgumentClause"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenGenericArgumentClauseAndLeftParen:
-    return "unexpectedBetweenGenericArgumentClauseAndLeftParen"
-  case \MacroExpansionDeclSyntax.leftParen:
-    return "leftParen"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \MacroExpansionDeclSyntax.arguments:
-    return "arguments"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \MacroExpansionDeclSyntax.rightParen:
-    return "rightParen"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenRightParenAndTrailingClosure:
-    return "unexpectedBetweenRightParenAndTrailingClosure"
-  case \MacroExpansionDeclSyntax.trailingClosure:
-    return "trailingClosure"
-  case \MacroExpansionDeclSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures:
-    return "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures"
-  case \MacroExpansionDeclSyntax.additionalTrailingClosures:
-    return "additionalTrailingClosures"
-  case \MacroExpansionDeclSyntax.unexpectedAfterAdditionalTrailingClosures:
-    return "unexpectedAfterAdditionalTrailingClosures"
-  case \MacroExpansionExprSyntax.unexpectedBeforePound:
-    return "unexpectedBeforePound"
-  case \MacroExpansionExprSyntax.pound:
-    return "pound"
-  case \MacroExpansionExprSyntax.unexpectedBetweenPoundAndMacroName:
-    return "unexpectedBetweenPoundAndMacroName"
-  case \MacroExpansionExprSyntax.macroName:
-    return "macroName"
-  case \MacroExpansionExprSyntax.unexpectedBetweenMacroNameAndGenericArgumentClause:
-    return "unexpectedBetweenMacroNameAndGenericArgumentClause"
-  case \MacroExpansionExprSyntax.genericArgumentClause:
-    return "genericArgumentClause"
-  case \MacroExpansionExprSyntax.unexpectedBetweenGenericArgumentClauseAndLeftParen:
-    return "unexpectedBetweenGenericArgumentClauseAndLeftParen"
-  case \MacroExpansionExprSyntax.leftParen:
-    return "leftParen"
-  case \MacroExpansionExprSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \MacroExpansionExprSyntax.arguments:
-    return "arguments"
-  case \MacroExpansionExprSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \MacroExpansionExprSyntax.rightParen:
-    return "rightParen"
-  case \MacroExpansionExprSyntax.unexpectedBetweenRightParenAndTrailingClosure:
-    return "unexpectedBetweenRightParenAndTrailingClosure"
-  case \MacroExpansionExprSyntax.trailingClosure:
-    return "trailingClosure"
-  case \MacroExpansionExprSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures:
-    return "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures"
-  case \MacroExpansionExprSyntax.additionalTrailingClosures:
-    return "additionalTrailingClosures"
-  case \MacroExpansionExprSyntax.unexpectedAfterAdditionalTrailingClosures:
-    return "unexpectedAfterAdditionalTrailingClosures"
-  case \MatchingPatternConditionSyntax.unexpectedBeforeCaseKeyword:
-    return "unexpectedBeforeCaseKeyword"
-  case \MatchingPatternConditionSyntax.caseKeyword:
-    return "caseKeyword"
-  case \MatchingPatternConditionSyntax.unexpectedBetweenCaseKeywordAndPattern:
-    return "unexpectedBetweenCaseKeywordAndPattern"
-  case \MatchingPatternConditionSyntax.pattern:
-    return "pattern"
-  case \MatchingPatternConditionSyntax.unexpectedBetweenPatternAndTypeAnnotation:
-    return "unexpectedBetweenPatternAndTypeAnnotation"
-  case \MatchingPatternConditionSyntax.typeAnnotation:
-    return "typeAnnotation"
-  case \MatchingPatternConditionSyntax.unexpectedBetweenTypeAnnotationAndInitializer:
-    return "unexpectedBetweenTypeAnnotationAndInitializer"
-  case \MatchingPatternConditionSyntax.initializer:
-    return "initializer"
-  case \MatchingPatternConditionSyntax.unexpectedAfterInitializer:
-    return "unexpectedAfterInitializer"
-  case \MemberAccessExprSyntax.unexpectedBeforeBase:
-    return "unexpectedBeforeBase"
-  case \MemberAccessExprSyntax.base:
-    return "base"
-  case \MemberAccessExprSyntax.unexpectedBetweenBaseAndPeriod:
-    return "unexpectedBetweenBaseAndPeriod"
-  case \MemberAccessExprSyntax.period:
-    return "period"
-  case \MemberAccessExprSyntax.unexpectedBetweenPeriodAndDeclName:
-    return "unexpectedBetweenPeriodAndDeclName"
-  case \MemberAccessExprSyntax.declName:
-    return "declName"
-  case \MemberAccessExprSyntax.unexpectedAfterDeclName:
-    return "unexpectedAfterDeclName"
-  case \MemberBlockItemListFileSyntax.unexpectedBeforeMembers:
-    return "unexpectedBeforeMembers"
-  case \MemberBlockItemListFileSyntax.members:
-    return "members"
-  case \MemberBlockItemListFileSyntax.unexpectedBetweenMembersAndEndOfFileToken:
-    return "unexpectedBetweenMembersAndEndOfFileToken"
-  case \MemberBlockItemListFileSyntax.endOfFileToken:
-    return "endOfFileToken"
-  case \MemberBlockItemListFileSyntax.unexpectedAfterEndOfFileToken:
-    return "unexpectedAfterEndOfFileToken"
-  case \MemberBlockItemSyntax.unexpectedBeforeDecl:
-    return "unexpectedBeforeDecl"
-  case \MemberBlockItemSyntax.decl:
-    return "decl"
-  case \MemberBlockItemSyntax.unexpectedBetweenDeclAndSemicolon:
-    return "unexpectedBetweenDeclAndSemicolon"
-  case \MemberBlockItemSyntax.semicolon:
-    return "semicolon"
-  case \MemberBlockItemSyntax.unexpectedAfterSemicolon:
-    return "unexpectedAfterSemicolon"
-  case \MemberBlockSyntax.unexpectedBeforeLeftBrace:
-    return "unexpectedBeforeLeftBrace"
-  case \MemberBlockSyntax.leftBrace:
-    return "leftBrace"
-  case \MemberBlockSyntax.unexpectedBetweenLeftBraceAndMembers:
-    return "unexpectedBetweenLeftBraceAndMembers"
-  case \MemberBlockSyntax.members:
-    return "members"
-  case \MemberBlockSyntax.unexpectedBetweenMembersAndRightBrace:
-    return "unexpectedBetweenMembersAndRightBrace"
-  case \MemberBlockSyntax.rightBrace:
-    return "rightBrace"
-  case \MemberBlockSyntax.unexpectedAfterRightBrace:
-    return "unexpectedAfterRightBrace"
-  case \MemberTypeSyntax.unexpectedBeforeBaseType:
-    return "unexpectedBeforeBaseType"
-  case \MemberTypeSyntax.baseType:
-    return "baseType"
-  case \MemberTypeSyntax.unexpectedBetweenBaseTypeAndPeriod:
-    return "unexpectedBetweenBaseTypeAndPeriod"
-  case \MemberTypeSyntax.period:
-    return "period"
-  case \MemberTypeSyntax.unexpectedBetweenPeriodAndName:
-    return "unexpectedBetweenPeriodAndName"
-  case \MemberTypeSyntax.name:
-    return "name"
-  case \MemberTypeSyntax.unexpectedBetweenNameAndGenericArgumentClause:
-    return "unexpectedBetweenNameAndGenericArgumentClause"
-  case \MemberTypeSyntax.genericArgumentClause:
-    return "genericArgumentClause"
-  case \MemberTypeSyntax.unexpectedAfterGenericArgumentClause:
-    return "unexpectedAfterGenericArgumentClause"
-  case \MetatypeTypeSyntax.unexpectedBeforeBaseType:
-    return "unexpectedBeforeBaseType"
-  case \MetatypeTypeSyntax.baseType:
-    return "baseType"
-  case \MetatypeTypeSyntax.unexpectedBetweenBaseTypeAndPeriod:
-    return "unexpectedBetweenBaseTypeAndPeriod"
-  case \MetatypeTypeSyntax.period:
-    return "period"
-  case \MetatypeTypeSyntax.unexpectedBetweenPeriodAndMetatypeSpecifier:
-    return "unexpectedBetweenPeriodAndMetatypeSpecifier"
-  case \MetatypeTypeSyntax.metatypeSpecifier:
-    return "metatypeSpecifier"
-  case \MetatypeTypeSyntax.unexpectedAfterMetatypeSpecifier:
-    return "unexpectedAfterMetatypeSpecifier"
-  case \MissingDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \MissingDeclSyntax.attributes:
-    return "attributes"
-  case \MissingDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \MissingDeclSyntax.modifiers:
-    return "modifiers"
-  case \MissingDeclSyntax.unexpectedBetweenModifiersAndPlaceholder:
-    return "unexpectedBetweenModifiersAndPlaceholder"
-  case \MissingDeclSyntax.placeholder:
-    return "placeholder"
-  case \MissingDeclSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \MissingExprSyntax.unexpectedBeforePlaceholder:
-    return "unexpectedBeforePlaceholder"
-  case \MissingExprSyntax.placeholder:
-    return "placeholder"
-  case \MissingExprSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \MissingPatternSyntax.unexpectedBeforePlaceholder:
-    return "unexpectedBeforePlaceholder"
-  case \MissingPatternSyntax.placeholder:
-    return "placeholder"
-  case \MissingPatternSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \MissingStmtSyntax.unexpectedBeforePlaceholder:
-    return "unexpectedBeforePlaceholder"
-  case \MissingStmtSyntax.placeholder:
-    return "placeholder"
-  case \MissingStmtSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \MissingSyntax.unexpectedBeforePlaceholder:
-    return "unexpectedBeforePlaceholder"
-  case \MissingSyntax.placeholder:
-    return "placeholder"
-  case \MissingSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \MissingTypeSyntax.unexpectedBeforePlaceholder:
-    return "unexpectedBeforePlaceholder"
-  case \MissingTypeSyntax.placeholder:
-    return "placeholder"
-  case \MissingTypeSyntax.unexpectedAfterPlaceholder:
-    return "unexpectedAfterPlaceholder"
-  case \MultipleTrailingClosureElementSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \MultipleTrailingClosureElementSyntax.label:
-    return "label"
-  case \MultipleTrailingClosureElementSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \MultipleTrailingClosureElementSyntax.colon:
-    return "colon"
-  case \MultipleTrailingClosureElementSyntax.unexpectedBetweenColonAndClosure:
-    return "unexpectedBetweenColonAndClosure"
-  case \MultipleTrailingClosureElementSyntax.closure:
-    return "closure"
-  case \MultipleTrailingClosureElementSyntax.unexpectedAfterClosure:
-    return "unexpectedAfterClosure"
-  case \NamedOpaqueReturnTypeSyntax.unexpectedBeforeGenericParameterClause:
-    return "unexpectedBeforeGenericParameterClause"
-  case \NamedOpaqueReturnTypeSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \NamedOpaqueReturnTypeSyntax.unexpectedBetweenGenericParameterClauseAndType:
-    return "unexpectedBetweenGenericParameterClauseAndType"
-  case \NamedOpaqueReturnTypeSyntax.type:
-    return "type"
-  case \NamedOpaqueReturnTypeSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \NilLiteralExprSyntax.unexpectedBeforeNilKeyword:
-    return "unexpectedBeforeNilKeyword"
-  case \NilLiteralExprSyntax.nilKeyword:
-    return "nilKeyword"
-  case \NilLiteralExprSyntax.unexpectedAfterNilKeyword:
-    return "unexpectedAfterNilKeyword"
-  case \NonisolatedSpecifierArgumentSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \NonisolatedSpecifierArgumentSyntax.leftParen:
-    return "leftParen"
-  case \NonisolatedSpecifierArgumentSyntax.unexpectedBetweenLeftParenAndNonsendingKeyword:
-    return "unexpectedBetweenLeftParenAndNonsendingKeyword"
-  case \NonisolatedSpecifierArgumentSyntax.nonsendingKeyword:
-    return "nonsendingKeyword"
-  case \NonisolatedSpecifierArgumentSyntax.unexpectedBetweenNonsendingKeywordAndRightParen:
-    return "unexpectedBetweenNonsendingKeywordAndRightParen"
-  case \NonisolatedSpecifierArgumentSyntax.rightParen:
-    return "rightParen"
-  case \NonisolatedSpecifierArgumentSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \NonisolatedTypeSpecifierSyntax.unexpectedBeforeNonisolatedKeyword:
-    return "unexpectedBeforeNonisolatedKeyword"
-  case \NonisolatedTypeSpecifierSyntax.nonisolatedKeyword:
-    return "nonisolatedKeyword"
-  case \NonisolatedTypeSpecifierSyntax.unexpectedBetweenNonisolatedKeywordAndArgument:
-    return "unexpectedBetweenNonisolatedKeywordAndArgument"
-  case \NonisolatedTypeSpecifierSyntax.argument:
+  case \CompositionTypeElementSyntax.ampersand,
+  \InOutExprSyntax.ampersand:
+    return "ampersand"
+  case \AvailabilityArgumentSyntax.argument,
+  \DifferentiabilityArgumentSyntax.argument,
+  \GenericArgumentSyntax.argument,
+  \NonisolatedTypeSpecifierSyntax.argument:
     return "argument"
-  case \NonisolatedTypeSpecifierSyntax.unexpectedAfterArgument:
-    return "unexpectedAfterArgument"
-  case \ObjCSelectorPieceSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \ObjCSelectorPieceSyntax.name:
-    return "name"
-  case \ObjCSelectorPieceSyntax.unexpectedBetweenNameAndColon:
-    return "unexpectedBetweenNameAndColon"
-  case \ObjCSelectorPieceSyntax.colon:
-    return "colon"
-  case \ObjCSelectorPieceSyntax.unexpectedAfterColon:
-    return "unexpectedAfterColon"
-  case \OperatorDeclSyntax.unexpectedBeforeFixitySpecifier:
-    return "unexpectedBeforeFixitySpecifier"
-  case \OperatorDeclSyntax.fixitySpecifier:
-    return "fixitySpecifier"
-  case \OperatorDeclSyntax.unexpectedBetweenFixitySpecifierAndOperatorKeyword:
-    return "unexpectedBetweenFixitySpecifierAndOperatorKeyword"
-  case \OperatorDeclSyntax.operatorKeyword:
-    return "operatorKeyword"
-  case \OperatorDeclSyntax.unexpectedBetweenOperatorKeywordAndName:
-    return "unexpectedBetweenOperatorKeywordAndName"
-  case \OperatorDeclSyntax.name:
-    return "name"
-  case \OperatorDeclSyntax.unexpectedBetweenNameAndOperatorPrecedenceAndTypes:
-    return "unexpectedBetweenNameAndOperatorPrecedenceAndTypes"
-  case \OperatorDeclSyntax.operatorPrecedenceAndTypes:
-    return "operatorPrecedenceAndTypes"
-  case \OperatorDeclSyntax.unexpectedAfterOperatorPrecedenceAndTypes:
-    return "unexpectedAfterOperatorPrecedenceAndTypes"
-  case \OperatorPrecedenceAndTypesSyntax.unexpectedBeforeColon:
-    return "unexpectedBeforeColon"
-  case \OperatorPrecedenceAndTypesSyntax.colon:
-    return "colon"
-  case \OperatorPrecedenceAndTypesSyntax.unexpectedBetweenColonAndPrecedenceGroup:
-    return "unexpectedBetweenColonAndPrecedenceGroup"
-  case \OperatorPrecedenceAndTypesSyntax.precedenceGroup:
-    return "precedenceGroup"
-  case \OperatorPrecedenceAndTypesSyntax.unexpectedBetweenPrecedenceGroupAndDesignatedTypes:
-    return "unexpectedBetweenPrecedenceGroupAndDesignatedTypes"
-  case \OperatorPrecedenceAndTypesSyntax.designatedTypes:
-    return "designatedTypes"
-  case \OperatorPrecedenceAndTypesSyntax.unexpectedAfterDesignatedTypes:
-    return "unexpectedAfterDesignatedTypes"
-  case \OptionalBindingConditionSyntax.unexpectedBeforeBindingSpecifier:
-    return "unexpectedBeforeBindingSpecifier"
-  case \OptionalBindingConditionSyntax.bindingSpecifier:
-    return "bindingSpecifier"
-  case \OptionalBindingConditionSyntax.unexpectedBetweenBindingSpecifierAndPattern:
-    return "unexpectedBetweenBindingSpecifierAndPattern"
-  case \OptionalBindingConditionSyntax.pattern:
-    return "pattern"
-  case \OptionalBindingConditionSyntax.unexpectedBetweenPatternAndTypeAnnotation:
-    return "unexpectedBetweenPatternAndTypeAnnotation"
-  case \OptionalBindingConditionSyntax.typeAnnotation:
-    return "typeAnnotation"
-  case \OptionalBindingConditionSyntax.unexpectedBetweenTypeAnnotationAndInitializer:
-    return "unexpectedBetweenTypeAnnotationAndInitializer"
-  case \OptionalBindingConditionSyntax.initializer:
-    return "initializer"
-  case \OptionalBindingConditionSyntax.unexpectedAfterInitializer:
-    return "unexpectedAfterInitializer"
-  case \OptionalChainingExprSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \OptionalChainingExprSyntax.expression:
-    return "expression"
-  case \OptionalChainingExprSyntax.unexpectedBetweenExpressionAndQuestionMark:
-    return "unexpectedBetweenExpressionAndQuestionMark"
-  case \OptionalChainingExprSyntax.questionMark:
-    return "questionMark"
-  case \OptionalChainingExprSyntax.unexpectedAfterQuestionMark:
-    return "unexpectedAfterQuestionMark"
-  case \OptionalTypeSyntax.unexpectedBeforeWrappedType:
-    return "unexpectedBeforeWrappedType"
-  case \OptionalTypeSyntax.wrappedType:
-    return "wrappedType"
-  case \OptionalTypeSyntax.unexpectedBetweenWrappedTypeAndQuestionMark:
-    return "unexpectedBetweenWrappedTypeAndQuestionMark"
-  case \OptionalTypeSyntax.questionMark:
-    return "questionMark"
-  case \OptionalTypeSyntax.unexpectedAfterQuestionMark:
-    return "unexpectedAfterQuestionMark"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBeforeModuleLabel:
-    return "unexpectedBeforeModuleLabel"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.moduleLabel:
-    return "moduleLabel"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenModuleLabelAndColon:
-    return "unexpectedBetweenModuleLabelAndColon"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.colon:
-    return "colon"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenColonAndModuleName:
-    return "unexpectedBetweenColonAndModuleName"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.moduleName:
-    return "moduleName"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenModuleNameAndComma:
-    return "unexpectedBetweenModuleNameAndComma"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.comma:
-    return "comma"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenCommaAndPlatforms:
-    return "unexpectedBetweenCommaAndPlatforms"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.platforms:
-    return "platforms"
-  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedAfterPlatforms:
-    return "unexpectedAfterPlatforms"
-  case \PackElementExprSyntax.unexpectedBeforeEachKeyword:
-    return "unexpectedBeforeEachKeyword"
-  case \PackElementExprSyntax.eachKeyword:
-    return "eachKeyword"
-  case \PackElementExprSyntax.unexpectedBetweenEachKeywordAndPack:
-    return "unexpectedBetweenEachKeywordAndPack"
-  case \PackElementExprSyntax.pack:
-    return "pack"
-  case \PackElementExprSyntax.unexpectedAfterPack:
-    return "unexpectedAfterPack"
-  case \PackElementTypeSyntax.unexpectedBeforeEachKeyword:
-    return "unexpectedBeforeEachKeyword"
-  case \PackElementTypeSyntax.eachKeyword:
-    return "eachKeyword"
-  case \PackElementTypeSyntax.unexpectedBetweenEachKeywordAndPack:
-    return "unexpectedBetweenEachKeywordAndPack"
-  case \PackElementTypeSyntax.pack:
-    return "pack"
-  case \PackElementTypeSyntax.unexpectedAfterPack:
-    return "unexpectedAfterPack"
-  case \PackExpansionExprSyntax.unexpectedBeforeRepeatKeyword:
-    return "unexpectedBeforeRepeatKeyword"
-  case \PackExpansionExprSyntax.repeatKeyword:
-    return "repeatKeyword"
-  case \PackExpansionExprSyntax.unexpectedBetweenRepeatKeywordAndRepetitionPattern:
-    return "unexpectedBetweenRepeatKeywordAndRepetitionPattern"
-  case \PackExpansionExprSyntax.repetitionPattern:
-    return "repetitionPattern"
-  case \PackExpansionExprSyntax.unexpectedAfterRepetitionPattern:
-    return "unexpectedAfterRepetitionPattern"
-  case \PackExpansionTypeSyntax.unexpectedBeforeRepeatKeyword:
-    return "unexpectedBeforeRepeatKeyword"
-  case \PackExpansionTypeSyntax.repeatKeyword:
-    return "repeatKeyword"
-  case \PackExpansionTypeSyntax.unexpectedBetweenRepeatKeywordAndRepetitionPattern:
-    return "unexpectedBetweenRepeatKeywordAndRepetitionPattern"
-  case \PackExpansionTypeSyntax.repetitionPattern:
-    return "repetitionPattern"
-  case \PackExpansionTypeSyntax.unexpectedAfterRepetitionPattern:
-    return "unexpectedAfterRepetitionPattern"
-  case \PatternBindingSyntax.unexpectedBeforePattern:
-    return "unexpectedBeforePattern"
-  case \PatternBindingSyntax.pattern:
-    return "pattern"
-  case \PatternBindingSyntax.unexpectedBetweenPatternAndTypeAnnotation:
-    return "unexpectedBetweenPatternAndTypeAnnotation"
-  case \PatternBindingSyntax.typeAnnotation:
-    return "typeAnnotation"
-  case \PatternBindingSyntax.unexpectedBetweenTypeAnnotationAndInitializer:
-    return "unexpectedBetweenTypeAnnotationAndInitializer"
-  case \PatternBindingSyntax.initializer:
-    return "initializer"
-  case \PatternBindingSyntax.unexpectedBetweenInitializerAndAccessorBlock:
-    return "unexpectedBetweenInitializerAndAccessorBlock"
-  case \PatternBindingSyntax.accessorBlock:
-    return "accessorBlock"
-  case \PatternBindingSyntax.unexpectedBetweenAccessorBlockAndTrailingComma:
-    return "unexpectedBetweenAccessorBlockAndTrailingComma"
-  case \PatternBindingSyntax.trailingComma:
-    return "trailingComma"
-  case \PatternBindingSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \PatternExprSyntax.unexpectedBeforePattern:
-    return "unexpectedBeforePattern"
-  case \PatternExprSyntax.pattern:
-    return "pattern"
-  case \PatternExprSyntax.unexpectedAfterPattern:
-    return "unexpectedAfterPattern"
-  case \PlatformVersionItemSyntax.unexpectedBeforePlatformVersion:
-    return "unexpectedBeforePlatformVersion"
-  case \PlatformVersionItemSyntax.platformVersion:
-    return "platformVersion"
-  case \PlatformVersionItemSyntax.unexpectedBetweenPlatformVersionAndTrailingComma:
-    return "unexpectedBetweenPlatformVersionAndTrailingComma"
-  case \PlatformVersionItemSyntax.trailingComma:
-    return "trailingComma"
-  case \PlatformVersionItemSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \PlatformVersionSyntax.unexpectedBeforePlatform:
-    return "unexpectedBeforePlatform"
-  case \PlatformVersionSyntax.platform:
-    return "platform"
-  case \PlatformVersionSyntax.unexpectedBetweenPlatformAndVersion:
-    return "unexpectedBetweenPlatformAndVersion"
-  case \PlatformVersionSyntax.version:
-    return "version"
-  case \PlatformVersionSyntax.unexpectedAfterVersion:
-    return "unexpectedAfterVersion"
-  case \PostfixIfConfigExprSyntax.unexpectedBeforeBase:
-    return "unexpectedBeforeBase"
-  case \PostfixIfConfigExprSyntax.base:
-    return "base"
-  case \PostfixIfConfigExprSyntax.unexpectedBetweenBaseAndConfig:
-    return "unexpectedBetweenBaseAndConfig"
-  case \PostfixIfConfigExprSyntax.config:
-    return "config"
-  case \PostfixIfConfigExprSyntax.unexpectedAfterConfig:
-    return "unexpectedAfterConfig"
-  case \PostfixOperatorExprSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \PostfixOperatorExprSyntax.expression:
-    return "expression"
-  case \PostfixOperatorExprSyntax.unexpectedBetweenExpressionAndOperator:
-    return "unexpectedBetweenExpressionAndOperator"
-  case \PostfixOperatorExprSyntax.operator:
-    return "operator"
-  case \PostfixOperatorExprSyntax.unexpectedAfterOperator:
-    return "unexpectedAfterOperator"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBeforeFileLabel:
-    return "unexpectedBeforeFileLabel"
-  case \PoundSourceLocationArgumentsSyntax.fileLabel:
-    return "fileLabel"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenFileLabelAndFileColon:
-    return "unexpectedBetweenFileLabelAndFileColon"
-  case \PoundSourceLocationArgumentsSyntax.fileColon:
-    return "fileColon"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenFileColonAndFileName:
-    return "unexpectedBetweenFileColonAndFileName"
-  case \PoundSourceLocationArgumentsSyntax.fileName:
-    return "fileName"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenFileNameAndComma:
-    return "unexpectedBetweenFileNameAndComma"
-  case \PoundSourceLocationArgumentsSyntax.comma:
-    return "comma"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenCommaAndLineLabel:
-    return "unexpectedBetweenCommaAndLineLabel"
-  case \PoundSourceLocationArgumentsSyntax.lineLabel:
-    return "lineLabel"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenLineLabelAndLineColon:
-    return "unexpectedBetweenLineLabelAndLineColon"
-  case \PoundSourceLocationArgumentsSyntax.lineColon:
-    return "lineColon"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenLineColonAndLineNumber:
-    return "unexpectedBetweenLineColonAndLineNumber"
-  case \PoundSourceLocationArgumentsSyntax.lineNumber:
-    return "lineNumber"
-  case \PoundSourceLocationArgumentsSyntax.unexpectedAfterLineNumber:
-    return "unexpectedAfterLineNumber"
-  case \PoundSourceLocationSyntax.unexpectedBeforePoundSourceLocation:
-    return "unexpectedBeforePoundSourceLocation"
-  case \PoundSourceLocationSyntax.poundSourceLocation:
-    return "poundSourceLocation"
-  case \PoundSourceLocationSyntax.unexpectedBetweenPoundSourceLocationAndLeftParen:
-    return "unexpectedBetweenPoundSourceLocationAndLeftParen"
-  case \PoundSourceLocationSyntax.leftParen:
-    return "leftParen"
-  case \PoundSourceLocationSyntax.unexpectedBetweenLeftParenAndArguments:
-    return "unexpectedBetweenLeftParenAndArguments"
-  case \PoundSourceLocationSyntax.arguments:
+  case \DeclReferenceExprSyntax.argumentNames:
+    return "argumentNames"
+  case \AttributeSyntax.arguments,
+  \DeclNameArgumentsSyntax.arguments,
+  \DerivativeAttributeArgumentsSyntax.arguments,
+  \DifferentiabilityArgumentsSyntax.arguments,
+  \DifferentiabilityWithRespectToArgumentSyntax.arguments,
+  \DifferentiableAttributeArgumentsSyntax.arguments,
+  \FunctionCallExprSyntax.arguments,
+  \GenericArgumentClauseSyntax.arguments,
+  \KeyPathMethodComponentSyntax.arguments,
+  \KeyPathSubscriptComponentSyntax.arguments,
+  \LifetimeTypeSpecifierSyntax.arguments,
+  \MacroExpansionDeclSyntax.arguments,
+  \MacroExpansionExprSyntax.arguments,
+  \PoundSourceLocationSyntax.arguments,
+  \SubscriptCallExprSyntax.arguments:
     return "arguments"
-  case \PoundSourceLocationSyntax.unexpectedBetweenArgumentsAndRightParen:
-    return "unexpectedBetweenArgumentsAndRightParen"
-  case \PoundSourceLocationSyntax.rightParen:
-    return "rightParen"
-  case \PoundSourceLocationSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \PrecedenceGroupAssignmentSyntax.unexpectedBeforeAssignmentLabel:
-    return "unexpectedBeforeAssignmentLabel"
+  case \DifferentiableAttributeArgumentsSyntax.argumentsComma:
+    return "argumentsComma"
+  case \ArrowExprSyntax.arrow,
+  \ReturnClauseSyntax.arrow:
+    return "arrow"
+  case \AsExprSyntax.asKeyword,
+  \UnresolvedAsExprSyntax.asKeyword:
+    return "asKeyword"
   case \PrecedenceGroupAssignmentSyntax.assignmentLabel:
     return "assignmentLabel"
-  case \PrecedenceGroupAssignmentSyntax.unexpectedBetweenAssignmentLabelAndColon:
-    return "unexpectedBetweenAssignmentLabelAndColon"
-  case \PrecedenceGroupAssignmentSyntax.colon:
-    return "colon"
-  case \PrecedenceGroupAssignmentSyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \PrecedenceGroupAssignmentSyntax.value:
-    return "value"
-  case \PrecedenceGroupAssignmentSyntax.unexpectedAfterValue:
-    return "unexpectedAfterValue"
-  case \PrecedenceGroupAssociativitySyntax.unexpectedBeforeAssociativityLabel:
-    return "unexpectedBeforeAssociativityLabel"
+  case \AssociatedTypeDeclSyntax.associatedtypeKeyword:
+    return "associatedtypeKeyword"
   case \PrecedenceGroupAssociativitySyntax.associativityLabel:
     return "associativityLabel"
-  case \PrecedenceGroupAssociativitySyntax.unexpectedBetweenAssociativityLabelAndColon:
-    return "unexpectedBetweenAssociativityLabelAndColon"
-  case \PrecedenceGroupAssociativitySyntax.colon:
-    return "colon"
-  case \PrecedenceGroupAssociativitySyntax.unexpectedBetweenColonAndValue:
-    return "unexpectedBetweenColonAndValue"
-  case \PrecedenceGroupAssociativitySyntax.value:
-    return "value"
-  case \PrecedenceGroupAssociativitySyntax.unexpectedAfterValue:
-    return "unexpectedAfterValue"
-  case \PrecedenceGroupDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \PrecedenceGroupDeclSyntax.attributes:
-    return "attributes"
-  case \PrecedenceGroupDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \PrecedenceGroupDeclSyntax.modifiers:
-    return "modifiers"
-  case \PrecedenceGroupDeclSyntax.unexpectedBetweenModifiersAndPrecedencegroupKeyword:
-    return "unexpectedBetweenModifiersAndPrecedencegroupKeyword"
-  case \PrecedenceGroupDeclSyntax.precedencegroupKeyword:
-    return "precedencegroupKeyword"
-  case \PrecedenceGroupDeclSyntax.unexpectedBetweenPrecedencegroupKeywordAndName:
-    return "unexpectedBetweenPrecedencegroupKeywordAndName"
-  case \PrecedenceGroupDeclSyntax.name:
-    return "name"
-  case \PrecedenceGroupDeclSyntax.unexpectedBetweenNameAndLeftBrace:
-    return "unexpectedBetweenNameAndLeftBrace"
-  case \PrecedenceGroupDeclSyntax.leftBrace:
-    return "leftBrace"
-  case \PrecedenceGroupDeclSyntax.unexpectedBetweenLeftBraceAndGroupAttributes:
-    return "unexpectedBetweenLeftBraceAndGroupAttributes"
-  case \PrecedenceGroupDeclSyntax.groupAttributes:
-    return "groupAttributes"
-  case \PrecedenceGroupDeclSyntax.unexpectedBetweenGroupAttributesAndRightBrace:
-    return "unexpectedBetweenGroupAttributesAndRightBrace"
-  case \PrecedenceGroupDeclSyntax.rightBrace:
-    return "rightBrace"
-  case \PrecedenceGroupDeclSyntax.unexpectedAfterRightBrace:
-    return "unexpectedAfterRightBrace"
-  case \PrecedenceGroupNameSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \PrecedenceGroupNameSyntax.name:
-    return "name"
-  case \PrecedenceGroupNameSyntax.unexpectedBetweenNameAndTrailingComma:
-    return "unexpectedBetweenNameAndTrailingComma"
-  case \PrecedenceGroupNameSyntax.trailingComma:
-    return "trailingComma"
-  case \PrecedenceGroupNameSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \PrecedenceGroupRelationSyntax.unexpectedBeforeHigherThanOrLowerThanLabel:
-    return "unexpectedBeforeHigherThanOrLowerThanLabel"
-  case \PrecedenceGroupRelationSyntax.higherThanOrLowerThanLabel:
-    return "higherThanOrLowerThanLabel"
-  case \PrecedenceGroupRelationSyntax.unexpectedBetweenHigherThanOrLowerThanLabelAndColon:
-    return "unexpectedBetweenHigherThanOrLowerThanLabelAndColon"
-  case \PrecedenceGroupRelationSyntax.colon:
-    return "colon"
-  case \PrecedenceGroupRelationSyntax.unexpectedBetweenColonAndPrecedenceGroups:
-    return "unexpectedBetweenColonAndPrecedenceGroups"
-  case \PrecedenceGroupRelationSyntax.precedenceGroups:
-    return "precedenceGroups"
-  case \PrecedenceGroupRelationSyntax.unexpectedAfterPrecedenceGroups:
-    return "unexpectedAfterPrecedenceGroups"
-  case \PrefixOperatorExprSyntax.unexpectedBeforeOperator:
-    return "unexpectedBeforeOperator"
-  case \PrefixOperatorExprSyntax.operator:
-    return "operator"
-  case \PrefixOperatorExprSyntax.unexpectedBetweenOperatorAndExpression:
-    return "unexpectedBetweenOperatorAndExpression"
-  case \PrefixOperatorExprSyntax.expression:
-    return "expression"
-  case \PrefixOperatorExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \PrimaryAssociatedTypeClauseSyntax.unexpectedBeforeLeftAngle:
-    return "unexpectedBeforeLeftAngle"
-  case \PrimaryAssociatedTypeClauseSyntax.leftAngle:
-    return "leftAngle"
-  case \PrimaryAssociatedTypeClauseSyntax.unexpectedBetweenLeftAngleAndPrimaryAssociatedTypes:
-    return "unexpectedBetweenLeftAngleAndPrimaryAssociatedTypes"
-  case \PrimaryAssociatedTypeClauseSyntax.primaryAssociatedTypes:
-    return "primaryAssociatedTypes"
-  case \PrimaryAssociatedTypeClauseSyntax.unexpectedBetweenPrimaryAssociatedTypesAndRightAngle:
-    return "unexpectedBetweenPrimaryAssociatedTypesAndRightAngle"
-  case \PrimaryAssociatedTypeClauseSyntax.rightAngle:
-    return "rightAngle"
-  case \PrimaryAssociatedTypeClauseSyntax.unexpectedAfterRightAngle:
-    return "unexpectedAfterRightAngle"
-  case \PrimaryAssociatedTypeSyntax.unexpectedBeforeName:
-    return "unexpectedBeforeName"
-  case \PrimaryAssociatedTypeSyntax.name:
-    return "name"
-  case \PrimaryAssociatedTypeSyntax.unexpectedBetweenNameAndTrailingComma:
-    return "unexpectedBetweenNameAndTrailingComma"
-  case \PrimaryAssociatedTypeSyntax.trailingComma:
-    return "trailingComma"
-  case \PrimaryAssociatedTypeSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \ProtocolDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \ProtocolDeclSyntax.attributes:
-    return "attributes"
-  case \ProtocolDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \ProtocolDeclSyntax.modifiers:
-    return "modifiers"
-  case \ProtocolDeclSyntax.unexpectedBetweenModifiersAndProtocolKeyword:
-    return "unexpectedBetweenModifiersAndProtocolKeyword"
-  case \ProtocolDeclSyntax.protocolKeyword:
-    return "protocolKeyword"
-  case \ProtocolDeclSyntax.unexpectedBetweenProtocolKeywordAndName:
-    return "unexpectedBetweenProtocolKeywordAndName"
-  case \ProtocolDeclSyntax.name:
-    return "name"
-  case \ProtocolDeclSyntax.unexpectedBetweenNameAndPrimaryAssociatedTypeClause:
-    return "unexpectedBetweenNameAndPrimaryAssociatedTypeClause"
-  case \ProtocolDeclSyntax.primaryAssociatedTypeClause:
-    return "primaryAssociatedTypeClause"
-  case \ProtocolDeclSyntax.unexpectedBetweenPrimaryAssociatedTypeClauseAndInheritanceClause:
-    return "unexpectedBetweenPrimaryAssociatedTypeClauseAndInheritanceClause"
-  case \ProtocolDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \ProtocolDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
-    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
-  case \ProtocolDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \ProtocolDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
-    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
-  case \ProtocolDeclSyntax.memberBlock:
-    return "memberBlock"
-  case \ProtocolDeclSyntax.unexpectedAfterMemberBlock:
-    return "unexpectedAfterMemberBlock"
-  case \RegexLiteralExprSyntax.unexpectedBeforeOpeningPounds:
-    return "unexpectedBeforeOpeningPounds"
-  case \RegexLiteralExprSyntax.openingPounds:
-    return "openingPounds"
-  case \RegexLiteralExprSyntax.unexpectedBetweenOpeningPoundsAndOpeningSlash:
-    return "unexpectedBetweenOpeningPoundsAndOpeningSlash"
-  case \RegexLiteralExprSyntax.openingSlash:
-    return "openingSlash"
-  case \RegexLiteralExprSyntax.unexpectedBetweenOpeningSlashAndRegex:
-    return "unexpectedBetweenOpeningSlashAndRegex"
-  case \RegexLiteralExprSyntax.regex:
-    return "regex"
-  case \RegexLiteralExprSyntax.unexpectedBetweenRegexAndClosingSlash:
-    return "unexpectedBetweenRegexAndClosingSlash"
-  case \RegexLiteralExprSyntax.closingSlash:
-    return "closingSlash"
-  case \RegexLiteralExprSyntax.unexpectedBetweenClosingSlashAndClosingPounds:
-    return "unexpectedBetweenClosingSlashAndClosingPounds"
-  case \RegexLiteralExprSyntax.closingPounds:
-    return "closingPounds"
-  case \RegexLiteralExprSyntax.unexpectedAfterClosingPounds:
-    return "unexpectedAfterClosingPounds"
-  case \RepeatStmtSyntax.unexpectedBeforeRepeatKeyword:
-    return "unexpectedBeforeRepeatKeyword"
-  case \RepeatStmtSyntax.repeatKeyword:
-    return "repeatKeyword"
-  case \RepeatStmtSyntax.unexpectedBetweenRepeatKeywordAndBody:
-    return "unexpectedBetweenRepeatKeywordAndBody"
-  case \RepeatStmtSyntax.body:
-    return "body"
-  case \RepeatStmtSyntax.unexpectedBetweenBodyAndWhileKeyword:
-    return "unexpectedBetweenBodyAndWhileKeyword"
-  case \RepeatStmtSyntax.whileKeyword:
-    return "whileKeyword"
-  case \RepeatStmtSyntax.unexpectedBetweenWhileKeywordAndCondition:
-    return "unexpectedBetweenWhileKeywordAndCondition"
-  case \RepeatStmtSyntax.condition:
-    return "condition"
-  case \RepeatStmtSyntax.unexpectedAfterCondition:
-    return "unexpectedAfterCondition"
-  case \ReturnClauseSyntax.unexpectedBeforeArrow:
-    return "unexpectedBeforeArrow"
-  case \ReturnClauseSyntax.arrow:
-    return "arrow"
-  case \ReturnClauseSyntax.unexpectedBetweenArrowAndType:
-    return "unexpectedBetweenArrowAndType"
-  case \ReturnClauseSyntax.type:
-    return "type"
-  case \ReturnClauseSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \ReturnStmtSyntax.unexpectedBeforeReturnKeyword:
-    return "unexpectedBeforeReturnKeyword"
-  case \ReturnStmtSyntax.returnKeyword:
-    return "returnKeyword"
-  case \ReturnStmtSyntax.unexpectedBetweenReturnKeywordAndExpression:
-    return "unexpectedBetweenReturnKeywordAndExpression"
-  case \ReturnStmtSyntax.expression:
-    return "expression"
-  case \ReturnStmtSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \SameTypeRequirementSyntax.unexpectedBeforeLeftType:
-    return "unexpectedBeforeLeftType"
-  case \SameTypeRequirementSyntax.leftType:
-    return "leftType"
-  case \SameTypeRequirementSyntax.unexpectedBetweenLeftTypeAndEqual:
-    return "unexpectedBetweenLeftTypeAndEqual"
-  case \SameTypeRequirementSyntax.equal:
-    return "equal"
-  case \SameTypeRequirementSyntax.unexpectedBetweenEqualAndRightType:
-    return "unexpectedBetweenEqualAndRightType"
-  case \SameTypeRequirementSyntax.rightType:
-    return "rightType"
-  case \SameTypeRequirementSyntax.unexpectedAfterRightType:
-    return "unexpectedAfterRightType"
-  case \SequenceExprSyntax.unexpectedBeforeElements:
-    return "unexpectedBeforeElements"
-  case \SequenceExprSyntax.elements:
-    return "elements"
-  case \SequenceExprSyntax.unexpectedAfterElements:
-    return "unexpectedAfterElements"
-  case \SimpleStringLiteralExprSyntax.unexpectedBeforeOpeningQuote:
-    return "unexpectedBeforeOpeningQuote"
-  case \SimpleStringLiteralExprSyntax.openingQuote:
-    return "openingQuote"
-  case \SimpleStringLiteralExprSyntax.unexpectedBetweenOpeningQuoteAndSegments:
-    return "unexpectedBetweenOpeningQuoteAndSegments"
-  case \SimpleStringLiteralExprSyntax.segments:
-    return "segments"
-  case \SimpleStringLiteralExprSyntax.unexpectedBetweenSegmentsAndClosingQuote:
-    return "unexpectedBetweenSegmentsAndClosingQuote"
-  case \SimpleStringLiteralExprSyntax.closingQuote:
-    return "closingQuote"
-  case \SimpleStringLiteralExprSyntax.unexpectedAfterClosingQuote:
-    return "unexpectedAfterClosingQuote"
-  case \SimpleTypeSpecifierSyntax.unexpectedBeforeSpecifier:
-    return "unexpectedBeforeSpecifier"
-  case \SimpleTypeSpecifierSyntax.specifier:
-    return "specifier"
-  case \SimpleTypeSpecifierSyntax.unexpectedAfterSpecifier:
-    return "unexpectedAfterSpecifier"
-  case \SomeOrAnyTypeSyntax.unexpectedBeforeSomeOrAnySpecifier:
-    return "unexpectedBeforeSomeOrAnySpecifier"
-  case \SomeOrAnyTypeSyntax.someOrAnySpecifier:
-    return "someOrAnySpecifier"
-  case \SomeOrAnyTypeSyntax.unexpectedBetweenSomeOrAnySpecifierAndConstraint:
-    return "unexpectedBetweenSomeOrAnySpecifierAndConstraint"
-  case \SomeOrAnyTypeSyntax.constraint:
-    return "constraint"
-  case \SomeOrAnyTypeSyntax.unexpectedAfterConstraint:
-    return "unexpectedAfterConstraint"
-  case \SourceFileSyntax.unexpectedBeforeShebang:
-    return "unexpectedBeforeShebang"
-  case \SourceFileSyntax.shebang:
-    return "shebang"
-  case \SourceFileSyntax.unexpectedBetweenShebangAndStatements:
-    return "unexpectedBetweenShebangAndStatements"
-  case \SourceFileSyntax.statements:
-    return "statements"
-  case \SourceFileSyntax.unexpectedBetweenStatementsAndEndOfFileToken:
-    return "unexpectedBetweenStatementsAndEndOfFileToken"
-  case \SourceFileSyntax.endOfFileToken:
-    return "endOfFileToken"
-  case \SourceFileSyntax.unexpectedAfterEndOfFileToken:
-    return "unexpectedAfterEndOfFileToken"
-  case \SpecializeAvailabilityArgumentSyntax.unexpectedBeforeAvailabilityLabel:
-    return "unexpectedBeforeAvailabilityLabel"
-  case \SpecializeAvailabilityArgumentSyntax.availabilityLabel:
-    return "availabilityLabel"
-  case \SpecializeAvailabilityArgumentSyntax.unexpectedBetweenAvailabilityLabelAndColon:
-    return "unexpectedBetweenAvailabilityLabelAndColon"
-  case \SpecializeAvailabilityArgumentSyntax.colon:
-    return "colon"
-  case \SpecializeAvailabilityArgumentSyntax.unexpectedBetweenColonAndAvailabilityArguments:
-    return "unexpectedBetweenColonAndAvailabilityArguments"
-  case \SpecializeAvailabilityArgumentSyntax.availabilityArguments:
-    return "availabilityArguments"
-  case \SpecializeAvailabilityArgumentSyntax.unexpectedBetweenAvailabilityArgumentsAndSemicolon:
-    return "unexpectedBetweenAvailabilityArgumentsAndSemicolon"
-  case \SpecializeAvailabilityArgumentSyntax.semicolon:
-    return "semicolon"
-  case \SpecializeAvailabilityArgumentSyntax.unexpectedAfterSemicolon:
-    return "unexpectedAfterSemicolon"
-  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBeforeTargetLabel:
-    return "unexpectedBeforeTargetLabel"
-  case \SpecializeTargetFunctionArgumentSyntax.targetLabel:
-    return "targetLabel"
-  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBetweenTargetLabelAndColon:
-    return "unexpectedBetweenTargetLabelAndColon"
-  case \SpecializeTargetFunctionArgumentSyntax.colon:
-    return "colon"
-  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBetweenColonAndDeclName:
-    return "unexpectedBetweenColonAndDeclName"
-  case \SpecializeTargetFunctionArgumentSyntax.declName:
-    return "declName"
-  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBetweenDeclNameAndTrailingComma:
-    return "unexpectedBetweenDeclNameAndTrailingComma"
-  case \SpecializeTargetFunctionArgumentSyntax.trailingComma:
-    return "trailingComma"
-  case \SpecializeTargetFunctionArgumentSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \SpecializedAttributeArgumentSyntax.unexpectedBeforeGenericWhereClause:
-    return "unexpectedBeforeGenericWhereClause"
-  case \SpecializedAttributeArgumentSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \SpecializedAttributeArgumentSyntax.unexpectedAfterGenericWhereClause:
-    return "unexpectedAfterGenericWhereClause"
-  case \StringLiteralExprSyntax.unexpectedBeforeOpeningPounds:
-    return "unexpectedBeforeOpeningPounds"
-  case \StringLiteralExprSyntax.openingPounds:
-    return "openingPounds"
-  case \StringLiteralExprSyntax.unexpectedBetweenOpeningPoundsAndOpeningQuote:
-    return "unexpectedBetweenOpeningPoundsAndOpeningQuote"
-  case \StringLiteralExprSyntax.openingQuote:
-    return "openingQuote"
-  case \StringLiteralExprSyntax.unexpectedBetweenOpeningQuoteAndSegments:
-    return "unexpectedBetweenOpeningQuoteAndSegments"
-  case \StringLiteralExprSyntax.segments:
-    return "segments"
-  case \StringLiteralExprSyntax.unexpectedBetweenSegmentsAndClosingQuote:
-    return "unexpectedBetweenSegmentsAndClosingQuote"
-  case \StringLiteralExprSyntax.closingQuote:
-    return "closingQuote"
-  case \StringLiteralExprSyntax.unexpectedBetweenClosingQuoteAndClosingPounds:
-    return "unexpectedBetweenClosingQuoteAndClosingPounds"
-  case \StringLiteralExprSyntax.closingPounds:
-    return "closingPounds"
-  case \StringLiteralExprSyntax.unexpectedAfterClosingPounds:
-    return "unexpectedAfterClosingPounds"
-  case \StringSegmentSyntax.unexpectedBeforeContent:
-    return "unexpectedBeforeContent"
-  case \StringSegmentSyntax.content:
-    return "content"
-  case \StringSegmentSyntax.unexpectedAfterContent:
-    return "unexpectedAfterContent"
-  case \StructDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \StructDeclSyntax.attributes:
-    return "attributes"
-  case \StructDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \StructDeclSyntax.modifiers:
-    return "modifiers"
-  case \StructDeclSyntax.unexpectedBetweenModifiersAndStructKeyword:
-    return "unexpectedBetweenModifiersAndStructKeyword"
-  case \StructDeclSyntax.structKeyword:
-    return "structKeyword"
-  case \StructDeclSyntax.unexpectedBetweenStructKeywordAndName:
-    return "unexpectedBetweenStructKeywordAndName"
-  case \StructDeclSyntax.name:
-    return "name"
-  case \StructDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \StructDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \StructDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause:
-    return "unexpectedBetweenGenericParameterClauseAndInheritanceClause"
-  case \StructDeclSyntax.inheritanceClause:
-    return "inheritanceClause"
-  case \StructDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
-    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
-  case \StructDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \StructDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
-    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
-  case \StructDeclSyntax.memberBlock:
-    return "memberBlock"
-  case \StructDeclSyntax.unexpectedAfterMemberBlock:
-    return "unexpectedAfterMemberBlock"
-  case \SubscriptCallExprSyntax.unexpectedBeforeCalledExpression:
-    return "unexpectedBeforeCalledExpression"
-  case \SubscriptCallExprSyntax.calledExpression:
-    return "calledExpression"
-  case \SubscriptCallExprSyntax.unexpectedBetweenCalledExpressionAndLeftSquare:
-    return "unexpectedBetweenCalledExpressionAndLeftSquare"
-  case \SubscriptCallExprSyntax.leftSquare:
-    return "leftSquare"
-  case \SubscriptCallExprSyntax.unexpectedBetweenLeftSquareAndArguments:
-    return "unexpectedBetweenLeftSquareAndArguments"
-  case \SubscriptCallExprSyntax.arguments:
-    return "arguments"
-  case \SubscriptCallExprSyntax.unexpectedBetweenArgumentsAndRightSquare:
-    return "unexpectedBetweenArgumentsAndRightSquare"
-  case \SubscriptCallExprSyntax.rightSquare:
-    return "rightSquare"
-  case \SubscriptCallExprSyntax.unexpectedBetweenRightSquareAndTrailingClosure:
-    return "unexpectedBetweenRightSquareAndTrailingClosure"
-  case \SubscriptCallExprSyntax.trailingClosure:
-    return "trailingClosure"
-  case \SubscriptCallExprSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures:
-    return "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures"
-  case \SubscriptCallExprSyntax.additionalTrailingClosures:
-    return "additionalTrailingClosures"
-  case \SubscriptCallExprSyntax.unexpectedAfterAdditionalTrailingClosures:
-    return "unexpectedAfterAdditionalTrailingClosures"
-  case \SubscriptDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \SubscriptDeclSyntax.attributes:
-    return "attributes"
-  case \SubscriptDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \SubscriptDeclSyntax.modifiers:
-    return "modifiers"
-  case \SubscriptDeclSyntax.unexpectedBetweenModifiersAndSubscriptKeyword:
-    return "unexpectedBetweenModifiersAndSubscriptKeyword"
-  case \SubscriptDeclSyntax.subscriptKeyword:
-    return "subscriptKeyword"
-  case \SubscriptDeclSyntax.unexpectedBetweenSubscriptKeywordAndGenericParameterClause:
-    return "unexpectedBetweenSubscriptKeywordAndGenericParameterClause"
-  case \SubscriptDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \SubscriptDeclSyntax.unexpectedBetweenGenericParameterClauseAndParameterClause:
-    return "unexpectedBetweenGenericParameterClauseAndParameterClause"
-  case \SubscriptDeclSyntax.parameterClause:
-    return "parameterClause"
-  case \SubscriptDeclSyntax.unexpectedBetweenParameterClauseAndReturnClause:
-    return "unexpectedBetweenParameterClauseAndReturnClause"
-  case \SubscriptDeclSyntax.returnClause:
-    return "returnClause"
-  case \SubscriptDeclSyntax.unexpectedBetweenReturnClauseAndGenericWhereClause:
-    return "unexpectedBetweenReturnClauseAndGenericWhereClause"
-  case \SubscriptDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \SubscriptDeclSyntax.unexpectedBetweenGenericWhereClauseAndAccessorBlock:
-    return "unexpectedBetweenGenericWhereClauseAndAccessorBlock"
-  case \SubscriptDeclSyntax.accessorBlock:
-    return "accessorBlock"
-  case \SubscriptDeclSyntax.unexpectedAfterAccessorBlock:
-    return "unexpectedAfterAccessorBlock"
-  case \SuperExprSyntax.unexpectedBeforeSuperKeyword:
-    return "unexpectedBeforeSuperKeyword"
-  case \SuperExprSyntax.superKeyword:
-    return "superKeyword"
-  case \SuperExprSyntax.unexpectedAfterSuperKeyword:
-    return "unexpectedAfterSuperKeyword"
-  case \SuppressedTypeSyntax.unexpectedBeforeWithoutTilde:
-    return "unexpectedBeforeWithoutTilde"
-  case \SuppressedTypeSyntax.withoutTilde:
-    return "withoutTilde"
-  case \SuppressedTypeSyntax.unexpectedBetweenWithoutTildeAndType:
-    return "unexpectedBetweenWithoutTildeAndType"
-  case \SuppressedTypeSyntax.type:
-    return "type"
-  case \SuppressedTypeSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \SwitchCaseItemSyntax.unexpectedBeforePattern:
-    return "unexpectedBeforePattern"
-  case \SwitchCaseItemSyntax.pattern:
-    return "pattern"
-  case \SwitchCaseItemSyntax.unexpectedBetweenPatternAndWhereClause:
-    return "unexpectedBetweenPatternAndWhereClause"
-  case \SwitchCaseItemSyntax.whereClause:
-    return "whereClause"
-  case \SwitchCaseItemSyntax.unexpectedBetweenWhereClauseAndTrailingComma:
-    return "unexpectedBetweenWhereClauseAndTrailingComma"
-  case \SwitchCaseItemSyntax.trailingComma:
-    return "trailingComma"
-  case \SwitchCaseItemSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \SwitchCaseLabelSyntax.unexpectedBeforeCaseKeyword:
-    return "unexpectedBeforeCaseKeyword"
-  case \SwitchCaseLabelSyntax.caseKeyword:
-    return "caseKeyword"
-  case \SwitchCaseLabelSyntax.unexpectedBetweenCaseKeywordAndCaseItems:
-    return "unexpectedBetweenCaseKeywordAndCaseItems"
-  case \SwitchCaseLabelSyntax.caseItems:
-    return "caseItems"
-  case \SwitchCaseLabelSyntax.unexpectedBetweenCaseItemsAndColon:
-    return "unexpectedBetweenCaseItemsAndColon"
-  case \SwitchCaseLabelSyntax.colon:
-    return "colon"
-  case \SwitchCaseLabelSyntax.unexpectedAfterColon:
-    return "unexpectedAfterColon"
-  case \SwitchCaseSyntax.unexpectedBeforeAttribute:
-    return "unexpectedBeforeAttribute"
+  case \AccessorEffectSpecifiersSyntax.asyncSpecifier,
+  \DeinitializerEffectSpecifiersSyntax.asyncSpecifier,
+  \FunctionEffectSpecifiersSyntax.asyncSpecifier,
+  \TypeEffectSpecifiersSyntax.asyncSpecifier:
+    return "asyncSpecifier"
+  case \AttributeSyntax.atSign:
+    return "atSign"
   case \SwitchCaseSyntax.attribute:
     return "attribute"
-  case \SwitchCaseSyntax.unexpectedBetweenAttributeAndLabel:
-    return "unexpectedBetweenAttributeAndLabel"
-  case \SwitchCaseSyntax.label:
-    return "label"
-  case \SwitchCaseSyntax.unexpectedBetweenLabelAndStatements:
-    return "unexpectedBetweenLabelAndStatements"
-  case \SwitchCaseSyntax.statements:
-    return "statements"
-  case \SwitchCaseSyntax.unexpectedAfterStatements:
-    return "unexpectedAfterStatements"
-  case \SwitchDefaultLabelSyntax.unexpectedBeforeDefaultKeyword:
-    return "unexpectedBeforeDefaultKeyword"
-  case \SwitchDefaultLabelSyntax.defaultKeyword:
-    return "defaultKeyword"
-  case \SwitchDefaultLabelSyntax.unexpectedBetweenDefaultKeywordAndColon:
-    return "unexpectedBetweenDefaultKeywordAndColon"
-  case \SwitchDefaultLabelSyntax.colon:
-    return "colon"
-  case \SwitchDefaultLabelSyntax.unexpectedAfterColon:
-    return "unexpectedAfterColon"
-  case \SwitchExprSyntax.unexpectedBeforeSwitchKeyword:
-    return "unexpectedBeforeSwitchKeyword"
-  case \SwitchExprSyntax.switchKeyword:
-    return "switchKeyword"
-  case \SwitchExprSyntax.unexpectedBetweenSwitchKeywordAndSubject:
-    return "unexpectedBetweenSwitchKeywordAndSubject"
-  case \SwitchExprSyntax.subject:
-    return "subject"
-  case \SwitchExprSyntax.unexpectedBetweenSubjectAndLeftBrace:
-    return "unexpectedBetweenSubjectAndLeftBrace"
-  case \SwitchExprSyntax.leftBrace:
-    return "leftBrace"
-  case \SwitchExprSyntax.unexpectedBetweenLeftBraceAndCases:
-    return "unexpectedBetweenLeftBraceAndCases"
-  case \SwitchExprSyntax.cases:
-    return "cases"
-  case \SwitchExprSyntax.unexpectedBetweenCasesAndRightBrace:
-    return "unexpectedBetweenCasesAndRightBrace"
-  case \SwitchExprSyntax.rightBrace:
-    return "rightBrace"
-  case \SwitchExprSyntax.unexpectedAfterRightBrace:
-    return "unexpectedAfterRightBrace"
-  case \TernaryExprSyntax.unexpectedBeforeCondition:
-    return "unexpectedBeforeCondition"
-  case \TernaryExprSyntax.condition:
-    return "condition"
-  case \TernaryExprSyntax.unexpectedBetweenConditionAndQuestionMark:
-    return "unexpectedBetweenConditionAndQuestionMark"
-  case \TernaryExprSyntax.questionMark:
-    return "questionMark"
-  case \TernaryExprSyntax.unexpectedBetweenQuestionMarkAndThenExpression:
-    return "unexpectedBetweenQuestionMarkAndThenExpression"
-  case \TernaryExprSyntax.thenExpression:
-    return "thenExpression"
-  case \TernaryExprSyntax.unexpectedBetweenThenExpressionAndColon:
-    return "unexpectedBetweenThenExpressionAndColon"
-  case \TernaryExprSyntax.colon:
-    return "colon"
-  case \TernaryExprSyntax.unexpectedBetweenColonAndElseExpression:
-    return "unexpectedBetweenColonAndElseExpression"
-  case \TernaryExprSyntax.elseExpression:
-    return "elseExpression"
-  case \TernaryExprSyntax.unexpectedAfterElseExpression:
-    return "unexpectedAfterElseExpression"
-  case \ThenStmtSyntax.unexpectedBeforeThenKeyword:
-    return "unexpectedBeforeThenKeyword"
-  case \ThenStmtSyntax.thenKeyword:
-    return "thenKeyword"
-  case \ThenStmtSyntax.unexpectedBetweenThenKeywordAndExpression:
-    return "unexpectedBetweenThenKeywordAndExpression"
-  case \ThenStmtSyntax.expression:
-    return "expression"
-  case \ThenStmtSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \ThrowStmtSyntax.unexpectedBeforeThrowKeyword:
-    return "unexpectedBeforeThrowKeyword"
-  case \ThrowStmtSyntax.throwKeyword:
-    return "throwKeyword"
-  case \ThrowStmtSyntax.unexpectedBetweenThrowKeywordAndExpression:
-    return "unexpectedBetweenThrowKeywordAndExpression"
-  case \ThrowStmtSyntax.expression:
-    return "expression"
-  case \ThrowStmtSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \ThrowsClauseSyntax.unexpectedBeforeThrowsSpecifier:
-    return "unexpectedBeforeThrowsSpecifier"
-  case \ThrowsClauseSyntax.throwsSpecifier:
-    return "throwsSpecifier"
-  case \ThrowsClauseSyntax.unexpectedBetweenThrowsSpecifierAndLeftParen:
-    return "unexpectedBetweenThrowsSpecifierAndLeftParen"
-  case \ThrowsClauseSyntax.leftParen:
-    return "leftParen"
-  case \ThrowsClauseSyntax.unexpectedBetweenLeftParenAndType:
-    return "unexpectedBetweenLeftParenAndType"
-  case \ThrowsClauseSyntax.type:
-    return "type"
-  case \ThrowsClauseSyntax.unexpectedBetweenTypeAndRightParen:
-    return "unexpectedBetweenTypeAndRightParen"
-  case \ThrowsClauseSyntax.rightParen:
-    return "rightParen"
-  case \ThrowsClauseSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \TryExprSyntax.unexpectedBeforeTryKeyword:
-    return "unexpectedBeforeTryKeyword"
-  case \TryExprSyntax.tryKeyword:
-    return "tryKeyword"
-  case \TryExprSyntax.unexpectedBetweenTryKeywordAndQuestionOrExclamationMark:
-    return "unexpectedBetweenTryKeywordAndQuestionOrExclamationMark"
-  case \TryExprSyntax.questionOrExclamationMark:
-    return "questionOrExclamationMark"
-  case \TryExprSyntax.unexpectedBetweenQuestionOrExclamationMarkAndExpression:
-    return "unexpectedBetweenQuestionOrExclamationMarkAndExpression"
-  case \TryExprSyntax.expression:
-    return "expression"
-  case \TryExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \TupleExprSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \TupleExprSyntax.leftParen:
-    return "leftParen"
-  case \TupleExprSyntax.unexpectedBetweenLeftParenAndElements:
-    return "unexpectedBetweenLeftParenAndElements"
-  case \TupleExprSyntax.elements:
-    return "elements"
-  case \TupleExprSyntax.unexpectedBetweenElementsAndRightParen:
-    return "unexpectedBetweenElementsAndRightParen"
-  case \TupleExprSyntax.rightParen:
-    return "rightParen"
-  case \TupleExprSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \TuplePatternElementSyntax.unexpectedBeforeLabel:
-    return "unexpectedBeforeLabel"
-  case \TuplePatternElementSyntax.label:
-    return "label"
-  case \TuplePatternElementSyntax.unexpectedBetweenLabelAndColon:
-    return "unexpectedBetweenLabelAndColon"
-  case \TuplePatternElementSyntax.colon:
-    return "colon"
-  case \TuplePatternElementSyntax.unexpectedBetweenColonAndPattern:
-    return "unexpectedBetweenColonAndPattern"
-  case \TuplePatternElementSyntax.pattern:
-    return "pattern"
-  case \TuplePatternElementSyntax.unexpectedBetweenPatternAndTrailingComma:
-    return "unexpectedBetweenPatternAndTrailingComma"
-  case \TuplePatternElementSyntax.trailingComma:
-    return "trailingComma"
-  case \TuplePatternElementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \TuplePatternSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \TuplePatternSyntax.leftParen:
-    return "leftParen"
-  case \TuplePatternSyntax.unexpectedBetweenLeftParenAndElements:
-    return "unexpectedBetweenLeftParenAndElements"
-  case \TuplePatternSyntax.elements:
-    return "elements"
-  case \TuplePatternSyntax.unexpectedBetweenElementsAndRightParen:
-    return "unexpectedBetweenElementsAndRightParen"
-  case \TuplePatternSyntax.rightParen:
-    return "rightParen"
-  case \TuplePatternSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \TupleTypeElementSyntax.unexpectedBeforeInoutKeyword:
-    return "unexpectedBeforeInoutKeyword"
-  case \TupleTypeElementSyntax.inoutKeyword:
-    return "inoutKeyword"
-  case \TupleTypeElementSyntax.unexpectedBetweenInoutKeywordAndFirstName:
-    return "unexpectedBetweenInoutKeywordAndFirstName"
-  case \TupleTypeElementSyntax.firstName:
-    return "firstName"
-  case \TupleTypeElementSyntax.unexpectedBetweenFirstNameAndSecondName:
-    return "unexpectedBetweenFirstNameAndSecondName"
-  case \TupleTypeElementSyntax.secondName:
-    return "secondName"
-  case \TupleTypeElementSyntax.unexpectedBetweenSecondNameAndColon:
-    return "unexpectedBetweenSecondNameAndColon"
-  case \TupleTypeElementSyntax.colon:
-    return "colon"
-  case \TupleTypeElementSyntax.unexpectedBetweenColonAndType:
-    return "unexpectedBetweenColonAndType"
-  case \TupleTypeElementSyntax.type:
-    return "type"
-  case \TupleTypeElementSyntax.unexpectedBetweenTypeAndEllipsis:
-    return "unexpectedBetweenTypeAndEllipsis"
-  case \TupleTypeElementSyntax.ellipsis:
-    return "ellipsis"
-  case \TupleTypeElementSyntax.unexpectedBetweenEllipsisAndTrailingComma:
-    return "unexpectedBetweenEllipsisAndTrailingComma"
-  case \TupleTypeElementSyntax.trailingComma:
-    return "trailingComma"
-  case \TupleTypeElementSyntax.unexpectedAfterTrailingComma:
-    return "unexpectedAfterTrailingComma"
-  case \TupleTypeSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \TupleTypeSyntax.leftParen:
-    return "leftParen"
-  case \TupleTypeSyntax.unexpectedBetweenLeftParenAndElements:
-    return "unexpectedBetweenLeftParenAndElements"
-  case \TupleTypeSyntax.elements:
-    return "elements"
-  case \TupleTypeSyntax.unexpectedBetweenElementsAndRightParen:
-    return "unexpectedBetweenElementsAndRightParen"
-  case \TupleTypeSyntax.rightParen:
-    return "rightParen"
-  case \TupleTypeSyntax.unexpectedAfterRightParen:
-    return "unexpectedAfterRightParen"
-  case \TypeAliasDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \TypeAliasDeclSyntax.attributes:
+  case \AttributeSyntax.attributeName:
+    return "attributeName"
+  case \AccessorDeclSyntax.attributes,
+  \ActorDeclSyntax.attributes,
+  \AssociatedTypeDeclSyntax.attributes,
+  \AttributeClauseFileSyntax.attributes,
+  \AttributedTypeSyntax.attributes,
+  \ClassDeclSyntax.attributes,
+  \ClosureParameterSyntax.attributes,
+  \ClosureSignatureSyntax.attributes,
+  \DeinitializerDeclSyntax.attributes,
+  \EditorPlaceholderDeclSyntax.attributes,
+  \EnumCaseDeclSyntax.attributes,
+  \EnumDeclSyntax.attributes,
+  \ExtensionDeclSyntax.attributes,
+  \FunctionDeclSyntax.attributes,
+  \FunctionParameterSyntax.attributes,
+  \GenericParameterSyntax.attributes,
+  \ImportDeclSyntax.attributes,
+  \InitializerDeclSyntax.attributes,
+  \MacroDeclSyntax.attributes,
+  \MacroExpansionDeclSyntax.attributes,
+  \MissingDeclSyntax.attributes,
+  \PrecedenceGroupDeclSyntax.attributes,
+  \ProtocolDeclSyntax.attributes,
+  \StructDeclSyntax.attributes,
+  \SubscriptDeclSyntax.attributes,
+  \TypeAliasDeclSyntax.attributes,
+  \VariableDeclSyntax.attributes:
     return "attributes"
-  case \TypeAliasDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \TypeAliasDeclSyntax.modifiers:
-    return "modifiers"
-  case \TypeAliasDeclSyntax.unexpectedBetweenModifiersAndTypealiasKeyword:
-    return "unexpectedBetweenModifiersAndTypealiasKeyword"
-  case \TypeAliasDeclSyntax.typealiasKeyword:
-    return "typealiasKeyword"
-  case \TypeAliasDeclSyntax.unexpectedBetweenTypealiasKeywordAndName:
-    return "unexpectedBetweenTypealiasKeywordAndName"
-  case \TypeAliasDeclSyntax.name:
-    return "name"
-  case \TypeAliasDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
-    return "unexpectedBetweenNameAndGenericParameterClause"
-  case \TypeAliasDeclSyntax.genericParameterClause:
-    return "genericParameterClause"
-  case \TypeAliasDeclSyntax.unexpectedBetweenGenericParameterClauseAndInitializer:
-    return "unexpectedBetweenGenericParameterClauseAndInitializer"
-  case \TypeAliasDeclSyntax.initializer:
-    return "initializer"
-  case \TypeAliasDeclSyntax.unexpectedBetweenInitializerAndGenericWhereClause:
-    return "unexpectedBetweenInitializerAndGenericWhereClause"
-  case \TypeAliasDeclSyntax.genericWhereClause:
-    return "genericWhereClause"
-  case \TypeAliasDeclSyntax.unexpectedAfterGenericWhereClause:
-    return "unexpectedAfterGenericWhereClause"
-  case \TypeAnnotationSyntax.unexpectedBeforeColon:
-    return "unexpectedBeforeColon"
-  case \TypeAnnotationSyntax.colon:
-    return "colon"
-  case \TypeAnnotationSyntax.unexpectedBetweenColonAndType:
-    return "unexpectedBetweenColonAndType"
-  case \TypeAnnotationSyntax.type:
-    return "type"
-  case \TypeAnnotationSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \TypeEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier:
-    return "unexpectedBeforeAsyncSpecifier"
-  case \TypeEffectSpecifiersSyntax.asyncSpecifier:
-    return "asyncSpecifier"
-  case \TypeEffectSpecifiersSyntax.unexpectedBetweenAsyncSpecifierAndThrowsClause:
-    return "unexpectedBetweenAsyncSpecifierAndThrowsClause"
-  case \TypeEffectSpecifiersSyntax.throwsClause:
-    return "throwsClause"
-  case \TypeEffectSpecifiersSyntax.unexpectedAfterThrowsClause:
-    return "unexpectedAfterThrowsClause"
-  case \TypeExprSyntax.unexpectedBeforeType:
-    return "unexpectedBeforeType"
-  case \TypeExprSyntax.type:
-    return "type"
-  case \TypeExprSyntax.unexpectedAfterType:
-    return "unexpectedAfterType"
-  case \TypeInitializerClauseSyntax.unexpectedBeforeEqual:
-    return "unexpectedBeforeEqual"
-  case \TypeInitializerClauseSyntax.equal:
-    return "equal"
-  case \TypeInitializerClauseSyntax.unexpectedBetweenEqualAndValue:
-    return "unexpectedBetweenEqualAndValue"
-  case \TypeInitializerClauseSyntax.value:
-    return "value"
-  case \TypeInitializerClauseSyntax.unexpectedAfterValue:
-    return "unexpectedAfterValue"
-  case \UnresolvedAsExprSyntax.unexpectedBeforeAsKeyword:
-    return "unexpectedBeforeAsKeyword"
-  case \UnresolvedAsExprSyntax.asKeyword:
-    return "asKeyword"
-  case \UnresolvedAsExprSyntax.unexpectedBetweenAsKeywordAndQuestionOrExclamationMark:
-    return "unexpectedBetweenAsKeywordAndQuestionOrExclamationMark"
-  case \UnresolvedAsExprSyntax.questionOrExclamationMark:
-    return "questionOrExclamationMark"
-  case \UnresolvedAsExprSyntax.unexpectedAfterQuestionOrExclamationMark:
-    return "unexpectedAfterQuestionOrExclamationMark"
-  case \UnresolvedIsExprSyntax.unexpectedBeforeIsKeyword:
-    return "unexpectedBeforeIsKeyword"
-  case \UnresolvedIsExprSyntax.isKeyword:
-    return "isKeyword"
-  case \UnresolvedIsExprSyntax.unexpectedAfterIsKeyword:
-    return "unexpectedAfterIsKeyword"
-  case \UnresolvedTernaryExprSyntax.unexpectedBeforeQuestionMark:
-    return "unexpectedBeforeQuestionMark"
-  case \UnresolvedTernaryExprSyntax.questionMark:
-    return "questionMark"
-  case \UnresolvedTernaryExprSyntax.unexpectedBetweenQuestionMarkAndThenExpression:
-    return "unexpectedBetweenQuestionMarkAndThenExpression"
-  case \UnresolvedTernaryExprSyntax.thenExpression:
-    return "thenExpression"
-  case \UnresolvedTernaryExprSyntax.unexpectedBetweenThenExpressionAndColon:
-    return "unexpectedBetweenThenExpressionAndColon"
-  case \UnresolvedTernaryExprSyntax.colon:
-    return "colon"
-  case \UnresolvedTernaryExprSyntax.unexpectedAfterColon:
-    return "unexpectedAfterColon"
-  case \UnsafeExprSyntax.unexpectedBeforeUnsafeKeyword:
-    return "unexpectedBeforeUnsafeKeyword"
-  case \UnsafeExprSyntax.unsafeKeyword:
-    return "unsafeKeyword"
-  case \UnsafeExprSyntax.unexpectedBetweenUnsafeKeywordAndExpression:
-    return "unexpectedBetweenUnsafeKeywordAndExpression"
-  case \UnsafeExprSyntax.expression:
-    return "expression"
-  case \UnsafeExprSyntax.unexpectedAfterExpression:
-    return "unexpectedAfterExpression"
-  case \UsingDeclSyntax.unexpectedBeforeUsingKeyword:
-    return "unexpectedBeforeUsingKeyword"
-  case \UsingDeclSyntax.usingKeyword:
-    return "usingKeyword"
-  case \UsingDeclSyntax.unexpectedBetweenUsingKeywordAndSpecifier:
-    return "unexpectedBetweenUsingKeywordAndSpecifier"
-  case \UsingDeclSyntax.specifier:
-    return "specifier"
-  case \UsingDeclSyntax.unexpectedAfterSpecifier:
-    return "unexpectedAfterSpecifier"
-  case \ValueBindingPatternSyntax.unexpectedBeforeBindingSpecifier:
-    return "unexpectedBeforeBindingSpecifier"
-  case \ValueBindingPatternSyntax.bindingSpecifier:
+  case \AvailabilityConditionSyntax.availabilityArguments,
+  \SpecializeAvailabilityArgumentSyntax.availabilityArguments:
+    return "availabilityArguments"
+  case \AvailabilityConditionSyntax.availabilityKeyword:
+    return "availabilityKeyword"
+  case \SpecializeAvailabilityArgumentSyntax.availabilityLabel:
+    return "availabilityLabel"
+  case \AwaitExprSyntax.awaitKeyword,
+  \ForStmtSyntax.awaitKeyword:
+    return "awaitKeyword"
+  case \ExpressionSegmentSyntax.backslash,
+  \KeyPathExprSyntax.backslash:
+    return "backslash"
+  case \MemberAccessExprSyntax.base,
+  \PostfixIfConfigExprSyntax.base:
+    return "base"
+  case \DeclReferenceExprSyntax.baseName:
+    return "baseName"
+  case \AttributedTypeSyntax.baseType,
+  \MemberTypeSyntax.baseType,
+  \MetatypeTypeSyntax.baseType:
+    return "baseType"
+  case \BackDeployedAttributeArgumentsSyntax.beforeLabel:
+    return "beforeLabel"
+  case \OptionalBindingConditionSyntax.bindingSpecifier,
+  \ValueBindingPatternSyntax.bindingSpecifier,
+  \VariableDeclSyntax.bindingSpecifier:
     return "bindingSpecifier"
-  case \ValueBindingPatternSyntax.unexpectedBetweenBindingSpecifierAndPattern:
-    return "unexpectedBetweenBindingSpecifierAndPattern"
-  case \ValueBindingPatternSyntax.pattern:
-    return "pattern"
-  case \ValueBindingPatternSyntax.unexpectedAfterPattern:
-    return "unexpectedAfterPattern"
-  case \VariableDeclSyntax.unexpectedBeforeAttributes:
-    return "unexpectedBeforeAttributes"
-  case \VariableDeclSyntax.attributes:
-    return "attributes"
-  case \VariableDeclSyntax.unexpectedBetweenAttributesAndModifiers:
-    return "unexpectedBetweenAttributesAndModifiers"
-  case \VariableDeclSyntax.modifiers:
-    return "modifiers"
-  case \VariableDeclSyntax.unexpectedBetweenModifiersAndBindingSpecifier:
-    return "unexpectedBetweenModifiersAndBindingSpecifier"
-  case \VariableDeclSyntax.bindingSpecifier:
-    return "bindingSpecifier"
-  case \VariableDeclSyntax.unexpectedBetweenBindingSpecifierAndBindings:
-    return "unexpectedBetweenBindingSpecifierAndBindings"
   case \VariableDeclSyntax.bindings:
     return "bindings"
-  case \VariableDeclSyntax.unexpectedAfterBindings:
-    return "unexpectedAfterBindings"
-  case \VersionComponentSyntax.unexpectedBeforePeriod:
-    return "unexpectedBeforePeriod"
-  case \VersionComponentSyntax.period:
-    return "period"
-  case \VersionComponentSyntax.unexpectedBetweenPeriodAndNumber:
-    return "unexpectedBetweenPeriodAndNumber"
-  case \VersionComponentSyntax.number:
-    return "number"
-  case \VersionComponentSyntax.unexpectedAfterNumber:
-    return "unexpectedAfterNumber"
-  case \VersionTupleSyntax.unexpectedBeforeMajor:
-    return "unexpectedBeforeMajor"
+  case \AccessorDeclSyntax.body,
+  \CatchClauseSyntax.body,
+  \CodeBlockFileSyntax.body,
+  \DeferStmtSyntax.body,
+  \DeinitializerDeclSyntax.body,
+  \DoExprSyntax.body,
+  \DoStmtSyntax.body,
+  \ForStmtSyntax.body,
+  \FunctionDeclSyntax.body,
+  \GuardStmtSyntax.body,
+  \IfExprSyntax.body,
+  \InitializerDeclSyntax.body,
+  \RepeatStmtSyntax.body,
+  \WhileStmtSyntax.body:
+    return "body"
+  case \BorrowExprSyntax.borrowKeyword:
+    return "borrowKeyword"
+  case \BreakStmtSyntax.breakKeyword:
+    return "breakKeyword"
+  case \FunctionCallExprSyntax.calledExpression,
+  \SubscriptCallExprSyntax.calledExpression:
+    return "calledExpression"
+  case \_CanImportExprSyntax.canImportKeyword:
+    return "canImportKeyword"
+  case \ClosureSignatureSyntax.capture:
+    return "capture"
+  case \SwitchCaseLabelSyntax.caseItems:
+    return "caseItems"
+  case \EnumCaseDeclSyntax.caseKeyword,
+  \ForStmtSyntax.caseKeyword,
+  \MatchingPatternConditionSyntax.caseKeyword,
+  \SwitchCaseLabelSyntax.caseKeyword:
+    return "caseKeyword"
+  case \SwitchExprSyntax.cases:
+    return "cases"
+  case \DoExprSyntax.catchClauses,
+  \DoStmtSyntax.catchClauses:
+    return "catchClauses"
+  case \CatchClauseSyntax.catchItems:
+    return "catchItems"
+  case \CatchClauseSyntax.catchKeyword:
+    return "catchKeyword"
+  case \ClassDeclSyntax.classKeyword,
+  \ClassRestrictionTypeSyntax.classKeyword:
+    return "classKeyword"
+  case \IfConfigDeclSyntax.clauses:
+    return "clauses"
+  case \RegexLiteralExprSyntax.closingPounds,
+  \StringLiteralExprSyntax.closingPounds:
+    return "closingPounds"
+  case \SimpleStringLiteralExprSyntax.closingQuote,
+  \StringLiteralExprSyntax.closingQuote:
+    return "closingQuote"
+  case \RegexLiteralExprSyntax.closingSlash:
+    return "closingSlash"
+  case \MultipleTrailingClosureElementSyntax.closure:
+    return "closure"
+  case \AvailabilityLabeledArgumentSyntax.colon,
+  \AvailabilityMacroDefinitionFileSyntax.colon,
+  \BackDeployedAttributeArgumentsSyntax.colon,
+  \_CanImportVersionInfoSyntax.colon,
+  \ClosureParameterSyntax.colon,
+  \ConformanceRequirementSyntax.colon,
+  \DeclNameArgumentSyntax.colon,
+  \DerivativeAttributeArgumentsSyntax.colon,
+  \DictionaryElementSyntax.colon,
+  \DictionaryTypeSyntax.colon,
+  \DifferentiabilityWithRespectToArgumentSyntax.colon,
+  \DocumentationAttributeArgumentSyntax.colon,
+  \DynamicReplacementAttributeArgumentsSyntax.colon,
+  \EnumCaseParameterSyntax.colon,
+  \FunctionParameterSyntax.colon,
+  \GenericParameterSyntax.colon,
+  \InheritanceClauseSyntax.colon,
+  \LabeledExprSyntax.colon,
+  \LabeledSpecializeArgumentSyntax.colon,
+  \LabeledStmtSyntax.colon,
+  \LayoutRequirementSyntax.colon,
+  \MultipleTrailingClosureElementSyntax.colon,
+  \ObjCSelectorPieceSyntax.colon,
+  \OperatorPrecedenceAndTypesSyntax.colon,
+  \OriginallyDefinedInAttributeArgumentsSyntax.colon,
+  \PrecedenceGroupAssignmentSyntax.colon,
+  \PrecedenceGroupAssociativitySyntax.colon,
+  \PrecedenceGroupRelationSyntax.colon,
+  \SpecializeAvailabilityArgumentSyntax.colon,
+  \SpecializeTargetFunctionArgumentSyntax.colon,
+  \SwitchCaseLabelSyntax.colon,
+  \SwitchDefaultLabelSyntax.colon,
+  \TernaryExprSyntax.colon,
+  \TuplePatternElementSyntax.colon,
+  \TupleTypeElementSyntax.colon,
+  \TypeAnnotationSyntax.colon,
+  \UnresolvedTernaryExprSyntax.colon:
+    return "colon"
+  case \_CanImportVersionInfoSyntax.comma,
+  \DerivativeAttributeArgumentsSyntax.comma,
+  \ImplementsAttributeArgumentsSyntax.comma,
+  \LayoutRequirementSyntax.comma,
+  \OriginallyDefinedInAttributeArgumentsSyntax.comma,
+  \PoundSourceLocationArgumentsSyntax.comma,
+  \YieldedExpressionSyntax.comma:
+    return "comma"
+  case \KeyPathComponentSyntax.component:
+    return "component"
+  case \KeyPathExprSyntax.components,
+  \VersionTupleSyntax.components:
+    return "components"
+  case \ConditionElementSyntax.condition,
+  \IfConfigClauseSyntax.condition,
+  \RepeatStmtSyntax.condition,
+  \TernaryExprSyntax.condition,
+  \WhereClauseSyntax.condition:
+    return "condition"
+  case \GuardStmtSyntax.conditions,
+  \IfExprSyntax.conditions,
+  \WhileStmtSyntax.conditions:
+    return "conditions"
+  case \PostfixIfConfigExprSyntax.config:
+    return "config"
+  case \SomeOrAnyTypeSyntax.constraint:
+    return "constraint"
+  case \ConsumeExprSyntax.consumeKeyword:
+    return "consumeKeyword"
+  case \DictionaryExprSyntax.content,
+  \StringSegmentSyntax.content:
+    return "content"
+  case \ContinueStmtSyntax.continueKeyword:
+    return "continueKeyword"
+  case \CopyExprSyntax.copyKeyword:
+    return "copyKeyword"
+  case \InlineArrayTypeSyntax.count:
+    return "count"
+  case \MemberBlockItemSyntax.decl:
+    return "decl"
+  case \DynamicReplacementAttributeArgumentsSyntax.declName,
+  \ImplementsAttributeArgumentsSyntax.declName,
+  \KeyPathMethodComponentSyntax.declName,
+  \KeyPathPropertyComponentSyntax.declName,
+  \MemberAccessExprSyntax.declName,
+  \SpecializeTargetFunctionArgumentSyntax.declName:
+    return "declName"
+  case \SwitchDefaultLabelSyntax.defaultKeyword:
+    return "defaultKeyword"
+  case \EnumCaseParameterSyntax.defaultValue,
+  \FunctionParameterSyntax.defaultValue:
+    return "defaultValue"
+  case \DeferStmtSyntax.deferKeyword:
+    return "deferKeyword"
+  case \MacroDeclSyntax.definition:
+    return "definition"
+  case \DeinitializerDeclSyntax.deinitKeyword:
+    return "deinitKeyword"
+  case \LifetimeTypeSpecifierSyntax.dependsOnKeyword:
+    return "dependsOnKeyword"
+  case \OperatorPrecedenceAndTypesSyntax.designatedTypes:
+    return "designatedTypes"
+  case \ClosureCaptureSpecifierSyntax.detail,
+  \DeclModifierDetailSyntax.detail,
+  \DeclModifierSyntax.detail:
+    return "detail"
+  case \DiscardStmtSyntax.discardKeyword:
+    return "discardKeyword"
+  case \DoExprSyntax.doKeyword,
+  \DoStmtSyntax.doKeyword:
+    return "doKeyword"
+  case \PackElementExprSyntax.eachKeyword,
+  \PackElementTypeSyntax.eachKeyword:
+    return "eachKeyword"
+  case \AccessorDeclSyntax.effectSpecifiers,
+  \ArrowExprSyntax.effectSpecifiers,
+  \ClosureSignatureSyntax.effectSpecifiers,
+  \DeinitializerDeclSyntax.effectSpecifiers,
+  \FunctionSignatureSyntax.effectSpecifiers,
+  \FunctionTypeSyntax.effectSpecifiers:
+    return "effectSpecifiers"
+  case \ArrayTypeSyntax.element,
+  \InlineArrayTypeSyntax.element:
+    return "element"
+  case \ArrayExprSyntax.elements,
+  \CompositionTypeSyntax.elements,
+  \EnumCaseDeclSyntax.elements,
+  \IfConfigClauseSyntax.elements,
+  \SequenceExprSyntax.elements,
+  \TupleExprSyntax.elements,
+  \TuplePatternSyntax.elements,
+  \TupleTypeSyntax.elements,
+  \YieldedExpressionsClauseSyntax.elements:
+    return "elements"
+  case \ClosureParameterSyntax.ellipsis,
+  \FunctionParameterSyntax.ellipsis,
+  \TupleTypeElementSyntax.ellipsis:
+    return "ellipsis"
+  case \IfExprSyntax.elseBody:
+    return "elseBody"
+  case \TernaryExprSyntax.elseExpression:
+    return "elseExpression"
+  case \GuardStmtSyntax.elseKeyword,
+  \IfExprSyntax.elseKeyword:
+    return "elseKeyword"
+  case \AccessorBlockFileSyntax.endOfFileToken,
+  \AttributeClauseFileSyntax.endOfFileToken,
+  \AvailabilityMacroDefinitionFileSyntax.endOfFileToken,
+  \CodeBlockFileSyntax.endOfFileToken,
+  \MemberBlockItemListFileSyntax.endOfFileToken,
+  \SourceFileSyntax.endOfFileToken:
+    return "endOfFileToken"
+  case \EnumDeclSyntax.enumKeyword:
+    return "enumKeyword"
+  case \AssignmentExprSyntax.equal,
+  \InitializerClauseSyntax.equal,
+  \SameTypeRequirementSyntax.equal,
+  \TypeInitializerClauseSyntax.equal:
+    return "equal"
+  case \ForceUnwrapExprSyntax.exclamationMark,
+  \ImplicitlyUnwrappedOptionalTypeSyntax.exclamationMark:
+    return "exclamationMark"
+  case \ArrayElementSyntax.expression,
+  \AsExprSyntax.expression,
+  \AwaitExprSyntax.expression,
+  \BorrowExprSyntax.expression,
+  \ConsumeExprSyntax.expression,
+  \CopyExprSyntax.expression,
+  \DiscardStmtSyntax.expression,
+  \ExpressionPatternSyntax.expression,
+  \ExpressionStmtSyntax.expression,
+  \ForceUnwrapExprSyntax.expression,
+  \GenericSpecializationExprSyntax.expression,
+  \InOutExprSyntax.expression,
+  \IsExprSyntax.expression,
+  \LabeledExprSyntax.expression,
+  \OptionalChainingExprSyntax.expression,
+  \PostfixOperatorExprSyntax.expression,
+  \PrefixOperatorExprSyntax.expression,
+  \ReturnStmtSyntax.expression,
+  \ThenStmtSyntax.expression,
+  \ThrowStmtSyntax.expression,
+  \TryExprSyntax.expression,
+  \UnsafeExprSyntax.expression,
+  \YieldedExpressionSyntax.expression:
+    return "expression"
+  case \ExpressionSegmentSyntax.expressions:
+    return "expressions"
+  case \ExtensionDeclSyntax.extendedType:
+    return "extendedType"
+  case \ExtensionDeclSyntax.extensionKeyword:
+    return "extensionKeyword"
+  case \FallThroughStmtSyntax.fallthroughKeyword:
+    return "fallthroughKeyword"
+  case \PoundSourceLocationArgumentsSyntax.fileColon:
+    return "fileColon"
+  case \PoundSourceLocationArgumentsSyntax.fileLabel:
+    return "fileLabel"
+  case \PoundSourceLocationArgumentsSyntax.fileName:
+    return "fileName"
+  case \ClosureParameterSyntax.firstName,
+  \EnumCaseParameterSyntax.firstName,
+  \FunctionParameterSyntax.firstName,
+  \TupleTypeElementSyntax.firstName:
+    return "firstName"
+  case \OperatorDeclSyntax.fixitySpecifier:
+    return "fixitySpecifier"
+  case \ForStmtSyntax.forKeyword:
+    return "forKeyword"
+  case \DynamicReplacementAttributeArgumentsSyntax.forLabel:
+    return "forLabel"
+  case \FunctionDeclSyntax.funcKeyword:
+    return "funcKeyword"
+  case \GenericSpecializationExprSyntax.genericArgumentClause,
+  \IdentifierTypeSyntax.genericArgumentClause,
+  \KeyPathPropertyComponentSyntax.genericArgumentClause,
+  \MacroExpansionDeclSyntax.genericArgumentClause,
+  \MacroExpansionExprSyntax.genericArgumentClause,
+  \MemberTypeSyntax.genericArgumentClause:
+    return "genericArgumentClause"
+  case \ActorDeclSyntax.genericParameterClause,
+  \ClassDeclSyntax.genericParameterClause,
+  \EnumDeclSyntax.genericParameterClause,
+  \FunctionDeclSyntax.genericParameterClause,
+  \InitializerDeclSyntax.genericParameterClause,
+  \MacroDeclSyntax.genericParameterClause,
+  \NamedOpaqueReturnTypeSyntax.genericParameterClause,
+  \StructDeclSyntax.genericParameterClause,
+  \SubscriptDeclSyntax.genericParameterClause,
+  \TypeAliasDeclSyntax.genericParameterClause:
+    return "genericParameterClause"
+  case \ActorDeclSyntax.genericWhereClause,
+  \AssociatedTypeDeclSyntax.genericWhereClause,
+  \ClassDeclSyntax.genericWhereClause,
+  \DifferentiableAttributeArgumentsSyntax.genericWhereClause,
+  \EnumDeclSyntax.genericWhereClause,
+  \ExtensionDeclSyntax.genericWhereClause,
+  \FunctionDeclSyntax.genericWhereClause,
+  \GenericParameterClauseSyntax.genericWhereClause,
+  \InitializerDeclSyntax.genericWhereClause,
+  \MacroDeclSyntax.genericWhereClause,
+  \ProtocolDeclSyntax.genericWhereClause,
+  \SpecializedAttributeArgumentSyntax.genericWhereClause,
+  \StructDeclSyntax.genericWhereClause,
+  \SubscriptDeclSyntax.genericWhereClause,
+  \TypeAliasDeclSyntax.genericWhereClause:
+    return "genericWhereClause"
+  case \PrecedenceGroupDeclSyntax.groupAttributes:
+    return "groupAttributes"
+  case \GuardStmtSyntax.guardKeyword:
+    return "guardKeyword"
+  case \PrecedenceGroupRelationSyntax.higherThanOrLowerThanLabel:
+    return "higherThanOrLowerThanLabel"
+  case \IdentifierPatternSyntax.identifier:
+    return "identifier"
+  case \IfExprSyntax.ifKeyword:
+    return "ifKeyword"
+  case \ImportDeclSyntax.importKeyword:
+    return "importKeyword"
+  case \ImportDeclSyntax.importKindSpecifier:
+    return "importKindSpecifier"
+  case \_CanImportExprSyntax.importPath:
+    return "importPath"
+  case \ClosureSignatureSyntax.inKeyword,
+  \ForStmtSyntax.inKeyword:
+    return "inKeyword"
+  case \ActorDeclSyntax.inheritanceClause,
+  \AssociatedTypeDeclSyntax.inheritanceClause,
+  \ClassDeclSyntax.inheritanceClause,
+  \EnumDeclSyntax.inheritanceClause,
+  \ExtensionDeclSyntax.inheritanceClause,
+  \ProtocolDeclSyntax.inheritanceClause,
+  \StructDeclSyntax.inheritanceClause:
+    return "inheritanceClause"
+  case \GenericParameterSyntax.inheritedType:
+    return "inheritedType"
+  case \InheritanceClauseSyntax.inheritedTypes:
+    return "inheritedTypes"
+  case \InitializerDeclSyntax.initKeyword:
+    return "initKeyword"
+  case \AssociatedTypeDeclSyntax.initializer,
+  \ClosureCaptureSyntax.initializer,
+  \MatchingPatternConditionSyntax.initializer,
+  \OptionalBindingConditionSyntax.initializer,
+  \PatternBindingSyntax.initializer,
+  \TypeAliasDeclSyntax.initializer:
+    return "initializer"
+  case \TupleTypeElementSyntax.inoutKeyword:
+    return "inoutKeyword"
+  case \IsExprSyntax.isKeyword,
+  \IsTypePatternSyntax.isKeyword,
+  \UnresolvedIsExprSyntax.isKeyword:
+    return "isKeyword"
+  case \CodeBlockItemSyntax.item:
+    return "item"
+  case \ClosureCaptureClauseSyntax.items:
+    return "items"
+  case \DictionaryElementSyntax.key,
+  \DictionaryTypeSyntax.key:
+    return "key"
+  case \DifferentiableAttributeArgumentsSyntax.kindSpecifier:
+    return "kindSpecifier"
+  case \DifferentiableAttributeArgumentsSyntax.kindSpecifierComma:
+    return "kindSpecifierComma"
+  case \AvailabilityLabeledArgumentSyntax.label,
+  \BreakStmtSyntax.label,
+  \_CanImportVersionInfoSyntax.label,
+  \ContinueStmtSyntax.label,
+  \DocumentationAttributeArgumentSyntax.label,
+  \LabeledExprSyntax.label,
+  \LabeledSpecializeArgumentSyntax.label,
+  \LabeledStmtSyntax.label,
+  \MultipleTrailingClosureElementSyntax.label,
+  \SwitchCaseSyntax.label,
+  \TuplePatternElementSyntax.label:
+    return "label"
+  case \AttributedTypeSyntax.lateSpecifiers:
+    return "lateSpecifiers"
+  case \LayoutRequirementSyntax.layoutSpecifier:
+    return "layoutSpecifier"
+  case \DesignatedTypeSyntax.leadingComma:
+    return "leadingComma"
+  case \GenericArgumentClauseSyntax.leftAngle,
+  \GenericParameterClauseSyntax.leftAngle,
+  \PrimaryAssociatedTypeClauseSyntax.leftAngle:
+    return "leftAngle"
+  case \AccessorBlockFileSyntax.leftBrace,
+  \AccessorBlockSyntax.leftBrace,
+  \ClosureExprSyntax.leftBrace,
+  \CodeBlockSyntax.leftBrace,
+  \MemberBlockSyntax.leftBrace,
+  \PrecedenceGroupDeclSyntax.leftBrace,
+  \SwitchExprSyntax.leftBrace:
+    return "leftBrace"
+  case \InfixOperatorExprSyntax.leftOperand:
+    return "leftOperand"
+  case \AccessorParametersSyntax.leftParen,
+  \AttributeSyntax.leftParen,
+  \AvailabilityConditionSyntax.leftParen,
+  \_CanImportExprSyntax.leftParen,
+  \ClosureCaptureSpecifierSyntax.leftParen,
+  \ClosureParameterClauseSyntax.leftParen,
+  \DeclModifierDetailSyntax.leftParen,
+  \DeclNameArgumentsSyntax.leftParen,
+  \DifferentiabilityArgumentsSyntax.leftParen,
+  \EnumCaseParameterClauseSyntax.leftParen,
+  \ExpressionSegmentSyntax.leftParen,
+  \FunctionCallExprSyntax.leftParen,
+  \FunctionParameterClauseSyntax.leftParen,
+  \FunctionTypeSyntax.leftParen,
+  \KeyPathMethodComponentSyntax.leftParen,
+  \LayoutRequirementSyntax.leftParen,
+  \LifetimeTypeSpecifierSyntax.leftParen,
+  \MacroExpansionDeclSyntax.leftParen,
+  \MacroExpansionExprSyntax.leftParen,
+  \NonisolatedSpecifierArgumentSyntax.leftParen,
+  \PoundSourceLocationSyntax.leftParen,
+  \ThrowsClauseSyntax.leftParen,
+  \TupleExprSyntax.leftParen,
+  \TuplePatternSyntax.leftParen,
+  \TupleTypeSyntax.leftParen,
+  \YieldedExpressionsClauseSyntax.leftParen:
+    return "leftParen"
+  case \ArrayExprSyntax.leftSquare,
+  \ArrayTypeSyntax.leftSquare,
+  \ClosureCaptureClauseSyntax.leftSquare,
+  \DictionaryExprSyntax.leftSquare,
+  \DictionaryTypeSyntax.leftSquare,
+  \InlineArrayTypeSyntax.leftSquare,
+  \KeyPathSubscriptComponentSyntax.leftSquare,
+  \SubscriptCallExprSyntax.leftSquare:
+    return "leftSquare"
+  case \ConformanceRequirementSyntax.leftType,
+  \SameTypeRequirementSyntax.leftType:
+    return "leftType"
+  case \PoundSourceLocationArgumentsSyntax.lineColon:
+    return "lineColon"
+  case \PoundSourceLocationArgumentsSyntax.lineLabel:
+    return "lineLabel"
+  case \PoundSourceLocationArgumentsSyntax.lineNumber:
+    return "lineNumber"
+  case \BooleanLiteralExprSyntax.literal,
+  \FloatLiteralExprSyntax.literal,
+  \IntegerLiteralExprSyntax.literal:
+    return "literal"
+  case \MacroDeclSyntax.macroKeyword:
+    return "macroKeyword"
+  case \MacroExpansionDeclSyntax.macroName,
+  \MacroExpansionExprSyntax.macroName:
+    return "macroName"
   case \VersionTupleSyntax.major:
     return "major"
-  case \VersionTupleSyntax.unexpectedBetweenMajorAndComponents:
-    return "unexpectedBetweenMajorAndComponents"
-  case \VersionTupleSyntax.components:
-    return "components"
-  case \VersionTupleSyntax.unexpectedAfterComponents:
-    return "unexpectedAfterComponents"
-  case \WhereClauseSyntax.unexpectedBeforeWhereKeyword:
-    return "unexpectedBeforeWhereKeyword"
-  case \WhereClauseSyntax.whereKeyword:
-    return "whereKeyword"
-  case \WhereClauseSyntax.unexpectedBetweenWhereKeywordAndCondition:
-    return "unexpectedBetweenWhereKeywordAndCondition"
-  case \WhereClauseSyntax.condition:
-    return "condition"
-  case \WhereClauseSyntax.unexpectedAfterCondition:
-    return "unexpectedAfterCondition"
-  case \WhileStmtSyntax.unexpectedBeforeWhileKeyword:
-    return "unexpectedBeforeWhileKeyword"
-  case \WhileStmtSyntax.whileKeyword:
-    return "whileKeyword"
-  case \WhileStmtSyntax.unexpectedBetweenWhileKeywordAndConditions:
-    return "unexpectedBetweenWhileKeywordAndConditions"
-  case \WhileStmtSyntax.conditions:
-    return "conditions"
-  case \WhileStmtSyntax.unexpectedBetweenConditionsAndBody:
-    return "unexpectedBetweenConditionsAndBody"
-  case \WhileStmtSyntax.body:
-    return "body"
-  case \WhileStmtSyntax.unexpectedAfterBody:
+  case \ActorDeclSyntax.memberBlock,
+  \ClassDeclSyntax.memberBlock,
+  \EnumDeclSyntax.memberBlock,
+  \ExtensionDeclSyntax.memberBlock,
+  \ProtocolDeclSyntax.memberBlock,
+  \StructDeclSyntax.memberBlock:
+    return "memberBlock"
+  case \MemberBlockItemListFileSyntax.members,
+  \MemberBlockSyntax.members:
+    return "members"
+  case \MetatypeTypeSyntax.metatypeSpecifier:
+    return "metatypeSpecifier"
+  case \AccessorDeclSyntax.modifier:
+    return "modifier"
+  case \ActorDeclSyntax.modifiers,
+  \AssociatedTypeDeclSyntax.modifiers,
+  \AttributeClauseFileSyntax.modifiers,
+  \ClassDeclSyntax.modifiers,
+  \ClosureParameterSyntax.modifiers,
+  \DeinitializerDeclSyntax.modifiers,
+  \EditorPlaceholderDeclSyntax.modifiers,
+  \EnumCaseDeclSyntax.modifiers,
+  \EnumCaseParameterSyntax.modifiers,
+  \EnumDeclSyntax.modifiers,
+  \ExtensionDeclSyntax.modifiers,
+  \FunctionDeclSyntax.modifiers,
+  \FunctionParameterSyntax.modifiers,
+  \ImportDeclSyntax.modifiers,
+  \InitializerDeclSyntax.modifiers,
+  \MacroDeclSyntax.modifiers,
+  \MacroExpansionDeclSyntax.modifiers,
+  \MissingDeclSyntax.modifiers,
+  \PrecedenceGroupDeclSyntax.modifiers,
+  \ProtocolDeclSyntax.modifiers,
+  \StructDeclSyntax.modifiers,
+  \SubscriptDeclSyntax.modifiers,
+  \TypeAliasDeclSyntax.modifiers,
+  \VariableDeclSyntax.modifiers:
+    return "modifiers"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.moduleLabel:
+    return "moduleLabel"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.moduleName:
+    return "moduleName"
+  case \AccessorParametersSyntax.name,
+  \ActorDeclSyntax.name,
+  \AssociatedTypeDeclSyntax.name,
+  \ClassDeclSyntax.name,
+  \ClosureCaptureSyntax.name,
+  \ClosureShorthandParameterSyntax.name,
+  \DeclModifierSyntax.name,
+  \DeclNameArgumentSyntax.name,
+  \DesignatedTypeSyntax.name,
+  \EnumCaseElementSyntax.name,
+  \EnumDeclSyntax.name,
+  \FunctionDeclSyntax.name,
+  \GenericParameterSyntax.name,
+  \IdentifierTypeSyntax.name,
+  \ImportPathComponentSyntax.name,
+  \MacroDeclSyntax.name,
+  \MemberTypeSyntax.name,
+  \ObjCSelectorPieceSyntax.name,
+  \OperatorDeclSyntax.name,
+  \PrecedenceGroupDeclSyntax.name,
+  \PrecedenceGroupNameSyntax.name,
+  \PrimaryAssociatedTypeSyntax.name,
+  \ProtocolDeclSyntax.name,
+  \StructDeclSyntax.name,
+  \TypeAliasDeclSyntax.name:
+    return "name"
+  case \NilLiteralExprSyntax.nilKeyword:
+    return "nilKeyword"
+  case \NonisolatedTypeSpecifierSyntax.nonisolatedKeyword:
+    return "nonisolatedKeyword"
+  case \NonisolatedSpecifierArgumentSyntax.nonsendingKeyword:
+    return "nonsendingKeyword"
+  case \VersionComponentSyntax.number:
+    return "number"
+  case \DerivativeAttributeArgumentsSyntax.ofLabel:
+    return "ofLabel"
+  case \RegexLiteralExprSyntax.openingPounds,
+  \StringLiteralExprSyntax.openingPounds:
+    return "openingPounds"
+  case \SimpleStringLiteralExprSyntax.openingQuote,
+  \StringLiteralExprSyntax.openingQuote:
+    return "openingQuote"
+  case \RegexLiteralExprSyntax.openingSlash:
+    return "openingSlash"
+  case \BinaryOperatorExprSyntax.operator,
+  \InfixOperatorExprSyntax.operator,
+  \PostfixOperatorExprSyntax.operator,
+  \PrefixOperatorExprSyntax.operator:
+    return "operator"
+  case \OperatorDeclSyntax.operatorKeyword:
+    return "operatorKeyword"
+  case \OperatorDeclSyntax.operatorPrecedenceAndTypes:
+    return "operatorPrecedenceAndTypes"
+  case \InitializerDeclSyntax.optionalMark:
+    return "optionalMark"
+  case \DerivativeAttributeArgumentsSyntax.originalDeclName:
+    return "originalDeclName"
+  case \PackElementExprSyntax.pack,
+  \PackElementTypeSyntax.pack:
+    return "pack"
+  case \LifetimeSpecifierArgumentSyntax.parameter:
+    return "parameter"
+  case \ClosureSignatureSyntax.parameterClause,
+  \EnumCaseElementSyntax.parameterClause,
+  \FunctionSignatureSyntax.parameterClause,
+  \SubscriptDeclSyntax.parameterClause:
+    return "parameterClause"
+  case \AccessorDeclSyntax.parameters,
+  \ClosureParameterClauseSyntax.parameters,
+  \EnumCaseParameterClauseSyntax.parameters,
+  \FunctionParameterClauseSyntax.parameters,
+  \FunctionTypeSyntax.parameters,
+  \GenericParameterClauseSyntax.parameters:
+    return "parameters"
+  case \ImportDeclSyntax.path:
+    return "path"
+  case \CatchItemSyntax.pattern,
+  \ForStmtSyntax.pattern,
+  \MatchingPatternConditionSyntax.pattern,
+  \OptionalBindingConditionSyntax.pattern,
+  \PatternBindingSyntax.pattern,
+  \PatternExprSyntax.pattern,
+  \SwitchCaseItemSyntax.pattern,
+  \TuplePatternElementSyntax.pattern,
+  \ValueBindingPatternSyntax.pattern:
+    return "pattern"
+  case \DerivativeAttributeArgumentsSyntax.period,
+  \KeyPathComponentSyntax.period,
+  \MemberAccessExprSyntax.period,
+  \MemberTypeSyntax.period,
+  \MetatypeTypeSyntax.period,
+  \VersionComponentSyntax.period:
+    return "period"
+  case \EditorPlaceholderDeclSyntax.placeholder,
+  \EditorPlaceholderExprSyntax.placeholder,
+  \MissingDeclSyntax.placeholder,
+  \MissingExprSyntax.placeholder,
+  \MissingPatternSyntax.placeholder,
+  \MissingStmtSyntax.placeholder,
+  \MissingSyntax.placeholder,
+  \MissingTypeSyntax.placeholder:
+    return "placeholder"
+  case \PlatformVersionSyntax.platform:
+    return "platform"
+  case \AvailabilityMacroDefinitionFileSyntax.platformVersion,
+  \PlatformVersionItemSyntax.platformVersion:
+    return "platformVersion"
+  case \BackDeployedAttributeArgumentsSyntax.platforms,
+  \OriginallyDefinedInAttributeArgumentsSyntax.platforms:
+    return "platforms"
+  case \MacroExpansionDeclSyntax.pound,
+  \MacroExpansionExprSyntax.pound:
+    return "pound"
+  case \IfConfigDeclSyntax.poundEndif:
+    return "poundEndif"
+  case \IfConfigClauseSyntax.poundKeyword:
+    return "poundKeyword"
+  case \PoundSourceLocationSyntax.poundSourceLocation:
+    return "poundSourceLocation"
+  case \ExpressionSegmentSyntax.pounds:
+    return "pounds"
+  case \OperatorPrecedenceAndTypesSyntax.precedenceGroup:
+    return "precedenceGroup"
+  case \PrecedenceGroupRelationSyntax.precedenceGroups:
+    return "precedenceGroups"
+  case \PrecedenceGroupDeclSyntax.precedencegroupKeyword:
+    return "precedencegroupKeyword"
+  case \ProtocolDeclSyntax.primaryAssociatedTypeClause:
+    return "primaryAssociatedTypeClause"
+  case \PrimaryAssociatedTypeClauseSyntax.primaryAssociatedTypes:
+    return "primaryAssociatedTypes"
+  case \ProtocolDeclSyntax.protocolKeyword:
+    return "protocolKeyword"
+  case \ABIAttributeArgumentsSyntax.provider:
+    return "provider"
+  case \OptionalChainingExprSyntax.questionMark,
+  \OptionalTypeSyntax.questionMark,
+  \TernaryExprSyntax.questionMark,
+  \UnresolvedTernaryExprSyntax.questionMark:
+    return "questionMark"
+  case \AsExprSyntax.questionOrExclamationMark,
+  \KeyPathOptionalComponentSyntax.questionOrExclamationMark,
+  \TryExprSyntax.questionOrExclamationMark,
+  \UnresolvedAsExprSyntax.questionOrExclamationMark:
+    return "questionOrExclamationMark"
+  case \EnumCaseElementSyntax.rawValue:
+    return "rawValue"
+  case \RegexLiteralExprSyntax.regex:
+    return "regex"
+  case \PackExpansionExprSyntax.repeatKeyword,
+  \PackExpansionTypeSyntax.repeatKeyword,
+  \RepeatStmtSyntax.repeatKeyword:
+    return "repeatKeyword"
+  case \PackExpansionExprSyntax.repetitionPattern,
+  \PackExpansionTypeSyntax.repetitionPattern:
+    return "repetitionPattern"
+  case \GenericRequirementSyntax.requirement:
+    return "requirement"
+  case \GenericWhereClauseSyntax.requirements:
+    return "requirements"
+  case \ClosureSignatureSyntax.returnClause,
+  \FunctionSignatureSyntax.returnClause,
+  \FunctionTypeSyntax.returnClause,
+  \SubscriptDeclSyntax.returnClause:
+    return "returnClause"
+  case \ReturnStmtSyntax.returnKeyword:
+    return "returnKeyword"
+  case \GenericArgumentClauseSyntax.rightAngle,
+  \GenericParameterClauseSyntax.rightAngle,
+  \PrimaryAssociatedTypeClauseSyntax.rightAngle:
+    return "rightAngle"
+  case \AccessorBlockFileSyntax.rightBrace,
+  \AccessorBlockSyntax.rightBrace,
+  \ClosureExprSyntax.rightBrace,
+  \CodeBlockSyntax.rightBrace,
+  \MemberBlockSyntax.rightBrace,
+  \PrecedenceGroupDeclSyntax.rightBrace,
+  \SwitchExprSyntax.rightBrace:
+    return "rightBrace"
+  case \InfixOperatorExprSyntax.rightOperand:
+    return "rightOperand"
+  case \AccessorParametersSyntax.rightParen,
+  \AttributeSyntax.rightParen,
+  \AvailabilityConditionSyntax.rightParen,
+  \_CanImportExprSyntax.rightParen,
+  \ClosureCaptureSpecifierSyntax.rightParen,
+  \ClosureParameterClauseSyntax.rightParen,
+  \DeclModifierDetailSyntax.rightParen,
+  \DeclNameArgumentsSyntax.rightParen,
+  \DifferentiabilityArgumentsSyntax.rightParen,
+  \EnumCaseParameterClauseSyntax.rightParen,
+  \ExpressionSegmentSyntax.rightParen,
+  \FunctionCallExprSyntax.rightParen,
+  \FunctionParameterClauseSyntax.rightParen,
+  \FunctionTypeSyntax.rightParen,
+  \KeyPathMethodComponentSyntax.rightParen,
+  \LayoutRequirementSyntax.rightParen,
+  \LifetimeTypeSpecifierSyntax.rightParen,
+  \MacroExpansionDeclSyntax.rightParen,
+  \MacroExpansionExprSyntax.rightParen,
+  \NonisolatedSpecifierArgumentSyntax.rightParen,
+  \PoundSourceLocationSyntax.rightParen,
+  \ThrowsClauseSyntax.rightParen,
+  \TupleExprSyntax.rightParen,
+  \TuplePatternSyntax.rightParen,
+  \TupleTypeSyntax.rightParen,
+  \YieldedExpressionsClauseSyntax.rightParen:
+    return "rightParen"
+  case \ArrayExprSyntax.rightSquare,
+  \ArrayTypeSyntax.rightSquare,
+  \ClosureCaptureClauseSyntax.rightSquare,
+  \DictionaryExprSyntax.rightSquare,
+  \DictionaryTypeSyntax.rightSquare,
+  \InlineArrayTypeSyntax.rightSquare,
+  \KeyPathSubscriptComponentSyntax.rightSquare,
+  \SubscriptCallExprSyntax.rightSquare:
+    return "rightSquare"
+  case \ConformanceRequirementSyntax.rightType,
+  \SameTypeRequirementSyntax.rightType:
+    return "rightType"
+  case \KeyPathExprSyntax.root:
+    return "root"
+  case \LifetimeTypeSpecifierSyntax.scopedKeyword:
+    return "scopedKeyword"
+  case \ClosureParameterSyntax.secondName,
+  \EnumCaseParameterSyntax.secondName,
+  \FunctionParameterSyntax.secondName,
+  \TupleTypeElementSyntax.secondName:
+    return "secondName"
+  case \SimpleStringLiteralExprSyntax.segments,
+  \StringLiteralExprSyntax.segments:
+    return "segments"
+  case \CodeBlockItemSyntax.semicolon,
+  \MemberBlockItemSyntax.semicolon,
+  \SpecializeAvailabilityArgumentSyntax.semicolon:
+    return "semicolon"
+  case \InlineArrayTypeSyntax.separator:
+    return "separator"
+  case \ForStmtSyntax.sequence:
+    return "sequence"
+  case \SourceFileSyntax.shebang:
+    return "shebang"
+  case \ClosureExprSyntax.signature,
+  \FunctionDeclSyntax.signature,
+  \InitializerDeclSyntax.signature,
+  \MacroDeclSyntax.signature:
+    return "signature"
+  case \LayoutRequirementSyntax.size:
+    return "size"
+  case \SomeOrAnyTypeSyntax.someOrAnySpecifier:
+    return "someOrAnySpecifier"
+  case \ClosureCaptureSpecifierSyntax.specifier,
+  \ClosureCaptureSyntax.specifier,
+  \GenericParameterSyntax.specifier,
+  \SimpleTypeSpecifierSyntax.specifier,
+  \UsingDeclSyntax.specifier:
+    return "specifier"
+  case \AttributedTypeSyntax.specifiers:
+    return "specifiers"
+  case \AvailabilityMacroDefinitionFileSyntax.specs:
+    return "specs"
+  case \LabeledStmtSyntax.statement:
+    return "statement"
+  case \ClosureExprSyntax.statements,
+  \CodeBlockSyntax.statements,
+  \SourceFileSyntax.statements,
+  \SwitchCaseSyntax.statements:
+    return "statements"
+  case \StructDeclSyntax.structKeyword:
+    return "structKeyword"
+  case \SwitchExprSyntax.subject:
+    return "subject"
+  case \SubscriptDeclSyntax.subscriptKeyword:
+    return "subscriptKeyword"
+  case \SuperExprSyntax.superKeyword:
+    return "superKeyword"
+  case \SwitchExprSyntax.switchKeyword:
+    return "switchKeyword"
+  case \SpecializeTargetFunctionArgumentSyntax.targetLabel:
+    return "targetLabel"
+  case \TernaryExprSyntax.thenExpression,
+  \UnresolvedTernaryExprSyntax.thenExpression:
+    return "thenExpression"
+  case \ThenStmtSyntax.thenKeyword:
+    return "thenKeyword"
+  case \ThrowStmtSyntax.throwKeyword:
+    return "throwKeyword"
+  case \AccessorEffectSpecifiersSyntax.throwsClause,
+  \DoStmtSyntax.throwsClause,
+  \FunctionEffectSpecifiersSyntax.throwsClause,
+  \TypeEffectSpecifiersSyntax.throwsClause:
+    return "throwsClause"
+  case \ThrowsClauseSyntax.throwsSpecifier:
+    return "throwsSpecifier"
+  case \FunctionCallExprSyntax.trailingClosure,
+  \MacroExpansionDeclSyntax.trailingClosure,
+  \MacroExpansionExprSyntax.trailingClosure,
+  \SubscriptCallExprSyntax.trailingClosure:
+    return "trailingClosure"
+  case \ArrayElementSyntax.trailingComma,
+  \AvailabilityArgumentSyntax.trailingComma,
+  \CatchItemSyntax.trailingComma,
+  \ClosureCaptureSyntax.trailingComma,
+  \ClosureParameterSyntax.trailingComma,
+  \ClosureShorthandParameterSyntax.trailingComma,
+  \ConditionElementSyntax.trailingComma,
+  \DictionaryElementSyntax.trailingComma,
+  \DifferentiabilityArgumentSyntax.trailingComma,
+  \DocumentationAttributeArgumentSyntax.trailingComma,
+  \EnumCaseElementSyntax.trailingComma,
+  \EnumCaseParameterSyntax.trailingComma,
+  \FunctionParameterSyntax.trailingComma,
+  \GenericArgumentSyntax.trailingComma,
+  \GenericParameterSyntax.trailingComma,
+  \GenericRequirementSyntax.trailingComma,
+  \InheritedTypeSyntax.trailingComma,
+  \LabeledExprSyntax.trailingComma,
+  \LabeledSpecializeArgumentSyntax.trailingComma,
+  \LifetimeSpecifierArgumentSyntax.trailingComma,
+  \PatternBindingSyntax.trailingComma,
+  \PlatformVersionItemSyntax.trailingComma,
+  \PrecedenceGroupNameSyntax.trailingComma,
+  \PrimaryAssociatedTypeSyntax.trailingComma,
+  \SpecializeTargetFunctionArgumentSyntax.trailingComma,
+  \SwitchCaseItemSyntax.trailingComma,
+  \TuplePatternElementSyntax.trailingComma,
+  \TupleTypeElementSyntax.trailingComma:
+    return "trailingComma"
+  case \ImportPathComponentSyntax.trailingPeriod:
+    return "trailingPeriod"
+  case \ForStmtSyntax.tryKeyword,
+  \TryExprSyntax.tryKeyword:
+    return "tryKeyword"
+  case \AsExprSyntax.type,
+  \ClosureParameterSyntax.type,
+  \CompositionTypeElementSyntax.type,
+  \EnumCaseParameterSyntax.type,
+  \FunctionParameterSyntax.type,
+  \ImplementsAttributeArgumentsSyntax.type,
+  \InheritedTypeSyntax.type,
+  \IsExprSyntax.type,
+  \IsTypePatternSyntax.type,
+  \LayoutRequirementSyntax.type,
+  \NamedOpaqueReturnTypeSyntax.type,
+  \ReturnClauseSyntax.type,
+  \SuppressedTypeSyntax.type,
+  \ThrowsClauseSyntax.type,
+  \TupleTypeElementSyntax.type,
+  \TypeAnnotationSyntax.type,
+  \TypeExprSyntax.type:
+    return "type"
+  case \ForStmtSyntax.typeAnnotation,
+  \MatchingPatternConditionSyntax.typeAnnotation,
+  \OptionalBindingConditionSyntax.typeAnnotation,
+  \PatternBindingSyntax.typeAnnotation:
+    return "typeAnnotation"
+  case \TypeAliasDeclSyntax.typealiasKeyword:
+    return "typealiasKeyword"
+  case \SubscriptDeclSyntax.unexpectedAfterAccessorBlock:
+    return "unexpectedAfterAccessorBlock"
+  case \FunctionCallExprSyntax.unexpectedAfterAdditionalTrailingClosures,
+  \MacroExpansionDeclSyntax.unexpectedAfterAdditionalTrailingClosures,
+  \MacroExpansionExprSyntax.unexpectedAfterAdditionalTrailingClosures,
+  \SubscriptCallExprSyntax.unexpectedAfterAdditionalTrailingClosures:
+    return "unexpectedAfterAdditionalTrailingClosures"
+  case \CompositionTypeElementSyntax.unexpectedAfterAmpersand:
+    return "unexpectedAfterAmpersand"
+  case \NonisolatedTypeSpecifierSyntax.unexpectedAfterArgument:
+    return "unexpectedAfterArgument"
+  case \DeclReferenceExprSyntax.unexpectedAfterArgumentNames:
+    return "unexpectedAfterArgumentNames"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedAfterArguments,
+  \DifferentiabilityWithRespectToArgumentSyntax.unexpectedAfterArguments:
+    return "unexpectedAfterArguments"
+  case \ArrowExprSyntax.unexpectedAfterArrow:
+    return "unexpectedAfterArrow"
+  case \DeinitializerEffectSpecifiersSyntax.unexpectedAfterAsyncSpecifier:
+    return "unexpectedAfterAsyncSpecifier"
+  case \AttributedTypeSyntax.unexpectedAfterBaseType:
+    return "unexpectedAfterBaseType"
+  case \VariableDeclSyntax.unexpectedAfterBindings:
+    return "unexpectedAfterBindings"
+  case \AccessorDeclSyntax.unexpectedAfterBody,
+  \CatchClauseSyntax.unexpectedAfterBody,
+  \DeferStmtSyntax.unexpectedAfterBody,
+  \DeinitializerDeclSyntax.unexpectedAfterBody,
+  \ForStmtSyntax.unexpectedAfterBody,
+  \FunctionDeclSyntax.unexpectedAfterBody,
+  \GuardStmtSyntax.unexpectedAfterBody,
+  \InitializerDeclSyntax.unexpectedAfterBody,
+  \WhileStmtSyntax.unexpectedAfterBody:
     return "unexpectedAfterBody"
-  case \WildcardPatternSyntax.unexpectedBeforeWildcard:
-    return "unexpectedBeforeWildcard"
-  case \WildcardPatternSyntax.wildcard:
-    return "wildcard"
-  case \WildcardPatternSyntax.unexpectedAfterWildcard:
-    return "unexpectedAfterWildcard"
-  case \YieldStmtSyntax.unexpectedBeforeYieldKeyword:
-    return "unexpectedBeforeYieldKeyword"
-  case \YieldStmtSyntax.yieldKeyword:
-    return "yieldKeyword"
-  case \YieldStmtSyntax.unexpectedBetweenYieldKeywordAndYieldedExpressions:
-    return "unexpectedBetweenYieldKeywordAndYieldedExpressions"
-  case \YieldStmtSyntax.yieldedExpressions:
-    return "yieldedExpressions"
-  case \YieldStmtSyntax.unexpectedAfterYieldedExpressions:
-    return "unexpectedAfterYieldedExpressions"
-  case \YieldedExpressionSyntax.unexpectedBeforeExpression:
-    return "unexpectedBeforeExpression"
-  case \YieldedExpressionSyntax.expression:
-    return "expression"
-  case \YieldedExpressionSyntax.unexpectedBetweenExpressionAndComma:
-    return "unexpectedBetweenExpressionAndComma"
-  case \YieldedExpressionSyntax.comma:
-    return "comma"
+  case \DoExprSyntax.unexpectedAfterCatchClauses,
+  \DoStmtSyntax.unexpectedAfterCatchClauses:
+    return "unexpectedAfterCatchClauses"
+  case \ClassRestrictionTypeSyntax.unexpectedAfterClassKeyword:
+    return "unexpectedAfterClassKeyword"
+  case \RegexLiteralExprSyntax.unexpectedAfterClosingPounds,
+  \StringLiteralExprSyntax.unexpectedAfterClosingPounds:
+    return "unexpectedAfterClosingPounds"
+  case \SimpleStringLiteralExprSyntax.unexpectedAfterClosingQuote:
+    return "unexpectedAfterClosingQuote"
+  case \MultipleTrailingClosureElementSyntax.unexpectedAfterClosure:
+    return "unexpectedAfterClosure"
+  case \DeclNameArgumentSyntax.unexpectedAfterColon,
+  \ObjCSelectorPieceSyntax.unexpectedAfterColon,
+  \SwitchCaseLabelSyntax.unexpectedAfterColon,
+  \SwitchDefaultLabelSyntax.unexpectedAfterColon,
+  \UnresolvedTernaryExprSyntax.unexpectedAfterColon:
+    return "unexpectedAfterColon"
   case \YieldedExpressionSyntax.unexpectedAfterComma:
     return "unexpectedAfterComma"
-  case \YieldedExpressionsClauseSyntax.unexpectedBeforeLeftParen:
-    return "unexpectedBeforeLeftParen"
-  case \YieldedExpressionsClauseSyntax.leftParen:
-    return "leftParen"
-  case \YieldedExpressionsClauseSyntax.unexpectedBetweenLeftParenAndElements:
-    return "unexpectedBetweenLeftParenAndElements"
-  case \YieldedExpressionsClauseSyntax.elements:
-    return "elements"
-  case \YieldedExpressionsClauseSyntax.unexpectedBetweenElementsAndRightParen:
-    return "unexpectedBetweenElementsAndRightParen"
-  case \YieldedExpressionsClauseSyntax.rightParen:
-    return "rightParen"
-  case \YieldedExpressionsClauseSyntax.unexpectedAfterRightParen:
+  case \KeyPathComponentSyntax.unexpectedAfterComponent:
+    return "unexpectedAfterComponent"
+  case \KeyPathExprSyntax.unexpectedAfterComponents,
+  \VersionTupleSyntax.unexpectedAfterComponents:
+    return "unexpectedAfterComponents"
+  case \RepeatStmtSyntax.unexpectedAfterCondition,
+  \WhereClauseSyntax.unexpectedAfterCondition:
+    return "unexpectedAfterCondition"
+  case \PostfixIfConfigExprSyntax.unexpectedAfterConfig:
+    return "unexpectedAfterConfig"
+  case \SomeOrAnyTypeSyntax.unexpectedAfterConstraint:
+    return "unexpectedAfterConstraint"
+  case \StringSegmentSyntax.unexpectedAfterContent:
+    return "unexpectedAfterContent"
+  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedAfterDeclName,
+  \ImplementsAttributeArgumentsSyntax.unexpectedAfterDeclName,
+  \MemberAccessExprSyntax.unexpectedAfterDeclName:
+    return "unexpectedAfterDeclName"
+  case \OperatorPrecedenceAndTypesSyntax.unexpectedAfterDesignatedTypes:
+    return "unexpectedAfterDesignatedTypes"
+  case \DeclModifierSyntax.unexpectedAfterDetail:
+    return "unexpectedAfterDetail"
+  case \CompositionTypeSyntax.unexpectedAfterElements,
+  \EnumCaseDeclSyntax.unexpectedAfterElements,
+  \IfConfigClauseSyntax.unexpectedAfterElements,
+  \SequenceExprSyntax.unexpectedAfterElements:
+    return "unexpectedAfterElements"
+  case \IfExprSyntax.unexpectedAfterElseBody:
+    return "unexpectedAfterElseBody"
+  case \TernaryExprSyntax.unexpectedAfterElseExpression:
+    return "unexpectedAfterElseExpression"
+  case \AccessorBlockFileSyntax.unexpectedAfterEndOfFileToken,
+  \AttributeClauseFileSyntax.unexpectedAfterEndOfFileToken,
+  \AvailabilityMacroDefinitionFileSyntax.unexpectedAfterEndOfFileToken,
+  \CodeBlockFileSyntax.unexpectedAfterEndOfFileToken,
+  \MemberBlockItemListFileSyntax.unexpectedAfterEndOfFileToken,
+  \SourceFileSyntax.unexpectedAfterEndOfFileToken:
+    return "unexpectedAfterEndOfFileToken"
+  case \AssignmentExprSyntax.unexpectedAfterEqual:
+    return "unexpectedAfterEqual"
+  case \ForceUnwrapExprSyntax.unexpectedAfterExclamationMark,
+  \ImplicitlyUnwrappedOptionalTypeSyntax.unexpectedAfterExclamationMark:
+    return "unexpectedAfterExclamationMark"
+  case \AwaitExprSyntax.unexpectedAfterExpression,
+  \BorrowExprSyntax.unexpectedAfterExpression,
+  \ConsumeExprSyntax.unexpectedAfterExpression,
+  \CopyExprSyntax.unexpectedAfterExpression,
+  \DiscardStmtSyntax.unexpectedAfterExpression,
+  \ExpressionPatternSyntax.unexpectedAfterExpression,
+  \ExpressionStmtSyntax.unexpectedAfterExpression,
+  \InOutExprSyntax.unexpectedAfterExpression,
+  \PrefixOperatorExprSyntax.unexpectedAfterExpression,
+  \ReturnStmtSyntax.unexpectedAfterExpression,
+  \ThenStmtSyntax.unexpectedAfterExpression,
+  \ThrowStmtSyntax.unexpectedAfterExpression,
+  \TryExprSyntax.unexpectedAfterExpression,
+  \UnsafeExprSyntax.unexpectedAfterExpression:
+    return "unexpectedAfterExpression"
+  case \FallThroughStmtSyntax.unexpectedAfterFallthroughKeyword:
+    return "unexpectedAfterFallthroughKeyword"
+  case \GenericSpecializationExprSyntax.unexpectedAfterGenericArgumentClause,
+  \IdentifierTypeSyntax.unexpectedAfterGenericArgumentClause,
+  \KeyPathPropertyComponentSyntax.unexpectedAfterGenericArgumentClause,
+  \MemberTypeSyntax.unexpectedAfterGenericArgumentClause:
+    return "unexpectedAfterGenericArgumentClause"
+  case \AssociatedTypeDeclSyntax.unexpectedAfterGenericWhereClause,
+  \DifferentiableAttributeArgumentsSyntax.unexpectedAfterGenericWhereClause,
+  \MacroDeclSyntax.unexpectedAfterGenericWhereClause,
+  \SpecializedAttributeArgumentSyntax.unexpectedAfterGenericWhereClause,
+  \TypeAliasDeclSyntax.unexpectedAfterGenericWhereClause:
+    return "unexpectedAfterGenericWhereClause"
+  case \IdentifierPatternSyntax.unexpectedAfterIdentifier:
+    return "unexpectedAfterIdentifier"
+  case \ClosureSignatureSyntax.unexpectedAfterInKeyword:
+    return "unexpectedAfterInKeyword"
+  case \InheritanceClauseSyntax.unexpectedAfterInheritedTypes:
+    return "unexpectedAfterInheritedTypes"
+  case \MatchingPatternConditionSyntax.unexpectedAfterInitializer,
+  \OptionalBindingConditionSyntax.unexpectedAfterInitializer:
+    return "unexpectedAfterInitializer"
+  case \UnresolvedIsExprSyntax.unexpectedAfterIsKeyword:
+    return "unexpectedAfterIsKeyword"
+  case \BreakStmtSyntax.unexpectedAfterLabel,
+  \ContinueStmtSyntax.unexpectedAfterLabel:
+    return "unexpectedAfterLabel"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedAfterLineNumber:
+    return "unexpectedAfterLineNumber"
+  case \BooleanLiteralExprSyntax.unexpectedAfterLiteral,
+  \FloatLiteralExprSyntax.unexpectedAfterLiteral,
+  \IntegerLiteralExprSyntax.unexpectedAfterLiteral:
+    return "unexpectedAfterLiteral"
+  case \ActorDeclSyntax.unexpectedAfterMemberBlock,
+  \ClassDeclSyntax.unexpectedAfterMemberBlock,
+  \EnumDeclSyntax.unexpectedAfterMemberBlock,
+  \ExtensionDeclSyntax.unexpectedAfterMemberBlock,
+  \ProtocolDeclSyntax.unexpectedAfterMemberBlock,
+  \StructDeclSyntax.unexpectedAfterMemberBlock:
+    return "unexpectedAfterMemberBlock"
+  case \MetatypeTypeSyntax.unexpectedAfterMetatypeSpecifier:
+    return "unexpectedAfterMetatypeSpecifier"
+  case \DesignatedTypeSyntax.unexpectedAfterName:
+    return "unexpectedAfterName"
+  case \NilLiteralExprSyntax.unexpectedAfterNilKeyword:
+    return "unexpectedAfterNilKeyword"
+  case \VersionComponentSyntax.unexpectedAfterNumber:
+    return "unexpectedAfterNumber"
+  case \BinaryOperatorExprSyntax.unexpectedAfterOperator,
+  \PostfixOperatorExprSyntax.unexpectedAfterOperator:
+    return "unexpectedAfterOperator"
+  case \OperatorDeclSyntax.unexpectedAfterOperatorPrecedenceAndTypes:
+    return "unexpectedAfterOperatorPrecedenceAndTypes"
+  case \PackElementExprSyntax.unexpectedAfterPack,
+  \PackElementTypeSyntax.unexpectedAfterPack:
+    return "unexpectedAfterPack"
+  case \ImportDeclSyntax.unexpectedAfterPath:
+    return "unexpectedAfterPath"
+  case \PatternExprSyntax.unexpectedAfterPattern,
+  \ValueBindingPatternSyntax.unexpectedAfterPattern:
+    return "unexpectedAfterPattern"
+  case \EditorPlaceholderDeclSyntax.unexpectedAfterPlaceholder,
+  \EditorPlaceholderExprSyntax.unexpectedAfterPlaceholder,
+  \MissingDeclSyntax.unexpectedAfterPlaceholder,
+  \MissingExprSyntax.unexpectedAfterPlaceholder,
+  \MissingPatternSyntax.unexpectedAfterPlaceholder,
+  \MissingStmtSyntax.unexpectedAfterPlaceholder,
+  \MissingSyntax.unexpectedAfterPlaceholder,
+  \MissingTypeSyntax.unexpectedAfterPlaceholder:
+    return "unexpectedAfterPlaceholder"
+  case \BackDeployedAttributeArgumentsSyntax.unexpectedAfterPlatforms,
+  \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedAfterPlatforms:
+    return "unexpectedAfterPlatforms"
+  case \IfConfigDeclSyntax.unexpectedAfterPoundEndif:
+    return "unexpectedAfterPoundEndif"
+  case \PrecedenceGroupRelationSyntax.unexpectedAfterPrecedenceGroups:
+    return "unexpectedAfterPrecedenceGroups"
+  case \ABIAttributeArgumentsSyntax.unexpectedAfterProvider:
+    return "unexpectedAfterProvider"
+  case \OptionalChainingExprSyntax.unexpectedAfterQuestionMark,
+  \OptionalTypeSyntax.unexpectedAfterQuestionMark:
+    return "unexpectedAfterQuestionMark"
+  case \KeyPathOptionalComponentSyntax.unexpectedAfterQuestionOrExclamationMark,
+  \UnresolvedAsExprSyntax.unexpectedAfterQuestionOrExclamationMark:
+    return "unexpectedAfterQuestionOrExclamationMark"
+  case \PackExpansionExprSyntax.unexpectedAfterRepetitionPattern,
+  \PackExpansionTypeSyntax.unexpectedAfterRepetitionPattern:
+    return "unexpectedAfterRepetitionPattern"
+  case \GenericWhereClauseSyntax.unexpectedAfterRequirements:
+    return "unexpectedAfterRequirements"
+  case \FunctionSignatureSyntax.unexpectedAfterReturnClause,
+  \FunctionTypeSyntax.unexpectedAfterReturnClause:
+    return "unexpectedAfterReturnClause"
+  case \GenericArgumentClauseSyntax.unexpectedAfterRightAngle,
+  \GenericParameterClauseSyntax.unexpectedAfterRightAngle,
+  \PrimaryAssociatedTypeClauseSyntax.unexpectedAfterRightAngle:
+    return "unexpectedAfterRightAngle"
+  case \AccessorBlockSyntax.unexpectedAfterRightBrace,
+  \ClosureExprSyntax.unexpectedAfterRightBrace,
+  \CodeBlockSyntax.unexpectedAfterRightBrace,
+  \MemberBlockSyntax.unexpectedAfterRightBrace,
+  \PrecedenceGroupDeclSyntax.unexpectedAfterRightBrace,
+  \SwitchExprSyntax.unexpectedAfterRightBrace:
+    return "unexpectedAfterRightBrace"
+  case \InfixOperatorExprSyntax.unexpectedAfterRightOperand:
+    return "unexpectedAfterRightOperand"
+  case \AccessorParametersSyntax.unexpectedAfterRightParen,
+  \AttributeSyntax.unexpectedAfterRightParen,
+  \AvailabilityConditionSyntax.unexpectedAfterRightParen,
+  \_CanImportExprSyntax.unexpectedAfterRightParen,
+  \ClosureCaptureSpecifierSyntax.unexpectedAfterRightParen,
+  \ClosureParameterClauseSyntax.unexpectedAfterRightParen,
+  \DeclModifierDetailSyntax.unexpectedAfterRightParen,
+  \DeclNameArgumentsSyntax.unexpectedAfterRightParen,
+  \DifferentiabilityArgumentsSyntax.unexpectedAfterRightParen,
+  \EnumCaseParameterClauseSyntax.unexpectedAfterRightParen,
+  \ExpressionSegmentSyntax.unexpectedAfterRightParen,
+  \FunctionParameterClauseSyntax.unexpectedAfterRightParen,
+  \KeyPathMethodComponentSyntax.unexpectedAfterRightParen,
+  \LayoutRequirementSyntax.unexpectedAfterRightParen,
+  \LifetimeTypeSpecifierSyntax.unexpectedAfterRightParen,
+  \NonisolatedSpecifierArgumentSyntax.unexpectedAfterRightParen,
+  \PoundSourceLocationSyntax.unexpectedAfterRightParen,
+  \ThrowsClauseSyntax.unexpectedAfterRightParen,
+  \TupleExprSyntax.unexpectedAfterRightParen,
+  \TuplePatternSyntax.unexpectedAfterRightParen,
+  \TupleTypeSyntax.unexpectedAfterRightParen,
+  \YieldedExpressionsClauseSyntax.unexpectedAfterRightParen:
     return "unexpectedAfterRightParen"
+  case \ArrayExprSyntax.unexpectedAfterRightSquare,
+  \ArrayTypeSyntax.unexpectedAfterRightSquare,
+  \ClosureCaptureClauseSyntax.unexpectedAfterRightSquare,
+  \DictionaryExprSyntax.unexpectedAfterRightSquare,
+  \DictionaryTypeSyntax.unexpectedAfterRightSquare,
+  \InlineArrayTypeSyntax.unexpectedAfterRightSquare,
+  \KeyPathSubscriptComponentSyntax.unexpectedAfterRightSquare:
+    return "unexpectedAfterRightSquare"
+  case \ConformanceRequirementSyntax.unexpectedAfterRightType,
+  \SameTypeRequirementSyntax.unexpectedAfterRightType:
+    return "unexpectedAfterRightType"
+  case \CodeBlockItemSyntax.unexpectedAfterSemicolon,
+  \MemberBlockItemSyntax.unexpectedAfterSemicolon,
+  \SpecializeAvailabilityArgumentSyntax.unexpectedAfterSemicolon:
+    return "unexpectedAfterSemicolon"
+  case \SimpleTypeSpecifierSyntax.unexpectedAfterSpecifier,
+  \UsingDeclSyntax.unexpectedAfterSpecifier:
+    return "unexpectedAfterSpecifier"
+  case \LabeledStmtSyntax.unexpectedAfterStatement:
+    return "unexpectedAfterStatement"
+  case \SwitchCaseSyntax.unexpectedAfterStatements:
+    return "unexpectedAfterStatements"
+  case \SuperExprSyntax.unexpectedAfterSuperKeyword:
+    return "unexpectedAfterSuperKeyword"
+  case \AccessorEffectSpecifiersSyntax.unexpectedAfterThrowsClause,
+  \FunctionEffectSpecifiersSyntax.unexpectedAfterThrowsClause,
+  \TypeEffectSpecifiersSyntax.unexpectedAfterThrowsClause:
+    return "unexpectedAfterThrowsClause"
+  case \ArrayElementSyntax.unexpectedAfterTrailingComma,
+  \AvailabilityArgumentSyntax.unexpectedAfterTrailingComma,
+  \CatchItemSyntax.unexpectedAfterTrailingComma,
+  \ClosureCaptureSyntax.unexpectedAfterTrailingComma,
+  \ClosureParameterSyntax.unexpectedAfterTrailingComma,
+  \ClosureShorthandParameterSyntax.unexpectedAfterTrailingComma,
+  \ConditionElementSyntax.unexpectedAfterTrailingComma,
+  \DictionaryElementSyntax.unexpectedAfterTrailingComma,
+  \DifferentiabilityArgumentSyntax.unexpectedAfterTrailingComma,
+  \DocumentationAttributeArgumentSyntax.unexpectedAfterTrailingComma,
+  \EnumCaseElementSyntax.unexpectedAfterTrailingComma,
+  \EnumCaseParameterSyntax.unexpectedAfterTrailingComma,
+  \FunctionParameterSyntax.unexpectedAfterTrailingComma,
+  \GenericArgumentSyntax.unexpectedAfterTrailingComma,
+  \GenericParameterSyntax.unexpectedAfterTrailingComma,
+  \GenericRequirementSyntax.unexpectedAfterTrailingComma,
+  \InheritedTypeSyntax.unexpectedAfterTrailingComma,
+  \LabeledExprSyntax.unexpectedAfterTrailingComma,
+  \LabeledSpecializeArgumentSyntax.unexpectedAfterTrailingComma,
+  \LifetimeSpecifierArgumentSyntax.unexpectedAfterTrailingComma,
+  \PatternBindingSyntax.unexpectedAfterTrailingComma,
+  \PlatformVersionItemSyntax.unexpectedAfterTrailingComma,
+  \PrecedenceGroupNameSyntax.unexpectedAfterTrailingComma,
+  \PrimaryAssociatedTypeSyntax.unexpectedAfterTrailingComma,
+  \SpecializeTargetFunctionArgumentSyntax.unexpectedAfterTrailingComma,
+  \SwitchCaseItemSyntax.unexpectedAfterTrailingComma,
+  \TuplePatternElementSyntax.unexpectedAfterTrailingComma,
+  \TupleTypeElementSyntax.unexpectedAfterTrailingComma:
+    return "unexpectedAfterTrailingComma"
+  case \ImportPathComponentSyntax.unexpectedAfterTrailingPeriod:
+    return "unexpectedAfterTrailingPeriod"
+  case \AsExprSyntax.unexpectedAfterType,
+  \IsExprSyntax.unexpectedAfterType,
+  \IsTypePatternSyntax.unexpectedAfterType,
+  \NamedOpaqueReturnTypeSyntax.unexpectedAfterType,
+  \ReturnClauseSyntax.unexpectedAfterType,
+  \SuppressedTypeSyntax.unexpectedAfterType,
+  \TypeAnnotationSyntax.unexpectedAfterType,
+  \TypeExprSyntax.unexpectedAfterType:
+    return "unexpectedAfterType"
+  case \AvailabilityLabeledArgumentSyntax.unexpectedAfterValue,
+  \InitializerClauseSyntax.unexpectedAfterValue,
+  \PrecedenceGroupAssignmentSyntax.unexpectedAfterValue,
+  \PrecedenceGroupAssociativitySyntax.unexpectedAfterValue,
+  \TypeInitializerClauseSyntax.unexpectedAfterValue:
+    return "unexpectedAfterValue"
+  case \_CanImportVersionInfoSyntax.unexpectedAfterVersion,
+  \PlatformVersionSyntax.unexpectedAfterVersion:
+    return "unexpectedAfterVersion"
+  case \DiscardAssignmentExprSyntax.unexpectedAfterWildcard,
+  \WildcardPatternSyntax.unexpectedAfterWildcard:
+    return "unexpectedAfterWildcard"
+  case \YieldStmtSyntax.unexpectedAfterYieldedExpressions:
+    return "unexpectedAfterYieldedExpressions"
+  case \InOutExprSyntax.unexpectedBeforeAmpersand:
+    return "unexpectedBeforeAmpersand"
+  case \AvailabilityArgumentSyntax.unexpectedBeforeArgument,
+  \DifferentiabilityArgumentSyntax.unexpectedBeforeArgument,
+  \GenericArgumentSyntax.unexpectedBeforeArgument:
+    return "unexpectedBeforeArgument"
+  case \ReturnClauseSyntax.unexpectedBeforeArrow:
+    return "unexpectedBeforeArrow"
+  case \UnresolvedAsExprSyntax.unexpectedBeforeAsKeyword:
+    return "unexpectedBeforeAsKeyword"
+  case \PrecedenceGroupAssignmentSyntax.unexpectedBeforeAssignmentLabel:
+    return "unexpectedBeforeAssignmentLabel"
+  case \PrecedenceGroupAssociativitySyntax.unexpectedBeforeAssociativityLabel:
+    return "unexpectedBeforeAssociativityLabel"
+  case \AccessorEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier,
+  \DeinitializerEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier,
+  \FunctionEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier,
+  \TypeEffectSpecifiersSyntax.unexpectedBeforeAsyncSpecifier:
+    return "unexpectedBeforeAsyncSpecifier"
+  case \AttributeSyntax.unexpectedBeforeAtSign:
+    return "unexpectedBeforeAtSign"
+  case \SwitchCaseSyntax.unexpectedBeforeAttribute:
+    return "unexpectedBeforeAttribute"
+  case \AccessorDeclSyntax.unexpectedBeforeAttributes,
+  \ActorDeclSyntax.unexpectedBeforeAttributes,
+  \AssociatedTypeDeclSyntax.unexpectedBeforeAttributes,
+  \AttributeClauseFileSyntax.unexpectedBeforeAttributes,
+  \ClassDeclSyntax.unexpectedBeforeAttributes,
+  \ClosureParameterSyntax.unexpectedBeforeAttributes,
+  \ClosureSignatureSyntax.unexpectedBeforeAttributes,
+  \DeinitializerDeclSyntax.unexpectedBeforeAttributes,
+  \EditorPlaceholderDeclSyntax.unexpectedBeforeAttributes,
+  \EnumCaseDeclSyntax.unexpectedBeforeAttributes,
+  \EnumDeclSyntax.unexpectedBeforeAttributes,
+  \ExtensionDeclSyntax.unexpectedBeforeAttributes,
+  \FunctionDeclSyntax.unexpectedBeforeAttributes,
+  \FunctionParameterSyntax.unexpectedBeforeAttributes,
+  \GenericParameterSyntax.unexpectedBeforeAttributes,
+  \ImportDeclSyntax.unexpectedBeforeAttributes,
+  \InitializerDeclSyntax.unexpectedBeforeAttributes,
+  \MacroDeclSyntax.unexpectedBeforeAttributes,
+  \MacroExpansionDeclSyntax.unexpectedBeforeAttributes,
+  \MissingDeclSyntax.unexpectedBeforeAttributes,
+  \PrecedenceGroupDeclSyntax.unexpectedBeforeAttributes,
+  \ProtocolDeclSyntax.unexpectedBeforeAttributes,
+  \StructDeclSyntax.unexpectedBeforeAttributes,
+  \SubscriptDeclSyntax.unexpectedBeforeAttributes,
+  \TypeAliasDeclSyntax.unexpectedBeforeAttributes,
+  \VariableDeclSyntax.unexpectedBeforeAttributes:
+    return "unexpectedBeforeAttributes"
+  case \AvailabilityConditionSyntax.unexpectedBeforeAvailabilityKeyword:
+    return "unexpectedBeforeAvailabilityKeyword"
+  case \SpecializeAvailabilityArgumentSyntax.unexpectedBeforeAvailabilityLabel:
+    return "unexpectedBeforeAvailabilityLabel"
+  case \AwaitExprSyntax.unexpectedBeforeAwaitKeyword:
+    return "unexpectedBeforeAwaitKeyword"
+  case \ExpressionSegmentSyntax.unexpectedBeforeBackslash,
+  \KeyPathExprSyntax.unexpectedBeforeBackslash:
+    return "unexpectedBeforeBackslash"
+  case \MemberAccessExprSyntax.unexpectedBeforeBase,
+  \PostfixIfConfigExprSyntax.unexpectedBeforeBase:
+    return "unexpectedBeforeBase"
+  case \DeclReferenceExprSyntax.unexpectedBeforeBaseName:
+    return "unexpectedBeforeBaseName"
+  case \MemberTypeSyntax.unexpectedBeforeBaseType,
+  \MetatypeTypeSyntax.unexpectedBeforeBaseType:
+    return "unexpectedBeforeBaseType"
+  case \BackDeployedAttributeArgumentsSyntax.unexpectedBeforeBeforeLabel:
+    return "unexpectedBeforeBeforeLabel"
+  case \OptionalBindingConditionSyntax.unexpectedBeforeBindingSpecifier,
+  \ValueBindingPatternSyntax.unexpectedBeforeBindingSpecifier:
+    return "unexpectedBeforeBindingSpecifier"
+  case \CodeBlockFileSyntax.unexpectedBeforeBody:
+    return "unexpectedBeforeBody"
+  case \BorrowExprSyntax.unexpectedBeforeBorrowKeyword:
+    return "unexpectedBeforeBorrowKeyword"
+  case \BreakStmtSyntax.unexpectedBeforeBreakKeyword:
+    return "unexpectedBeforeBreakKeyword"
+  case \FunctionCallExprSyntax.unexpectedBeforeCalledExpression,
+  \SubscriptCallExprSyntax.unexpectedBeforeCalledExpression:
+    return "unexpectedBeforeCalledExpression"
+  case \_CanImportExprSyntax.unexpectedBeforeCanImportKeyword:
+    return "unexpectedBeforeCanImportKeyword"
+  case \MatchingPatternConditionSyntax.unexpectedBeforeCaseKeyword,
+  \SwitchCaseLabelSyntax.unexpectedBeforeCaseKeyword:
+    return "unexpectedBeforeCaseKeyword"
+  case \CatchClauseSyntax.unexpectedBeforeCatchKeyword:
+    return "unexpectedBeforeCatchKeyword"
+  case \ClassRestrictionTypeSyntax.unexpectedBeforeClassKeyword:
+    return "unexpectedBeforeClassKeyword"
+  case \IfConfigDeclSyntax.unexpectedBeforeClauses:
+    return "unexpectedBeforeClauses"
+  case \InheritanceClauseSyntax.unexpectedBeforeColon,
+  \OperatorPrecedenceAndTypesSyntax.unexpectedBeforeColon,
+  \TypeAnnotationSyntax.unexpectedBeforeColon:
+    return "unexpectedBeforeColon"
+  case \_CanImportVersionInfoSyntax.unexpectedBeforeComma:
+    return "unexpectedBeforeComma"
+  case \ConditionElementSyntax.unexpectedBeforeCondition,
+  \TernaryExprSyntax.unexpectedBeforeCondition:
+    return "unexpectedBeforeCondition"
+  case \ConsumeExprSyntax.unexpectedBeforeConsumeKeyword:
+    return "unexpectedBeforeConsumeKeyword"
+  case \StringSegmentSyntax.unexpectedBeforeContent:
+    return "unexpectedBeforeContent"
+  case \ContinueStmtSyntax.unexpectedBeforeContinueKeyword:
+    return "unexpectedBeforeContinueKeyword"
+  case \CopyExprSyntax.unexpectedBeforeCopyKeyword:
+    return "unexpectedBeforeCopyKeyword"
+  case \MemberBlockItemSyntax.unexpectedBeforeDecl:
+    return "unexpectedBeforeDecl"
+  case \KeyPathMethodComponentSyntax.unexpectedBeforeDeclName,
+  \KeyPathPropertyComponentSyntax.unexpectedBeforeDeclName:
+    return "unexpectedBeforeDeclName"
+  case \SwitchDefaultLabelSyntax.unexpectedBeforeDefaultKeyword:
+    return "unexpectedBeforeDefaultKeyword"
+  case \DeferStmtSyntax.unexpectedBeforeDeferKeyword:
+    return "unexpectedBeforeDeferKeyword"
+  case \LifetimeTypeSpecifierSyntax.unexpectedBeforeDependsOnKeyword:
+    return "unexpectedBeforeDependsOnKeyword"
+  case \DiscardStmtSyntax.unexpectedBeforeDiscardKeyword:
+    return "unexpectedBeforeDiscardKeyword"
+  case \DoExprSyntax.unexpectedBeforeDoKeyword,
+  \DoStmtSyntax.unexpectedBeforeDoKeyword:
+    return "unexpectedBeforeDoKeyword"
+  case \PackElementExprSyntax.unexpectedBeforeEachKeyword,
+  \PackElementTypeSyntax.unexpectedBeforeEachKeyword:
+    return "unexpectedBeforeEachKeyword"
+  case \ArrowExprSyntax.unexpectedBeforeEffectSpecifiers:
+    return "unexpectedBeforeEffectSpecifiers"
+  case \CompositionTypeSyntax.unexpectedBeforeElements,
+  \SequenceExprSyntax.unexpectedBeforeElements:
+    return "unexpectedBeforeElements"
+  case \AssignmentExprSyntax.unexpectedBeforeEqual,
+  \InitializerClauseSyntax.unexpectedBeforeEqual,
+  \TypeInitializerClauseSyntax.unexpectedBeforeEqual:
+    return "unexpectedBeforeEqual"
+  case \ArrayElementSyntax.unexpectedBeforeExpression,
+  \AsExprSyntax.unexpectedBeforeExpression,
+  \ExpressionPatternSyntax.unexpectedBeforeExpression,
+  \ExpressionStmtSyntax.unexpectedBeforeExpression,
+  \ForceUnwrapExprSyntax.unexpectedBeforeExpression,
+  \GenericSpecializationExprSyntax.unexpectedBeforeExpression,
+  \IsExprSyntax.unexpectedBeforeExpression,
+  \OptionalChainingExprSyntax.unexpectedBeforeExpression,
+  \PostfixOperatorExprSyntax.unexpectedBeforeExpression,
+  \YieldedExpressionSyntax.unexpectedBeforeExpression:
+    return "unexpectedBeforeExpression"
+  case \FallThroughStmtSyntax.unexpectedBeforeFallthroughKeyword:
+    return "unexpectedBeforeFallthroughKeyword"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBeforeFileLabel:
+    return "unexpectedBeforeFileLabel"
+  case \OperatorDeclSyntax.unexpectedBeforeFixitySpecifier:
+    return "unexpectedBeforeFixitySpecifier"
+  case \ForStmtSyntax.unexpectedBeforeForKeyword:
+    return "unexpectedBeforeForKeyword"
+  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedBeforeForLabel:
+    return "unexpectedBeforeForLabel"
+  case \NamedOpaqueReturnTypeSyntax.unexpectedBeforeGenericParameterClause:
+    return "unexpectedBeforeGenericParameterClause"
+  case \SpecializedAttributeArgumentSyntax.unexpectedBeforeGenericWhereClause:
+    return "unexpectedBeforeGenericWhereClause"
+  case \GuardStmtSyntax.unexpectedBeforeGuardKeyword:
+    return "unexpectedBeforeGuardKeyword"
+  case \PrecedenceGroupRelationSyntax.unexpectedBeforeHigherThanOrLowerThanLabel:
+    return "unexpectedBeforeHigherThanOrLowerThanLabel"
+  case \IdentifierPatternSyntax.unexpectedBeforeIdentifier:
+    return "unexpectedBeforeIdentifier"
+  case \IfExprSyntax.unexpectedBeforeIfKeyword:
+    return "unexpectedBeforeIfKeyword"
+  case \TupleTypeElementSyntax.unexpectedBeforeInoutKeyword:
+    return "unexpectedBeforeInoutKeyword"
+  case \IsTypePatternSyntax.unexpectedBeforeIsKeyword,
+  \UnresolvedIsExprSyntax.unexpectedBeforeIsKeyword:
+    return "unexpectedBeforeIsKeyword"
+  case \CodeBlockItemSyntax.unexpectedBeforeItem:
+    return "unexpectedBeforeItem"
+  case \DictionaryElementSyntax.unexpectedBeforeKey:
+    return "unexpectedBeforeKey"
+  case \DifferentiableAttributeArgumentsSyntax.unexpectedBeforeKindSpecifier:
+    return "unexpectedBeforeKindSpecifier"
+  case \AvailabilityLabeledArgumentSyntax.unexpectedBeforeLabel,
+  \DocumentationAttributeArgumentSyntax.unexpectedBeforeLabel,
+  \LabeledExprSyntax.unexpectedBeforeLabel,
+  \LabeledSpecializeArgumentSyntax.unexpectedBeforeLabel,
+  \LabeledStmtSyntax.unexpectedBeforeLabel,
+  \MultipleTrailingClosureElementSyntax.unexpectedBeforeLabel,
+  \TuplePatternElementSyntax.unexpectedBeforeLabel:
+    return "unexpectedBeforeLabel"
+  case \DesignatedTypeSyntax.unexpectedBeforeLeadingComma:
+    return "unexpectedBeforeLeadingComma"
+  case \GenericArgumentClauseSyntax.unexpectedBeforeLeftAngle,
+  \GenericParameterClauseSyntax.unexpectedBeforeLeftAngle,
+  \PrimaryAssociatedTypeClauseSyntax.unexpectedBeforeLeftAngle:
+    return "unexpectedBeforeLeftAngle"
+  case \AccessorBlockFileSyntax.unexpectedBeforeLeftBrace,
+  \AccessorBlockSyntax.unexpectedBeforeLeftBrace,
+  \ClosureExprSyntax.unexpectedBeforeLeftBrace,
+  \CodeBlockSyntax.unexpectedBeforeLeftBrace,
+  \MemberBlockSyntax.unexpectedBeforeLeftBrace:
+    return "unexpectedBeforeLeftBrace"
+  case \InfixOperatorExprSyntax.unexpectedBeforeLeftOperand:
+    return "unexpectedBeforeLeftOperand"
+  case \AccessorParametersSyntax.unexpectedBeforeLeftParen,
+  \ClosureParameterClauseSyntax.unexpectedBeforeLeftParen,
+  \DeclModifierDetailSyntax.unexpectedBeforeLeftParen,
+  \DeclNameArgumentsSyntax.unexpectedBeforeLeftParen,
+  \DifferentiabilityArgumentsSyntax.unexpectedBeforeLeftParen,
+  \EnumCaseParameterClauseSyntax.unexpectedBeforeLeftParen,
+  \FunctionParameterClauseSyntax.unexpectedBeforeLeftParen,
+  \FunctionTypeSyntax.unexpectedBeforeLeftParen,
+  \NonisolatedSpecifierArgumentSyntax.unexpectedBeforeLeftParen,
+  \TupleExprSyntax.unexpectedBeforeLeftParen,
+  \TuplePatternSyntax.unexpectedBeforeLeftParen,
+  \TupleTypeSyntax.unexpectedBeforeLeftParen,
+  \YieldedExpressionsClauseSyntax.unexpectedBeforeLeftParen:
+    return "unexpectedBeforeLeftParen"
+  case \ArrayExprSyntax.unexpectedBeforeLeftSquare,
+  \ArrayTypeSyntax.unexpectedBeforeLeftSquare,
+  \ClosureCaptureClauseSyntax.unexpectedBeforeLeftSquare,
+  \DictionaryExprSyntax.unexpectedBeforeLeftSquare,
+  \DictionaryTypeSyntax.unexpectedBeforeLeftSquare,
+  \InlineArrayTypeSyntax.unexpectedBeforeLeftSquare,
+  \KeyPathSubscriptComponentSyntax.unexpectedBeforeLeftSquare:
+    return "unexpectedBeforeLeftSquare"
+  case \ConformanceRequirementSyntax.unexpectedBeforeLeftType,
+  \SameTypeRequirementSyntax.unexpectedBeforeLeftType:
+    return "unexpectedBeforeLeftType"
+  case \BooleanLiteralExprSyntax.unexpectedBeforeLiteral,
+  \FloatLiteralExprSyntax.unexpectedBeforeLiteral,
+  \IntegerLiteralExprSyntax.unexpectedBeforeLiteral:
+    return "unexpectedBeforeLiteral"
+  case \VersionTupleSyntax.unexpectedBeforeMajor:
+    return "unexpectedBeforeMajor"
+  case \MemberBlockItemListFileSyntax.unexpectedBeforeMembers:
+    return "unexpectedBeforeMembers"
+  case \EnumCaseParameterSyntax.unexpectedBeforeModifiers:
+    return "unexpectedBeforeModifiers"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBeforeModuleLabel:
+    return "unexpectedBeforeModuleLabel"
+  case \ClosureShorthandParameterSyntax.unexpectedBeforeName,
+  \DeclModifierSyntax.unexpectedBeforeName,
+  \DeclNameArgumentSyntax.unexpectedBeforeName,
+  \EnumCaseElementSyntax.unexpectedBeforeName,
+  \IdentifierTypeSyntax.unexpectedBeforeName,
+  \ImportPathComponentSyntax.unexpectedBeforeName,
+  \ObjCSelectorPieceSyntax.unexpectedBeforeName,
+  \PrecedenceGroupNameSyntax.unexpectedBeforeName,
+  \PrimaryAssociatedTypeSyntax.unexpectedBeforeName:
+    return "unexpectedBeforeName"
+  case \NilLiteralExprSyntax.unexpectedBeforeNilKeyword:
+    return "unexpectedBeforeNilKeyword"
+  case \NonisolatedTypeSpecifierSyntax.unexpectedBeforeNonisolatedKeyword:
+    return "unexpectedBeforeNonisolatedKeyword"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBeforeOfLabel:
+    return "unexpectedBeforeOfLabel"
+  case \RegexLiteralExprSyntax.unexpectedBeforeOpeningPounds,
+  \StringLiteralExprSyntax.unexpectedBeforeOpeningPounds:
+    return "unexpectedBeforeOpeningPounds"
+  case \SimpleStringLiteralExprSyntax.unexpectedBeforeOpeningQuote:
+    return "unexpectedBeforeOpeningQuote"
+  case \BinaryOperatorExprSyntax.unexpectedBeforeOperator,
+  \PrefixOperatorExprSyntax.unexpectedBeforeOperator:
+    return "unexpectedBeforeOperator"
+  case \LifetimeSpecifierArgumentSyntax.unexpectedBeforeParameter:
+    return "unexpectedBeforeParameter"
+  case \FunctionSignatureSyntax.unexpectedBeforeParameterClause:
+    return "unexpectedBeforeParameterClause"
+  case \CatchItemSyntax.unexpectedBeforePattern,
+  \PatternBindingSyntax.unexpectedBeforePattern,
+  \PatternExprSyntax.unexpectedBeforePattern,
+  \SwitchCaseItemSyntax.unexpectedBeforePattern:
+    return "unexpectedBeforePattern"
+  case \KeyPathComponentSyntax.unexpectedBeforePeriod,
+  \VersionComponentSyntax.unexpectedBeforePeriod:
+    return "unexpectedBeforePeriod"
+  case \EditorPlaceholderExprSyntax.unexpectedBeforePlaceholder,
+  \MissingExprSyntax.unexpectedBeforePlaceholder,
+  \MissingPatternSyntax.unexpectedBeforePlaceholder,
+  \MissingStmtSyntax.unexpectedBeforePlaceholder,
+  \MissingSyntax.unexpectedBeforePlaceholder,
+  \MissingTypeSyntax.unexpectedBeforePlaceholder:
+    return "unexpectedBeforePlaceholder"
+  case \PlatformVersionSyntax.unexpectedBeforePlatform:
+    return "unexpectedBeforePlatform"
+  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBeforePlatformVersion,
+  \PlatformVersionItemSyntax.unexpectedBeforePlatformVersion:
+    return "unexpectedBeforePlatformVersion"
+  case \MacroExpansionExprSyntax.unexpectedBeforePound:
+    return "unexpectedBeforePound"
+  case \IfConfigClauseSyntax.unexpectedBeforePoundKeyword:
+    return "unexpectedBeforePoundKeyword"
+  case \PoundSourceLocationSyntax.unexpectedBeforePoundSourceLocation:
+    return "unexpectedBeforePoundSourceLocation"
+  case \ABIAttributeArgumentsSyntax.unexpectedBeforeProvider:
+    return "unexpectedBeforeProvider"
+  case \UnresolvedTernaryExprSyntax.unexpectedBeforeQuestionMark:
+    return "unexpectedBeforeQuestionMark"
+  case \KeyPathOptionalComponentSyntax.unexpectedBeforeQuestionOrExclamationMark:
+    return "unexpectedBeforeQuestionOrExclamationMark"
+  case \PackExpansionExprSyntax.unexpectedBeforeRepeatKeyword,
+  \PackExpansionTypeSyntax.unexpectedBeforeRepeatKeyword,
+  \RepeatStmtSyntax.unexpectedBeforeRepeatKeyword:
+    return "unexpectedBeforeRepeatKeyword"
+  case \GenericRequirementSyntax.unexpectedBeforeRequirement:
+    return "unexpectedBeforeRequirement"
+  case \ReturnStmtSyntax.unexpectedBeforeReturnKeyword:
+    return "unexpectedBeforeReturnKeyword"
+  case \SourceFileSyntax.unexpectedBeforeShebang:
+    return "unexpectedBeforeShebang"
+  case \SomeOrAnyTypeSyntax.unexpectedBeforeSomeOrAnySpecifier:
+    return "unexpectedBeforeSomeOrAnySpecifier"
+  case \ClosureCaptureSpecifierSyntax.unexpectedBeforeSpecifier,
+  \ClosureCaptureSyntax.unexpectedBeforeSpecifier,
+  \SimpleTypeSpecifierSyntax.unexpectedBeforeSpecifier:
+    return "unexpectedBeforeSpecifier"
+  case \AttributedTypeSyntax.unexpectedBeforeSpecifiers:
+    return "unexpectedBeforeSpecifiers"
+  case \SuperExprSyntax.unexpectedBeforeSuperKeyword:
+    return "unexpectedBeforeSuperKeyword"
+  case \SwitchExprSyntax.unexpectedBeforeSwitchKeyword:
+    return "unexpectedBeforeSwitchKeyword"
+  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBeforeTargetLabel:
+    return "unexpectedBeforeTargetLabel"
+  case \ThenStmtSyntax.unexpectedBeforeThenKeyword:
+    return "unexpectedBeforeThenKeyword"
+  case \ThrowStmtSyntax.unexpectedBeforeThrowKeyword:
+    return "unexpectedBeforeThrowKeyword"
+  case \ThrowsClauseSyntax.unexpectedBeforeThrowsSpecifier:
+    return "unexpectedBeforeThrowsSpecifier"
+  case \TryExprSyntax.unexpectedBeforeTryKeyword:
+    return "unexpectedBeforeTryKeyword"
+  case \CompositionTypeElementSyntax.unexpectedBeforeType,
+  \ImplementsAttributeArgumentsSyntax.unexpectedBeforeType,
+  \InheritedTypeSyntax.unexpectedBeforeType,
+  \LayoutRequirementSyntax.unexpectedBeforeType,
+  \TypeExprSyntax.unexpectedBeforeType:
+    return "unexpectedBeforeType"
+  case \UnsafeExprSyntax.unexpectedBeforeUnsafeKeyword:
+    return "unexpectedBeforeUnsafeKeyword"
+  case \UsingDeclSyntax.unexpectedBeforeUsingKeyword:
+    return "unexpectedBeforeUsingKeyword"
+  case \GenericWhereClauseSyntax.unexpectedBeforeWhereKeyword,
+  \WhereClauseSyntax.unexpectedBeforeWhereKeyword:
+    return "unexpectedBeforeWhereKeyword"
+  case \WhileStmtSyntax.unexpectedBeforeWhileKeyword:
+    return "unexpectedBeforeWhileKeyword"
+  case \DiscardAssignmentExprSyntax.unexpectedBeforeWildcard,
+  \WildcardPatternSyntax.unexpectedBeforeWildcard:
+    return "unexpectedBeforeWildcard"
+  case \SuppressedTypeSyntax.unexpectedBeforeWithoutTilde:
+    return "unexpectedBeforeWithoutTilde"
+  case \ImplicitlyUnwrappedOptionalTypeSyntax.unexpectedBeforeWrappedType,
+  \OptionalTypeSyntax.unexpectedBeforeWrappedType:
+    return "unexpectedBeforeWrappedType"
+  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedBeforeWrtLabel:
+    return "unexpectedBeforeWrtLabel"
+  case \YieldStmtSyntax.unexpectedBeforeYieldKeyword:
+    return "unexpectedBeforeYieldKeyword"
+  case \PatternBindingSyntax.unexpectedBetweenAccessorBlockAndTrailingComma:
+    return "unexpectedBetweenAccessorBlockAndTrailingComma"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenAccessorSpecifierAndComma:
+    return "unexpectedBetweenAccessorSpecifierAndComma"
+  case \AccessorDeclSyntax.unexpectedBetweenAccessorSpecifierAndParameters:
+    return "unexpectedBetweenAccessorSpecifierAndParameters"
+  case \AccessorBlockFileSyntax.unexpectedBetweenAccessorsAndRightBrace,
+  \AccessorBlockSyntax.unexpectedBetweenAccessorsAndRightBrace:
+    return "unexpectedBetweenAccessorsAndRightBrace"
+  case \ActorDeclSyntax.unexpectedBetweenActorKeywordAndName:
+    return "unexpectedBetweenActorKeywordAndName"
+  case \LayoutRequirementSyntax.unexpectedBetweenAlignmentAndRightParen:
+    return "unexpectedBetweenAlignmentAndRightParen"
+  case \InOutExprSyntax.unexpectedBetweenAmpersandAndExpression:
+    return "unexpectedBetweenAmpersandAndExpression"
+  case \AvailabilityArgumentSyntax.unexpectedBetweenArgumentAndTrailingComma,
+  \DifferentiabilityArgumentSyntax.unexpectedBetweenArgumentAndTrailingComma,
+  \GenericArgumentSyntax.unexpectedBetweenArgumentAndTrailingComma:
+    return "unexpectedBetweenArgumentAndTrailingComma"
+  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenArgumentsAndArgumentsComma:
+    return "unexpectedBetweenArgumentsAndArgumentsComma"
+  case \GenericArgumentClauseSyntax.unexpectedBetweenArgumentsAndRightAngle:
+    return "unexpectedBetweenArgumentsAndRightAngle"
+  case \AttributeSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \DeclNameArgumentsSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \DifferentiabilityArgumentsSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \FunctionCallExprSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \KeyPathMethodComponentSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \LifetimeTypeSpecifierSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \MacroExpansionDeclSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \MacroExpansionExprSyntax.unexpectedBetweenArgumentsAndRightParen,
+  \PoundSourceLocationSyntax.unexpectedBetweenArgumentsAndRightParen:
+    return "unexpectedBetweenArgumentsAndRightParen"
+  case \KeyPathSubscriptComponentSyntax.unexpectedBetweenArgumentsAndRightSquare,
+  \SubscriptCallExprSyntax.unexpectedBetweenArgumentsAndRightSquare:
+    return "unexpectedBetweenArgumentsAndRightSquare"
+  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenArgumentsCommaAndGenericWhereClause:
+    return "unexpectedBetweenArgumentsCommaAndGenericWhereClause"
+  case \ReturnClauseSyntax.unexpectedBetweenArrowAndType:
+    return "unexpectedBetweenArrowAndType"
+  case \AsExprSyntax.unexpectedBetweenAsKeywordAndQuestionOrExclamationMark,
+  \UnresolvedAsExprSyntax.unexpectedBetweenAsKeywordAndQuestionOrExclamationMark:
+    return "unexpectedBetweenAsKeywordAndQuestionOrExclamationMark"
+  case \PrecedenceGroupAssignmentSyntax.unexpectedBetweenAssignmentLabelAndColon:
+    return "unexpectedBetweenAssignmentLabelAndColon"
+  case \AssociatedTypeDeclSyntax.unexpectedBetweenAssociatedtypeKeywordAndName:
+    return "unexpectedBetweenAssociatedtypeKeywordAndName"
+  case \PrecedenceGroupAssociativitySyntax.unexpectedBetweenAssociativityLabelAndColon:
+    return "unexpectedBetweenAssociativityLabelAndColon"
+  case \AccessorEffectSpecifiersSyntax.unexpectedBetweenAsyncSpecifierAndThrowsClause,
+  \FunctionEffectSpecifiersSyntax.unexpectedBetweenAsyncSpecifierAndThrowsClause,
+  \TypeEffectSpecifiersSyntax.unexpectedBetweenAsyncSpecifierAndThrowsClause:
+    return "unexpectedBetweenAsyncSpecifierAndThrowsClause"
+  case \AttributeSyntax.unexpectedBetweenAtSignAndAttributeName:
+    return "unexpectedBetweenAtSignAndAttributeName"
+  case \SwitchCaseSyntax.unexpectedBetweenAttributeAndLabel:
+    return "unexpectedBetweenAttributeAndLabel"
+  case \AttributeSyntax.unexpectedBetweenAttributeNameAndLeftParen:
+    return "unexpectedBetweenAttributeNameAndLeftParen"
+  case \ClosureSignatureSyntax.unexpectedBetweenAttributesAndCapture:
+    return "unexpectedBetweenAttributesAndCapture"
+  case \AttributedTypeSyntax.unexpectedBetweenAttributesAndLateSpecifiers:
+    return "unexpectedBetweenAttributesAndLateSpecifiers"
+  case \AccessorDeclSyntax.unexpectedBetweenAttributesAndModifier:
+    return "unexpectedBetweenAttributesAndModifier"
+  case \ActorDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \AssociatedTypeDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \AttributeClauseFileSyntax.unexpectedBetweenAttributesAndModifiers,
+  \ClassDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \ClosureParameterSyntax.unexpectedBetweenAttributesAndModifiers,
+  \DeinitializerDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \EditorPlaceholderDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \EnumCaseDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \EnumDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \ExtensionDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \FunctionDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \FunctionParameterSyntax.unexpectedBetweenAttributesAndModifiers,
+  \ImportDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \InitializerDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \MacroDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \MacroExpansionDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \MissingDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \PrecedenceGroupDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \ProtocolDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \StructDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \SubscriptDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \TypeAliasDeclSyntax.unexpectedBetweenAttributesAndModifiers,
+  \VariableDeclSyntax.unexpectedBetweenAttributesAndModifiers:
+    return "unexpectedBetweenAttributesAndModifiers"
+  case \GenericParameterSyntax.unexpectedBetweenAttributesAndSpecifier:
+    return "unexpectedBetweenAttributesAndSpecifier"
+  case \AvailabilityConditionSyntax.unexpectedBetweenAvailabilityArgumentsAndRightParen:
+    return "unexpectedBetweenAvailabilityArgumentsAndRightParen"
+  case \SpecializeAvailabilityArgumentSyntax.unexpectedBetweenAvailabilityArgumentsAndSemicolon:
+    return "unexpectedBetweenAvailabilityArgumentsAndSemicolon"
+  case \AvailabilityConditionSyntax.unexpectedBetweenAvailabilityKeywordAndLeftParen:
+    return "unexpectedBetweenAvailabilityKeywordAndLeftParen"
+  case \SpecializeAvailabilityArgumentSyntax.unexpectedBetweenAvailabilityLabelAndColon:
+    return "unexpectedBetweenAvailabilityLabelAndColon"
+  case \AwaitExprSyntax.unexpectedBetweenAwaitKeywordAndExpression:
+    return "unexpectedBetweenAwaitKeywordAndExpression"
+  case \ForStmtSyntax.unexpectedBetweenAwaitKeywordAndUnsafeKeyword:
+    return "unexpectedBetweenAwaitKeywordAndUnsafeKeyword"
+  case \ExpressionSegmentSyntax.unexpectedBetweenBackslashAndPounds:
+    return "unexpectedBetweenBackslashAndPounds"
+  case \KeyPathExprSyntax.unexpectedBetweenBackslashAndRoot:
+    return "unexpectedBetweenBackslashAndRoot"
+  case \PostfixIfConfigExprSyntax.unexpectedBetweenBaseAndConfig:
+    return "unexpectedBetweenBaseAndConfig"
+  case \MemberAccessExprSyntax.unexpectedBetweenBaseAndPeriod:
+    return "unexpectedBetweenBaseAndPeriod"
+  case \DeclReferenceExprSyntax.unexpectedBetweenBaseNameAndArgumentNames:
+    return "unexpectedBetweenBaseNameAndArgumentNames"
+  case \MemberTypeSyntax.unexpectedBetweenBaseTypeAndPeriod,
+  \MetatypeTypeSyntax.unexpectedBetweenBaseTypeAndPeriod:
+    return "unexpectedBetweenBaseTypeAndPeriod"
+  case \BackDeployedAttributeArgumentsSyntax.unexpectedBetweenBeforeLabelAndColon:
+    return "unexpectedBetweenBeforeLabelAndColon"
+  case \VariableDeclSyntax.unexpectedBetweenBindingSpecifierAndBindings:
+    return "unexpectedBetweenBindingSpecifierAndBindings"
+  case \OptionalBindingConditionSyntax.unexpectedBetweenBindingSpecifierAndPattern,
+  \ValueBindingPatternSyntax.unexpectedBetweenBindingSpecifierAndPattern:
+    return "unexpectedBetweenBindingSpecifierAndPattern"
+  case \DoExprSyntax.unexpectedBetweenBodyAndCatchClauses,
+  \DoStmtSyntax.unexpectedBetweenBodyAndCatchClauses:
+    return "unexpectedBetweenBodyAndCatchClauses"
+  case \IfExprSyntax.unexpectedBetweenBodyAndElseKeyword:
+    return "unexpectedBetweenBodyAndElseKeyword"
+  case \CodeBlockFileSyntax.unexpectedBetweenBodyAndEndOfFileToken:
+    return "unexpectedBetweenBodyAndEndOfFileToken"
+  case \RepeatStmtSyntax.unexpectedBetweenBodyAndWhileKeyword:
+    return "unexpectedBetweenBodyAndWhileKeyword"
+  case \BorrowExprSyntax.unexpectedBetweenBorrowKeywordAndExpression:
+    return "unexpectedBetweenBorrowKeywordAndExpression"
+  case \BreakStmtSyntax.unexpectedBetweenBreakKeywordAndLabel:
+    return "unexpectedBetweenBreakKeywordAndLabel"
+  case \FunctionCallExprSyntax.unexpectedBetweenCalledExpressionAndLeftParen:
+    return "unexpectedBetweenCalledExpressionAndLeftParen"
+  case \SubscriptCallExprSyntax.unexpectedBetweenCalledExpressionAndLeftSquare:
+    return "unexpectedBetweenCalledExpressionAndLeftSquare"
+  case \_CanImportExprSyntax.unexpectedBetweenCanImportKeywordAndLeftParen:
+    return "unexpectedBetweenCanImportKeywordAndLeftParen"
+  case \ClosureSignatureSyntax.unexpectedBetweenCaptureAndParameterClause:
+    return "unexpectedBetweenCaptureAndParameterClause"
+  case \SwitchCaseLabelSyntax.unexpectedBetweenCaseItemsAndColon:
+    return "unexpectedBetweenCaseItemsAndColon"
+  case \SwitchCaseLabelSyntax.unexpectedBetweenCaseKeywordAndCaseItems:
+    return "unexpectedBetweenCaseKeywordAndCaseItems"
+  case \EnumCaseDeclSyntax.unexpectedBetweenCaseKeywordAndElements:
+    return "unexpectedBetweenCaseKeywordAndElements"
+  case \ForStmtSyntax.unexpectedBetweenCaseKeywordAndPattern,
+  \MatchingPatternConditionSyntax.unexpectedBetweenCaseKeywordAndPattern:
+    return "unexpectedBetweenCaseKeywordAndPattern"
+  case \SwitchExprSyntax.unexpectedBetweenCasesAndRightBrace:
+    return "unexpectedBetweenCasesAndRightBrace"
+  case \CatchClauseSyntax.unexpectedBetweenCatchItemsAndBody:
+    return "unexpectedBetweenCatchItemsAndBody"
+  case \CatchClauseSyntax.unexpectedBetweenCatchKeywordAndCatchItems:
+    return "unexpectedBetweenCatchKeywordAndCatchItems"
+  case \ClassDeclSyntax.unexpectedBetweenClassKeywordAndName:
+    return "unexpectedBetweenClassKeywordAndName"
+  case \IfConfigDeclSyntax.unexpectedBetweenClausesAndPoundEndif:
+    return "unexpectedBetweenClausesAndPoundEndif"
+  case \StringLiteralExprSyntax.unexpectedBetweenClosingQuoteAndClosingPounds:
+    return "unexpectedBetweenClosingQuoteAndClosingPounds"
+  case \RegexLiteralExprSyntax.unexpectedBetweenClosingSlashAndClosingPounds:
+    return "unexpectedBetweenClosingSlashAndClosingPounds"
+  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedBetweenColonAndArguments:
+    return "unexpectedBetweenColonAndArguments"
+  case \SpecializeAvailabilityArgumentSyntax.unexpectedBetweenColonAndAvailabilityArguments:
+    return "unexpectedBetweenColonAndAvailabilityArguments"
+  case \MultipleTrailingClosureElementSyntax.unexpectedBetweenColonAndClosure:
+    return "unexpectedBetweenColonAndClosure"
+  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedBetweenColonAndDeclName,
+  \SpecializeTargetFunctionArgumentSyntax.unexpectedBetweenColonAndDeclName:
+    return "unexpectedBetweenColonAndDeclName"
+  case \TernaryExprSyntax.unexpectedBetweenColonAndElseExpression:
+    return "unexpectedBetweenColonAndElseExpression"
+  case \LabeledExprSyntax.unexpectedBetweenColonAndExpression:
+    return "unexpectedBetweenColonAndExpression"
+  case \GenericParameterSyntax.unexpectedBetweenColonAndInheritedType:
+    return "unexpectedBetweenColonAndInheritedType"
+  case \InheritanceClauseSyntax.unexpectedBetweenColonAndInheritedTypes:
+    return "unexpectedBetweenColonAndInheritedTypes"
+  case \LayoutRequirementSyntax.unexpectedBetweenColonAndLayoutSpecifier:
+    return "unexpectedBetweenColonAndLayoutSpecifier"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenColonAndModuleName:
+    return "unexpectedBetweenColonAndModuleName"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenColonAndOriginalDeclName:
+    return "unexpectedBetweenColonAndOriginalDeclName"
+  case \TuplePatternElementSyntax.unexpectedBetweenColonAndPattern:
+    return "unexpectedBetweenColonAndPattern"
+  case \BackDeployedAttributeArgumentsSyntax.unexpectedBetweenColonAndPlatforms:
+    return "unexpectedBetweenColonAndPlatforms"
+  case \OperatorPrecedenceAndTypesSyntax.unexpectedBetweenColonAndPrecedenceGroup:
+    return "unexpectedBetweenColonAndPrecedenceGroup"
+  case \PrecedenceGroupRelationSyntax.unexpectedBetweenColonAndPrecedenceGroups:
+    return "unexpectedBetweenColonAndPrecedenceGroups"
+  case \ConformanceRequirementSyntax.unexpectedBetweenColonAndRightType:
+    return "unexpectedBetweenColonAndRightType"
+  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBetweenColonAndSpecs:
+    return "unexpectedBetweenColonAndSpecs"
+  case \LabeledStmtSyntax.unexpectedBetweenColonAndStatement:
+    return "unexpectedBetweenColonAndStatement"
+  case \ClosureParameterSyntax.unexpectedBetweenColonAndType,
+  \EnumCaseParameterSyntax.unexpectedBetweenColonAndType,
+  \FunctionParameterSyntax.unexpectedBetweenColonAndType,
+  \TupleTypeElementSyntax.unexpectedBetweenColonAndType,
+  \TypeAnnotationSyntax.unexpectedBetweenColonAndType:
+    return "unexpectedBetweenColonAndType"
+  case \AvailabilityLabeledArgumentSyntax.unexpectedBetweenColonAndValue,
+  \DictionaryElementSyntax.unexpectedBetweenColonAndValue,
+  \DictionaryTypeSyntax.unexpectedBetweenColonAndValue,
+  \DocumentationAttributeArgumentSyntax.unexpectedBetweenColonAndValue,
+  \LabeledSpecializeArgumentSyntax.unexpectedBetweenColonAndValue,
+  \PrecedenceGroupAssignmentSyntax.unexpectedBetweenColonAndValue,
+  \PrecedenceGroupAssociativitySyntax.unexpectedBetweenColonAndValue:
+    return "unexpectedBetweenColonAndValue"
+  case \_CanImportVersionInfoSyntax.unexpectedBetweenColonAndVersion:
+    return "unexpectedBetweenColonAndVersion"
+  case \LayoutRequirementSyntax.unexpectedBetweenCommaAndAlignment:
+    return "unexpectedBetweenCommaAndAlignment"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenCommaAndArguments:
+    return "unexpectedBetweenCommaAndArguments"
+  case \ImplementsAttributeArgumentsSyntax.unexpectedBetweenCommaAndDeclName:
+    return "unexpectedBetweenCommaAndDeclName"
+  case \_CanImportVersionInfoSyntax.unexpectedBetweenCommaAndLabel:
+    return "unexpectedBetweenCommaAndLabel"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenCommaAndLineLabel:
+    return "unexpectedBetweenCommaAndLineLabel"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenCommaAndPlatforms:
+    return "unexpectedBetweenCommaAndPlatforms"
+  case \IfConfigClauseSyntax.unexpectedBetweenConditionAndElements:
+    return "unexpectedBetweenConditionAndElements"
+  case \TernaryExprSyntax.unexpectedBetweenConditionAndQuestionMark:
+    return "unexpectedBetweenConditionAndQuestionMark"
+  case \ConditionElementSyntax.unexpectedBetweenConditionAndTrailingComma:
+    return "unexpectedBetweenConditionAndTrailingComma"
+  case \IfExprSyntax.unexpectedBetweenConditionsAndBody,
+  \WhileStmtSyntax.unexpectedBetweenConditionsAndBody:
+    return "unexpectedBetweenConditionsAndBody"
+  case \GuardStmtSyntax.unexpectedBetweenConditionsAndElseKeyword:
+    return "unexpectedBetweenConditionsAndElseKeyword"
+  case \ConsumeExprSyntax.unexpectedBetweenConsumeKeywordAndExpression:
+    return "unexpectedBetweenConsumeKeywordAndExpression"
+  case \DictionaryExprSyntax.unexpectedBetweenContentAndRightSquare:
+    return "unexpectedBetweenContentAndRightSquare"
+  case \ContinueStmtSyntax.unexpectedBetweenContinueKeywordAndLabel:
+    return "unexpectedBetweenContinueKeywordAndLabel"
+  case \CopyExprSyntax.unexpectedBetweenCopyKeywordAndExpression:
+    return "unexpectedBetweenCopyKeywordAndExpression"
+  case \InlineArrayTypeSyntax.unexpectedBetweenCountAndSeparator:
+    return "unexpectedBetweenCountAndSeparator"
+  case \MemberBlockItemSyntax.unexpectedBetweenDeclAndSemicolon:
+    return "unexpectedBetweenDeclAndSemicolon"
+  case \KeyPathPropertyComponentSyntax.unexpectedBetweenDeclNameAndGenericArgumentClause:
+    return "unexpectedBetweenDeclNameAndGenericArgumentClause"
+  case \KeyPathMethodComponentSyntax.unexpectedBetweenDeclNameAndLeftParen:
+    return "unexpectedBetweenDeclNameAndLeftParen"
+  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBetweenDeclNameAndTrailingComma:
+    return "unexpectedBetweenDeclNameAndTrailingComma"
+  case \SwitchDefaultLabelSyntax.unexpectedBetweenDefaultKeywordAndColon:
+    return "unexpectedBetweenDefaultKeywordAndColon"
+  case \EnumCaseParameterSyntax.unexpectedBetweenDefaultValueAndTrailingComma,
+  \FunctionParameterSyntax.unexpectedBetweenDefaultValueAndTrailingComma:
+    return "unexpectedBetweenDefaultValueAndTrailingComma"
+  case \DeferStmtSyntax.unexpectedBetweenDeferKeywordAndBody:
+    return "unexpectedBetweenDeferKeywordAndBody"
+  case \MacroDeclSyntax.unexpectedBetweenDefinitionAndGenericWhereClause:
+    return "unexpectedBetweenDefinitionAndGenericWhereClause"
+  case \DeinitializerDeclSyntax.unexpectedBetweenDeinitKeywordAndEffectSpecifiers:
+    return "unexpectedBetweenDeinitKeywordAndEffectSpecifiers"
+  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenDependsOnKeywordAndLeftParen:
+    return "unexpectedBetweenDependsOnKeywordAndLeftParen"
+  case \ClosureCaptureSpecifierSyntax.unexpectedBetweenDetailAndRightParen,
+  \DeclModifierDetailSyntax.unexpectedBetweenDetailAndRightParen:
+    return "unexpectedBetweenDetailAndRightParen"
+  case \DiscardStmtSyntax.unexpectedBetweenDiscardKeywordAndExpression:
+    return "unexpectedBetweenDiscardKeywordAndExpression"
+  case \DoExprSyntax.unexpectedBetweenDoKeywordAndBody:
+    return "unexpectedBetweenDoKeywordAndBody"
+  case \DoStmtSyntax.unexpectedBetweenDoKeywordAndThrowsClause:
+    return "unexpectedBetweenDoKeywordAndThrowsClause"
+  case \PackElementExprSyntax.unexpectedBetweenEachKeywordAndPack,
+  \PackElementTypeSyntax.unexpectedBetweenEachKeywordAndPack:
+    return "unexpectedBetweenEachKeywordAndPack"
+  case \ArrowExprSyntax.unexpectedBetweenEffectSpecifiersAndArrow:
+    return "unexpectedBetweenEffectSpecifiersAndArrow"
+  case \AccessorDeclSyntax.unexpectedBetweenEffectSpecifiersAndBody,
+  \DeinitializerDeclSyntax.unexpectedBetweenEffectSpecifiersAndBody:
+    return "unexpectedBetweenEffectSpecifiersAndBody"
+  case \ClosureSignatureSyntax.unexpectedBetweenEffectSpecifiersAndReturnClause,
+  \FunctionSignatureSyntax.unexpectedBetweenEffectSpecifiersAndReturnClause,
+  \FunctionTypeSyntax.unexpectedBetweenEffectSpecifiersAndReturnClause:
+    return "unexpectedBetweenEffectSpecifiersAndReturnClause"
+  case \ArrayTypeSyntax.unexpectedBetweenElementAndRightSquare,
+  \InlineArrayTypeSyntax.unexpectedBetweenElementAndRightSquare:
+    return "unexpectedBetweenElementAndRightSquare"
+  case \TupleExprSyntax.unexpectedBetweenElementsAndRightParen,
+  \TuplePatternSyntax.unexpectedBetweenElementsAndRightParen,
+  \TupleTypeSyntax.unexpectedBetweenElementsAndRightParen,
+  \YieldedExpressionsClauseSyntax.unexpectedBetweenElementsAndRightParen:
+    return "unexpectedBetweenElementsAndRightParen"
+  case \ArrayExprSyntax.unexpectedBetweenElementsAndRightSquare:
+    return "unexpectedBetweenElementsAndRightSquare"
+  case \FunctionParameterSyntax.unexpectedBetweenEllipsisAndDefaultValue:
+    return "unexpectedBetweenEllipsisAndDefaultValue"
+  case \ClosureParameterSyntax.unexpectedBetweenEllipsisAndTrailingComma,
+  \TupleTypeElementSyntax.unexpectedBetweenEllipsisAndTrailingComma:
+    return "unexpectedBetweenEllipsisAndTrailingComma"
+  case \GuardStmtSyntax.unexpectedBetweenElseKeywordAndBody:
+    return "unexpectedBetweenElseKeywordAndBody"
+  case \IfExprSyntax.unexpectedBetweenElseKeywordAndElseBody:
+    return "unexpectedBetweenElseKeywordAndElseBody"
+  case \EnumDeclSyntax.unexpectedBetweenEnumKeywordAndName:
+    return "unexpectedBetweenEnumKeywordAndName"
+  case \SameTypeRequirementSyntax.unexpectedBetweenEqualAndRightType:
+    return "unexpectedBetweenEqualAndRightType"
+  case \InitializerClauseSyntax.unexpectedBetweenEqualAndValue,
+  \TypeInitializerClauseSyntax.unexpectedBetweenEqualAndValue:
+    return "unexpectedBetweenEqualAndValue"
+  case \AsExprSyntax.unexpectedBetweenExpressionAndAsKeyword:
+    return "unexpectedBetweenExpressionAndAsKeyword"
+  case \YieldedExpressionSyntax.unexpectedBetweenExpressionAndComma:
+    return "unexpectedBetweenExpressionAndComma"
+  case \ForceUnwrapExprSyntax.unexpectedBetweenExpressionAndExclamationMark:
+    return "unexpectedBetweenExpressionAndExclamationMark"
+  case \GenericSpecializationExprSyntax.unexpectedBetweenExpressionAndGenericArgumentClause:
+    return "unexpectedBetweenExpressionAndGenericArgumentClause"
+  case \IsExprSyntax.unexpectedBetweenExpressionAndIsKeyword:
+    return "unexpectedBetweenExpressionAndIsKeyword"
+  case \PostfixOperatorExprSyntax.unexpectedBetweenExpressionAndOperator:
+    return "unexpectedBetweenExpressionAndOperator"
+  case \OptionalChainingExprSyntax.unexpectedBetweenExpressionAndQuestionMark:
+    return "unexpectedBetweenExpressionAndQuestionMark"
+  case \ArrayElementSyntax.unexpectedBetweenExpressionAndTrailingComma,
+  \LabeledExprSyntax.unexpectedBetweenExpressionAndTrailingComma:
+    return "unexpectedBetweenExpressionAndTrailingComma"
+  case \ExpressionSegmentSyntax.unexpectedBetweenExpressionsAndRightParen:
+    return "unexpectedBetweenExpressionsAndRightParen"
+  case \ExtensionDeclSyntax.unexpectedBetweenExtendedTypeAndInheritanceClause:
+    return "unexpectedBetweenExtendedTypeAndInheritanceClause"
+  case \ExtensionDeclSyntax.unexpectedBetweenExtensionKeywordAndExtendedType:
+    return "unexpectedBetweenExtensionKeywordAndExtendedType"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenFileColonAndFileName:
+    return "unexpectedBetweenFileColonAndFileName"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenFileLabelAndFileColon:
+    return "unexpectedBetweenFileLabelAndFileColon"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenFileNameAndComma:
+    return "unexpectedBetweenFileNameAndComma"
+  case \ClosureParameterSyntax.unexpectedBetweenFirstNameAndSecondName,
+  \EnumCaseParameterSyntax.unexpectedBetweenFirstNameAndSecondName,
+  \FunctionParameterSyntax.unexpectedBetweenFirstNameAndSecondName,
+  \TupleTypeElementSyntax.unexpectedBetweenFirstNameAndSecondName:
+    return "unexpectedBetweenFirstNameAndSecondName"
+  case \OperatorDeclSyntax.unexpectedBetweenFixitySpecifierAndOperatorKeyword:
+    return "unexpectedBetweenFixitySpecifierAndOperatorKeyword"
+  case \ForStmtSyntax.unexpectedBetweenForKeywordAndTryKeyword:
+    return "unexpectedBetweenForKeywordAndTryKeyword"
+  case \DynamicReplacementAttributeArgumentsSyntax.unexpectedBetweenForLabelAndColon:
+    return "unexpectedBetweenForLabelAndColon"
+  case \FunctionDeclSyntax.unexpectedBetweenFuncKeywordAndName:
+    return "unexpectedBetweenFuncKeywordAndName"
+  case \MacroExpansionDeclSyntax.unexpectedBetweenGenericArgumentClauseAndLeftParen,
+  \MacroExpansionExprSyntax.unexpectedBetweenGenericArgumentClauseAndLeftParen:
+    return "unexpectedBetweenGenericArgumentClauseAndLeftParen"
+  case \ActorDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause,
+  \ClassDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause,
+  \EnumDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause,
+  \StructDeclSyntax.unexpectedBetweenGenericParameterClauseAndInheritanceClause:
+    return "unexpectedBetweenGenericParameterClauseAndInheritanceClause"
+  case \TypeAliasDeclSyntax.unexpectedBetweenGenericParameterClauseAndInitializer:
+    return "unexpectedBetweenGenericParameterClauseAndInitializer"
+  case \SubscriptDeclSyntax.unexpectedBetweenGenericParameterClauseAndParameterClause:
+    return "unexpectedBetweenGenericParameterClauseAndParameterClause"
+  case \FunctionDeclSyntax.unexpectedBetweenGenericParameterClauseAndSignature,
+  \InitializerDeclSyntax.unexpectedBetweenGenericParameterClauseAndSignature,
+  \MacroDeclSyntax.unexpectedBetweenGenericParameterClauseAndSignature:
+    return "unexpectedBetweenGenericParameterClauseAndSignature"
+  case \NamedOpaqueReturnTypeSyntax.unexpectedBetweenGenericParameterClauseAndType:
+    return "unexpectedBetweenGenericParameterClauseAndType"
+  case \SubscriptDeclSyntax.unexpectedBetweenGenericWhereClauseAndAccessorBlock:
+    return "unexpectedBetweenGenericWhereClauseAndAccessorBlock"
+  case \FunctionDeclSyntax.unexpectedBetweenGenericWhereClauseAndBody,
+  \InitializerDeclSyntax.unexpectedBetweenGenericWhereClauseAndBody:
+    return "unexpectedBetweenGenericWhereClauseAndBody"
+  case \ActorDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock,
+  \ClassDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock,
+  \EnumDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock,
+  \ExtensionDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock,
+  \ProtocolDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock,
+  \StructDeclSyntax.unexpectedBetweenGenericWhereClauseAndMemberBlock:
+    return "unexpectedBetweenGenericWhereClauseAndMemberBlock"
+  case \GenericParameterClauseSyntax.unexpectedBetweenGenericWhereClauseAndRightAngle:
+    return "unexpectedBetweenGenericWhereClauseAndRightAngle"
+  case \PrecedenceGroupDeclSyntax.unexpectedBetweenGroupAttributesAndRightBrace:
+    return "unexpectedBetweenGroupAttributesAndRightBrace"
+  case \GuardStmtSyntax.unexpectedBetweenGuardKeywordAndConditions:
+    return "unexpectedBetweenGuardKeywordAndConditions"
+  case \PrecedenceGroupRelationSyntax.unexpectedBetweenHigherThanOrLowerThanLabelAndColon:
+    return "unexpectedBetweenHigherThanOrLowerThanLabelAndColon"
+  case \IfExprSyntax.unexpectedBetweenIfKeywordAndConditions:
+    return "unexpectedBetweenIfKeywordAndConditions"
+  case \ImportDeclSyntax.unexpectedBetweenImportKeywordAndImportKindSpecifier:
+    return "unexpectedBetweenImportKeywordAndImportKindSpecifier"
+  case \ImportDeclSyntax.unexpectedBetweenImportKindSpecifierAndPath:
+    return "unexpectedBetweenImportKindSpecifierAndPath"
+  case \_CanImportExprSyntax.unexpectedBetweenImportPathAndVersionInfo:
+    return "unexpectedBetweenImportPathAndVersionInfo"
+  case \ForStmtSyntax.unexpectedBetweenInKeywordAndSequence:
+    return "unexpectedBetweenInKeywordAndSequence"
+  case \ActorDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause,
+  \ClassDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause,
+  \EnumDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause,
+  \ExtensionDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause,
+  \ProtocolDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause,
+  \StructDeclSyntax.unexpectedBetweenInheritanceClauseAndGenericWhereClause:
+    return "unexpectedBetweenInheritanceClauseAndGenericWhereClause"
+  case \AssociatedTypeDeclSyntax.unexpectedBetweenInheritanceClauseAndInitializer:
+    return "unexpectedBetweenInheritanceClauseAndInitializer"
+  case \GenericParameterSyntax.unexpectedBetweenInheritedTypeAndTrailingComma:
+    return "unexpectedBetweenInheritedTypeAndTrailingComma"
+  case \InitializerDeclSyntax.unexpectedBetweenInitKeywordAndOptionalMark:
+    return "unexpectedBetweenInitKeywordAndOptionalMark"
+  case \PatternBindingSyntax.unexpectedBetweenInitializerAndAccessorBlock:
+    return "unexpectedBetweenInitializerAndAccessorBlock"
+  case \AssociatedTypeDeclSyntax.unexpectedBetweenInitializerAndGenericWhereClause,
+  \TypeAliasDeclSyntax.unexpectedBetweenInitializerAndGenericWhereClause:
+    return "unexpectedBetweenInitializerAndGenericWhereClause"
+  case \ClosureCaptureSyntax.unexpectedBetweenInitializerAndTrailingComma:
+    return "unexpectedBetweenInitializerAndTrailingComma"
+  case \TupleTypeElementSyntax.unexpectedBetweenInoutKeywordAndFirstName:
+    return "unexpectedBetweenInoutKeywordAndFirstName"
+  case \IsExprSyntax.unexpectedBetweenIsKeywordAndType,
+  \IsTypePatternSyntax.unexpectedBetweenIsKeywordAndType:
+    return "unexpectedBetweenIsKeywordAndType"
+  case \CodeBlockItemSyntax.unexpectedBetweenItemAndSemicolon:
+    return "unexpectedBetweenItemAndSemicolon"
+  case \ClosureCaptureClauseSyntax.unexpectedBetweenItemsAndRightSquare:
+    return "unexpectedBetweenItemsAndRightSquare"
+  case \DictionaryElementSyntax.unexpectedBetweenKeyAndColon,
+  \DictionaryTypeSyntax.unexpectedBetweenKeyAndColon:
+    return "unexpectedBetweenKeyAndColon"
+  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenKindSpecifierAndKindSpecifierComma:
+    return "unexpectedBetweenKindSpecifierAndKindSpecifierComma"
+  case \DifferentiableAttributeArgumentsSyntax.unexpectedBetweenKindSpecifierCommaAndArguments:
+    return "unexpectedBetweenKindSpecifierCommaAndArguments"
+  case \AvailabilityLabeledArgumentSyntax.unexpectedBetweenLabelAndColon,
+  \_CanImportVersionInfoSyntax.unexpectedBetweenLabelAndColon,
+  \DocumentationAttributeArgumentSyntax.unexpectedBetweenLabelAndColon,
+  \LabeledExprSyntax.unexpectedBetweenLabelAndColon,
+  \LabeledSpecializeArgumentSyntax.unexpectedBetweenLabelAndColon,
+  \LabeledStmtSyntax.unexpectedBetweenLabelAndColon,
+  \MultipleTrailingClosureElementSyntax.unexpectedBetweenLabelAndColon,
+  \TuplePatternElementSyntax.unexpectedBetweenLabelAndColon:
+    return "unexpectedBetweenLabelAndColon"
+  case \SwitchCaseSyntax.unexpectedBetweenLabelAndStatements:
+    return "unexpectedBetweenLabelAndStatements"
+  case \AttributedTypeSyntax.unexpectedBetweenLateSpecifiersAndBaseType:
+    return "unexpectedBetweenLateSpecifiersAndBaseType"
+  case \LayoutRequirementSyntax.unexpectedBetweenLayoutSpecifierAndLeftParen:
+    return "unexpectedBetweenLayoutSpecifierAndLeftParen"
+  case \DesignatedTypeSyntax.unexpectedBetweenLeadingCommaAndName:
+    return "unexpectedBetweenLeadingCommaAndName"
+  case \GenericArgumentClauseSyntax.unexpectedBetweenLeftAngleAndArguments:
+    return "unexpectedBetweenLeftAngleAndArguments"
+  case \GenericParameterClauseSyntax.unexpectedBetweenLeftAngleAndParameters:
+    return "unexpectedBetweenLeftAngleAndParameters"
+  case \PrimaryAssociatedTypeClauseSyntax.unexpectedBetweenLeftAngleAndPrimaryAssociatedTypes:
+    return "unexpectedBetweenLeftAngleAndPrimaryAssociatedTypes"
+  case \AccessorBlockFileSyntax.unexpectedBetweenLeftBraceAndAccessors,
+  \AccessorBlockSyntax.unexpectedBetweenLeftBraceAndAccessors:
+    return "unexpectedBetweenLeftBraceAndAccessors"
+  case \SwitchExprSyntax.unexpectedBetweenLeftBraceAndCases:
+    return "unexpectedBetweenLeftBraceAndCases"
+  case \PrecedenceGroupDeclSyntax.unexpectedBetweenLeftBraceAndGroupAttributes:
+    return "unexpectedBetweenLeftBraceAndGroupAttributes"
+  case \MemberBlockSyntax.unexpectedBetweenLeftBraceAndMembers:
+    return "unexpectedBetweenLeftBraceAndMembers"
+  case \ClosureExprSyntax.unexpectedBetweenLeftBraceAndSignature:
+    return "unexpectedBetweenLeftBraceAndSignature"
+  case \CodeBlockSyntax.unexpectedBetweenLeftBraceAndStatements:
+    return "unexpectedBetweenLeftBraceAndStatements"
+  case \InfixOperatorExprSyntax.unexpectedBetweenLeftOperandAndOperator:
+    return "unexpectedBetweenLeftOperandAndOperator"
+  case \AttributeSyntax.unexpectedBetweenLeftParenAndArguments,
+  \DeclNameArgumentsSyntax.unexpectedBetweenLeftParenAndArguments,
+  \DifferentiabilityArgumentsSyntax.unexpectedBetweenLeftParenAndArguments,
+  \FunctionCallExprSyntax.unexpectedBetweenLeftParenAndArguments,
+  \KeyPathMethodComponentSyntax.unexpectedBetweenLeftParenAndArguments,
+  \MacroExpansionDeclSyntax.unexpectedBetweenLeftParenAndArguments,
+  \MacroExpansionExprSyntax.unexpectedBetweenLeftParenAndArguments,
+  \PoundSourceLocationSyntax.unexpectedBetweenLeftParenAndArguments:
+    return "unexpectedBetweenLeftParenAndArguments"
+  case \AvailabilityConditionSyntax.unexpectedBetweenLeftParenAndAvailabilityArguments:
+    return "unexpectedBetweenLeftParenAndAvailabilityArguments"
+  case \ClosureCaptureSpecifierSyntax.unexpectedBetweenLeftParenAndDetail,
+  \DeclModifierDetailSyntax.unexpectedBetweenLeftParenAndDetail:
+    return "unexpectedBetweenLeftParenAndDetail"
+  case \TupleExprSyntax.unexpectedBetweenLeftParenAndElements,
+  \TuplePatternSyntax.unexpectedBetweenLeftParenAndElements,
+  \TupleTypeSyntax.unexpectedBetweenLeftParenAndElements,
+  \YieldedExpressionsClauseSyntax.unexpectedBetweenLeftParenAndElements:
+    return "unexpectedBetweenLeftParenAndElements"
+  case \ExpressionSegmentSyntax.unexpectedBetweenLeftParenAndExpressions:
+    return "unexpectedBetweenLeftParenAndExpressions"
+  case \_CanImportExprSyntax.unexpectedBetweenLeftParenAndImportPath:
+    return "unexpectedBetweenLeftParenAndImportPath"
+  case \AccessorParametersSyntax.unexpectedBetweenLeftParenAndName:
+    return "unexpectedBetweenLeftParenAndName"
+  case \NonisolatedSpecifierArgumentSyntax.unexpectedBetweenLeftParenAndNonsendingKeyword:
+    return "unexpectedBetweenLeftParenAndNonsendingKeyword"
+  case \ClosureParameterClauseSyntax.unexpectedBetweenLeftParenAndParameters,
+  \EnumCaseParameterClauseSyntax.unexpectedBetweenLeftParenAndParameters,
+  \FunctionParameterClauseSyntax.unexpectedBetweenLeftParenAndParameters,
+  \FunctionTypeSyntax.unexpectedBetweenLeftParenAndParameters:
+    return "unexpectedBetweenLeftParenAndParameters"
+  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenLeftParenAndScopedKeyword:
+    return "unexpectedBetweenLeftParenAndScopedKeyword"
+  case \LayoutRequirementSyntax.unexpectedBetweenLeftParenAndSize:
+    return "unexpectedBetweenLeftParenAndSize"
+  case \ThrowsClauseSyntax.unexpectedBetweenLeftParenAndType:
+    return "unexpectedBetweenLeftParenAndType"
+  case \KeyPathSubscriptComponentSyntax.unexpectedBetweenLeftSquareAndArguments,
+  \SubscriptCallExprSyntax.unexpectedBetweenLeftSquareAndArguments:
+    return "unexpectedBetweenLeftSquareAndArguments"
+  case \DictionaryExprSyntax.unexpectedBetweenLeftSquareAndContent:
+    return "unexpectedBetweenLeftSquareAndContent"
+  case \InlineArrayTypeSyntax.unexpectedBetweenLeftSquareAndCount:
+    return "unexpectedBetweenLeftSquareAndCount"
+  case \ArrayTypeSyntax.unexpectedBetweenLeftSquareAndElement:
+    return "unexpectedBetweenLeftSquareAndElement"
+  case \ArrayExprSyntax.unexpectedBetweenLeftSquareAndElements:
+    return "unexpectedBetweenLeftSquareAndElements"
+  case \ClosureCaptureClauseSyntax.unexpectedBetweenLeftSquareAndItems:
+    return "unexpectedBetweenLeftSquareAndItems"
+  case \DictionaryTypeSyntax.unexpectedBetweenLeftSquareAndKey:
+    return "unexpectedBetweenLeftSquareAndKey"
+  case \ConformanceRequirementSyntax.unexpectedBetweenLeftTypeAndColon:
+    return "unexpectedBetweenLeftTypeAndColon"
+  case \SameTypeRequirementSyntax.unexpectedBetweenLeftTypeAndEqual:
+    return "unexpectedBetweenLeftTypeAndEqual"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenLineColonAndLineNumber:
+    return "unexpectedBetweenLineColonAndLineNumber"
+  case \PoundSourceLocationArgumentsSyntax.unexpectedBetweenLineLabelAndLineColon:
+    return "unexpectedBetweenLineLabelAndLineColon"
+  case \MacroDeclSyntax.unexpectedBetweenMacroKeywordAndName:
+    return "unexpectedBetweenMacroKeywordAndName"
+  case \MacroExpansionDeclSyntax.unexpectedBetweenMacroNameAndGenericArgumentClause,
+  \MacroExpansionExprSyntax.unexpectedBetweenMacroNameAndGenericArgumentClause:
+    return "unexpectedBetweenMacroNameAndGenericArgumentClause"
+  case \VersionTupleSyntax.unexpectedBetweenMajorAndComponents:
+    return "unexpectedBetweenMajorAndComponents"
+  case \MemberBlockItemListFileSyntax.unexpectedBetweenMembersAndEndOfFileToken:
+    return "unexpectedBetweenMembersAndEndOfFileToken"
+  case \MemberBlockSyntax.unexpectedBetweenMembersAndRightBrace:
+    return "unexpectedBetweenMembersAndRightBrace"
+  case \AccessorDeclSyntax.unexpectedBetweenModifierAndAccessorSpecifier:
+    return "unexpectedBetweenModifierAndAccessorSpecifier"
+  case \ActorDeclSyntax.unexpectedBetweenModifiersAndActorKeyword:
+    return "unexpectedBetweenModifiersAndActorKeyword"
+  case \AssociatedTypeDeclSyntax.unexpectedBetweenModifiersAndAssociatedtypeKeyword:
+    return "unexpectedBetweenModifiersAndAssociatedtypeKeyword"
+  case \VariableDeclSyntax.unexpectedBetweenModifiersAndBindingSpecifier:
+    return "unexpectedBetweenModifiersAndBindingSpecifier"
+  case \EnumCaseDeclSyntax.unexpectedBetweenModifiersAndCaseKeyword:
+    return "unexpectedBetweenModifiersAndCaseKeyword"
+  case \ClassDeclSyntax.unexpectedBetweenModifiersAndClassKeyword:
+    return "unexpectedBetweenModifiersAndClassKeyword"
+  case \DeinitializerDeclSyntax.unexpectedBetweenModifiersAndDeinitKeyword:
+    return "unexpectedBetweenModifiersAndDeinitKeyword"
+  case \AttributeClauseFileSyntax.unexpectedBetweenModifiersAndEndOfFileToken:
+    return "unexpectedBetweenModifiersAndEndOfFileToken"
+  case \EnumDeclSyntax.unexpectedBetweenModifiersAndEnumKeyword:
+    return "unexpectedBetweenModifiersAndEnumKeyword"
+  case \ExtensionDeclSyntax.unexpectedBetweenModifiersAndExtensionKeyword:
+    return "unexpectedBetweenModifiersAndExtensionKeyword"
+  case \ClosureParameterSyntax.unexpectedBetweenModifiersAndFirstName,
+  \EnumCaseParameterSyntax.unexpectedBetweenModifiersAndFirstName,
+  \FunctionParameterSyntax.unexpectedBetweenModifiersAndFirstName:
+    return "unexpectedBetweenModifiersAndFirstName"
+  case \FunctionDeclSyntax.unexpectedBetweenModifiersAndFuncKeyword:
+    return "unexpectedBetweenModifiersAndFuncKeyword"
+  case \ImportDeclSyntax.unexpectedBetweenModifiersAndImportKeyword:
+    return "unexpectedBetweenModifiersAndImportKeyword"
+  case \InitializerDeclSyntax.unexpectedBetweenModifiersAndInitKeyword:
+    return "unexpectedBetweenModifiersAndInitKeyword"
+  case \MacroDeclSyntax.unexpectedBetweenModifiersAndMacroKeyword:
+    return "unexpectedBetweenModifiersAndMacroKeyword"
+  case \EditorPlaceholderDeclSyntax.unexpectedBetweenModifiersAndPlaceholder,
+  \MissingDeclSyntax.unexpectedBetweenModifiersAndPlaceholder:
+    return "unexpectedBetweenModifiersAndPlaceholder"
+  case \MacroExpansionDeclSyntax.unexpectedBetweenModifiersAndPound:
+    return "unexpectedBetweenModifiersAndPound"
+  case \PrecedenceGroupDeclSyntax.unexpectedBetweenModifiersAndPrecedencegroupKeyword:
+    return "unexpectedBetweenModifiersAndPrecedencegroupKeyword"
+  case \ProtocolDeclSyntax.unexpectedBetweenModifiersAndProtocolKeyword:
+    return "unexpectedBetweenModifiersAndProtocolKeyword"
+  case \StructDeclSyntax.unexpectedBetweenModifiersAndStructKeyword:
+    return "unexpectedBetweenModifiersAndStructKeyword"
+  case \SubscriptDeclSyntax.unexpectedBetweenModifiersAndSubscriptKeyword:
+    return "unexpectedBetweenModifiersAndSubscriptKeyword"
+  case \TypeAliasDeclSyntax.unexpectedBetweenModifiersAndTypealiasKeyword:
+    return "unexpectedBetweenModifiersAndTypealiasKeyword"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenModuleLabelAndColon:
+    return "unexpectedBetweenModuleLabelAndColon"
+  case \OriginallyDefinedInAttributeArgumentsSyntax.unexpectedBetweenModuleNameAndComma:
+    return "unexpectedBetweenModuleNameAndComma"
+  case \DeclNameArgumentSyntax.unexpectedBetweenNameAndColon,
+  \GenericParameterSyntax.unexpectedBetweenNameAndColon,
+  \ObjCSelectorPieceSyntax.unexpectedBetweenNameAndColon:
+    return "unexpectedBetweenNameAndColon"
+  case \DeclModifierSyntax.unexpectedBetweenNameAndDetail:
+    return "unexpectedBetweenNameAndDetail"
+  case \IdentifierTypeSyntax.unexpectedBetweenNameAndGenericArgumentClause,
+  \MemberTypeSyntax.unexpectedBetweenNameAndGenericArgumentClause:
+    return "unexpectedBetweenNameAndGenericArgumentClause"
+  case \ActorDeclSyntax.unexpectedBetweenNameAndGenericParameterClause,
+  \ClassDeclSyntax.unexpectedBetweenNameAndGenericParameterClause,
+  \EnumDeclSyntax.unexpectedBetweenNameAndGenericParameterClause,
+  \FunctionDeclSyntax.unexpectedBetweenNameAndGenericParameterClause,
+  \MacroDeclSyntax.unexpectedBetweenNameAndGenericParameterClause,
+  \StructDeclSyntax.unexpectedBetweenNameAndGenericParameterClause,
+  \TypeAliasDeclSyntax.unexpectedBetweenNameAndGenericParameterClause:
+    return "unexpectedBetweenNameAndGenericParameterClause"
+  case \AssociatedTypeDeclSyntax.unexpectedBetweenNameAndInheritanceClause:
+    return "unexpectedBetweenNameAndInheritanceClause"
+  case \ClosureCaptureSyntax.unexpectedBetweenNameAndInitializer:
+    return "unexpectedBetweenNameAndInitializer"
+  case \PrecedenceGroupDeclSyntax.unexpectedBetweenNameAndLeftBrace:
+    return "unexpectedBetweenNameAndLeftBrace"
+  case \OperatorDeclSyntax.unexpectedBetweenNameAndOperatorPrecedenceAndTypes:
+    return "unexpectedBetweenNameAndOperatorPrecedenceAndTypes"
+  case \EnumCaseElementSyntax.unexpectedBetweenNameAndParameterClause:
+    return "unexpectedBetweenNameAndParameterClause"
+  case \ProtocolDeclSyntax.unexpectedBetweenNameAndPrimaryAssociatedTypeClause:
+    return "unexpectedBetweenNameAndPrimaryAssociatedTypeClause"
+  case \AccessorParametersSyntax.unexpectedBetweenNameAndRightParen:
+    return "unexpectedBetweenNameAndRightParen"
+  case \ClosureShorthandParameterSyntax.unexpectedBetweenNameAndTrailingComma,
+  \PrecedenceGroupNameSyntax.unexpectedBetweenNameAndTrailingComma,
+  \PrimaryAssociatedTypeSyntax.unexpectedBetweenNameAndTrailingComma:
+    return "unexpectedBetweenNameAndTrailingComma"
+  case \ImportPathComponentSyntax.unexpectedBetweenNameAndTrailingPeriod:
+    return "unexpectedBetweenNameAndTrailingPeriod"
+  case \NonisolatedTypeSpecifierSyntax.unexpectedBetweenNonisolatedKeywordAndArgument:
+    return "unexpectedBetweenNonisolatedKeywordAndArgument"
+  case \NonisolatedSpecifierArgumentSyntax.unexpectedBetweenNonsendingKeywordAndRightParen:
+    return "unexpectedBetweenNonsendingKeywordAndRightParen"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenOfLabelAndColon:
+    return "unexpectedBetweenOfLabelAndColon"
+  case \StringLiteralExprSyntax.unexpectedBetweenOpeningPoundsAndOpeningQuote:
+    return "unexpectedBetweenOpeningPoundsAndOpeningQuote"
+  case \RegexLiteralExprSyntax.unexpectedBetweenOpeningPoundsAndOpeningSlash:
+    return "unexpectedBetweenOpeningPoundsAndOpeningSlash"
+  case \SimpleStringLiteralExprSyntax.unexpectedBetweenOpeningQuoteAndSegments,
+  \StringLiteralExprSyntax.unexpectedBetweenOpeningQuoteAndSegments:
+    return "unexpectedBetweenOpeningQuoteAndSegments"
+  case \RegexLiteralExprSyntax.unexpectedBetweenOpeningSlashAndRegex:
+    return "unexpectedBetweenOpeningSlashAndRegex"
+  case \PrefixOperatorExprSyntax.unexpectedBetweenOperatorAndExpression:
+    return "unexpectedBetweenOperatorAndExpression"
+  case \InfixOperatorExprSyntax.unexpectedBetweenOperatorAndRightOperand:
+    return "unexpectedBetweenOperatorAndRightOperand"
+  case \OperatorDeclSyntax.unexpectedBetweenOperatorKeywordAndName:
+    return "unexpectedBetweenOperatorKeywordAndName"
+  case \InitializerDeclSyntax.unexpectedBetweenOptionalMarkAndGenericParameterClause:
+    return "unexpectedBetweenOptionalMarkAndGenericParameterClause"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenOriginalDeclNameAndPeriod:
+    return "unexpectedBetweenOriginalDeclNameAndPeriod"
+  case \LifetimeSpecifierArgumentSyntax.unexpectedBetweenParameterAndTrailingComma:
+    return "unexpectedBetweenParameterAndTrailingComma"
+  case \ClosureSignatureSyntax.unexpectedBetweenParameterClauseAndEffectSpecifiers,
+  \FunctionSignatureSyntax.unexpectedBetweenParameterClauseAndEffectSpecifiers:
+    return "unexpectedBetweenParameterClauseAndEffectSpecifiers"
+  case \EnumCaseElementSyntax.unexpectedBetweenParameterClauseAndRawValue:
+    return "unexpectedBetweenParameterClauseAndRawValue"
+  case \SubscriptDeclSyntax.unexpectedBetweenParameterClauseAndReturnClause:
+    return "unexpectedBetweenParameterClauseAndReturnClause"
+  case \AccessorDeclSyntax.unexpectedBetweenParametersAndEffectSpecifiers:
+    return "unexpectedBetweenParametersAndEffectSpecifiers"
+  case \GenericParameterClauseSyntax.unexpectedBetweenParametersAndGenericWhereClause:
+    return "unexpectedBetweenParametersAndGenericWhereClause"
+  case \ClosureParameterClauseSyntax.unexpectedBetweenParametersAndRightParen,
+  \EnumCaseParameterClauseSyntax.unexpectedBetweenParametersAndRightParen,
+  \FunctionParameterClauseSyntax.unexpectedBetweenParametersAndRightParen,
+  \FunctionTypeSyntax.unexpectedBetweenParametersAndRightParen:
+    return "unexpectedBetweenParametersAndRightParen"
+  case \TuplePatternElementSyntax.unexpectedBetweenPatternAndTrailingComma:
+    return "unexpectedBetweenPatternAndTrailingComma"
+  case \ForStmtSyntax.unexpectedBetweenPatternAndTypeAnnotation,
+  \MatchingPatternConditionSyntax.unexpectedBetweenPatternAndTypeAnnotation,
+  \OptionalBindingConditionSyntax.unexpectedBetweenPatternAndTypeAnnotation,
+  \PatternBindingSyntax.unexpectedBetweenPatternAndTypeAnnotation:
+    return "unexpectedBetweenPatternAndTypeAnnotation"
+  case \CatchItemSyntax.unexpectedBetweenPatternAndWhereClause,
+  \SwitchCaseItemSyntax.unexpectedBetweenPatternAndWhereClause:
+    return "unexpectedBetweenPatternAndWhereClause"
+  case \DerivativeAttributeArgumentsSyntax.unexpectedBetweenPeriodAndAccessorSpecifier:
+    return "unexpectedBetweenPeriodAndAccessorSpecifier"
+  case \KeyPathComponentSyntax.unexpectedBetweenPeriodAndComponent:
+    return "unexpectedBetweenPeriodAndComponent"
+  case \MemberAccessExprSyntax.unexpectedBetweenPeriodAndDeclName:
+    return "unexpectedBetweenPeriodAndDeclName"
+  case \MetatypeTypeSyntax.unexpectedBetweenPeriodAndMetatypeSpecifier:
+    return "unexpectedBetweenPeriodAndMetatypeSpecifier"
+  case \MemberTypeSyntax.unexpectedBetweenPeriodAndName:
+    return "unexpectedBetweenPeriodAndName"
+  case \VersionComponentSyntax.unexpectedBetweenPeriodAndNumber:
+    return "unexpectedBetweenPeriodAndNumber"
+  case \PlatformVersionSyntax.unexpectedBetweenPlatformAndVersion:
+    return "unexpectedBetweenPlatformAndVersion"
+  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBetweenPlatformVersionAndColon:
+    return "unexpectedBetweenPlatformVersionAndColon"
+  case \PlatformVersionItemSyntax.unexpectedBetweenPlatformVersionAndTrailingComma:
+    return "unexpectedBetweenPlatformVersionAndTrailingComma"
+  case \MacroExpansionDeclSyntax.unexpectedBetweenPoundAndMacroName,
+  \MacroExpansionExprSyntax.unexpectedBetweenPoundAndMacroName:
+    return "unexpectedBetweenPoundAndMacroName"
+  case \IfConfigClauseSyntax.unexpectedBetweenPoundKeywordAndCondition:
+    return "unexpectedBetweenPoundKeywordAndCondition"
+  case \PoundSourceLocationSyntax.unexpectedBetweenPoundSourceLocationAndLeftParen:
+    return "unexpectedBetweenPoundSourceLocationAndLeftParen"
+  case \ExpressionSegmentSyntax.unexpectedBetweenPoundsAndLeftParen:
+    return "unexpectedBetweenPoundsAndLeftParen"
+  case \OperatorPrecedenceAndTypesSyntax.unexpectedBetweenPrecedenceGroupAndDesignatedTypes:
+    return "unexpectedBetweenPrecedenceGroupAndDesignatedTypes"
+  case \PrecedenceGroupDeclSyntax.unexpectedBetweenPrecedencegroupKeywordAndName:
+    return "unexpectedBetweenPrecedencegroupKeywordAndName"
+  case \ProtocolDeclSyntax.unexpectedBetweenPrimaryAssociatedTypeClauseAndInheritanceClause:
+    return "unexpectedBetweenPrimaryAssociatedTypeClauseAndInheritanceClause"
+  case \PrimaryAssociatedTypeClauseSyntax.unexpectedBetweenPrimaryAssociatedTypesAndRightAngle:
+    return "unexpectedBetweenPrimaryAssociatedTypesAndRightAngle"
+  case \ProtocolDeclSyntax.unexpectedBetweenProtocolKeywordAndName:
+    return "unexpectedBetweenProtocolKeywordAndName"
+  case \TernaryExprSyntax.unexpectedBetweenQuestionMarkAndThenExpression,
+  \UnresolvedTernaryExprSyntax.unexpectedBetweenQuestionMarkAndThenExpression:
+    return "unexpectedBetweenQuestionMarkAndThenExpression"
+  case \TryExprSyntax.unexpectedBetweenQuestionOrExclamationMarkAndExpression:
+    return "unexpectedBetweenQuestionOrExclamationMarkAndExpression"
+  case \AsExprSyntax.unexpectedBetweenQuestionOrExclamationMarkAndType:
+    return "unexpectedBetweenQuestionOrExclamationMarkAndType"
+  case \EnumCaseElementSyntax.unexpectedBetweenRawValueAndTrailingComma:
+    return "unexpectedBetweenRawValueAndTrailingComma"
+  case \RegexLiteralExprSyntax.unexpectedBetweenRegexAndClosingSlash:
+    return "unexpectedBetweenRegexAndClosingSlash"
+  case \RepeatStmtSyntax.unexpectedBetweenRepeatKeywordAndBody:
+    return "unexpectedBetweenRepeatKeywordAndBody"
+  case \PackExpansionExprSyntax.unexpectedBetweenRepeatKeywordAndRepetitionPattern,
+  \PackExpansionTypeSyntax.unexpectedBetweenRepeatKeywordAndRepetitionPattern:
+    return "unexpectedBetweenRepeatKeywordAndRepetitionPattern"
+  case \GenericRequirementSyntax.unexpectedBetweenRequirementAndTrailingComma:
+    return "unexpectedBetweenRequirementAndTrailingComma"
+  case \SubscriptDeclSyntax.unexpectedBetweenReturnClauseAndGenericWhereClause:
+    return "unexpectedBetweenReturnClauseAndGenericWhereClause"
+  case \ClosureSignatureSyntax.unexpectedBetweenReturnClauseAndInKeyword:
+    return "unexpectedBetweenReturnClauseAndInKeyword"
+  case \ReturnStmtSyntax.unexpectedBetweenReturnKeywordAndExpression:
+    return "unexpectedBetweenReturnKeywordAndExpression"
+  case \AccessorBlockFileSyntax.unexpectedBetweenRightBraceAndEndOfFileToken:
+    return "unexpectedBetweenRightBraceAndEndOfFileToken"
+  case \FunctionTypeSyntax.unexpectedBetweenRightParenAndEffectSpecifiers:
+    return "unexpectedBetweenRightParenAndEffectSpecifiers"
+  case \FunctionCallExprSyntax.unexpectedBetweenRightParenAndTrailingClosure,
+  \MacroExpansionDeclSyntax.unexpectedBetweenRightParenAndTrailingClosure,
+  \MacroExpansionExprSyntax.unexpectedBetweenRightParenAndTrailingClosure:
+    return "unexpectedBetweenRightParenAndTrailingClosure"
+  case \SubscriptCallExprSyntax.unexpectedBetweenRightSquareAndTrailingClosure:
+    return "unexpectedBetweenRightSquareAndTrailingClosure"
+  case \KeyPathExprSyntax.unexpectedBetweenRootAndComponents:
+    return "unexpectedBetweenRootAndComponents"
+  case \LifetimeTypeSpecifierSyntax.unexpectedBetweenScopedKeywordAndArguments:
+    return "unexpectedBetweenScopedKeywordAndArguments"
+  case \ClosureParameterSyntax.unexpectedBetweenSecondNameAndColon,
+  \EnumCaseParameterSyntax.unexpectedBetweenSecondNameAndColon,
+  \FunctionParameterSyntax.unexpectedBetweenSecondNameAndColon,
+  \TupleTypeElementSyntax.unexpectedBetweenSecondNameAndColon:
+    return "unexpectedBetweenSecondNameAndColon"
+  case \SimpleStringLiteralExprSyntax.unexpectedBetweenSegmentsAndClosingQuote,
+  \StringLiteralExprSyntax.unexpectedBetweenSegmentsAndClosingQuote:
+    return "unexpectedBetweenSegmentsAndClosingQuote"
+  case \InlineArrayTypeSyntax.unexpectedBetweenSeparatorAndElement:
+    return "unexpectedBetweenSeparatorAndElement"
+  case \ForStmtSyntax.unexpectedBetweenSequenceAndWhereClause:
+    return "unexpectedBetweenSequenceAndWhereClause"
+  case \SourceFileSyntax.unexpectedBetweenShebangAndStatements:
+    return "unexpectedBetweenShebangAndStatements"
+  case \MacroDeclSyntax.unexpectedBetweenSignatureAndDefinition:
+    return "unexpectedBetweenSignatureAndDefinition"
+  case \FunctionDeclSyntax.unexpectedBetweenSignatureAndGenericWhereClause,
+  \InitializerDeclSyntax.unexpectedBetweenSignatureAndGenericWhereClause:
+    return "unexpectedBetweenSignatureAndGenericWhereClause"
+  case \ClosureExprSyntax.unexpectedBetweenSignatureAndStatements:
+    return "unexpectedBetweenSignatureAndStatements"
+  case \LayoutRequirementSyntax.unexpectedBetweenSizeAndComma:
+    return "unexpectedBetweenSizeAndComma"
+  case \SomeOrAnyTypeSyntax.unexpectedBetweenSomeOrAnySpecifierAndConstraint:
+    return "unexpectedBetweenSomeOrAnySpecifierAndConstraint"
+  case \ClosureCaptureSpecifierSyntax.unexpectedBetweenSpecifierAndLeftParen:
+    return "unexpectedBetweenSpecifierAndLeftParen"
+  case \ClosureCaptureSyntax.unexpectedBetweenSpecifierAndName,
+  \GenericParameterSyntax.unexpectedBetweenSpecifierAndName:
+    return "unexpectedBetweenSpecifierAndName"
+  case \AttributedTypeSyntax.unexpectedBetweenSpecifiersAndAttributes:
+    return "unexpectedBetweenSpecifiersAndAttributes"
+  case \AvailabilityMacroDefinitionFileSyntax.unexpectedBetweenSpecsAndEndOfFileToken:
+    return "unexpectedBetweenSpecsAndEndOfFileToken"
+  case \SourceFileSyntax.unexpectedBetweenStatementsAndEndOfFileToken:
+    return "unexpectedBetweenStatementsAndEndOfFileToken"
+  case \ClosureExprSyntax.unexpectedBetweenStatementsAndRightBrace,
+  \CodeBlockSyntax.unexpectedBetweenStatementsAndRightBrace:
+    return "unexpectedBetweenStatementsAndRightBrace"
+  case \StructDeclSyntax.unexpectedBetweenStructKeywordAndName:
+    return "unexpectedBetweenStructKeywordAndName"
+  case \SwitchExprSyntax.unexpectedBetweenSubjectAndLeftBrace:
+    return "unexpectedBetweenSubjectAndLeftBrace"
+  case \SubscriptDeclSyntax.unexpectedBetweenSubscriptKeywordAndGenericParameterClause:
+    return "unexpectedBetweenSubscriptKeywordAndGenericParameterClause"
+  case \SwitchExprSyntax.unexpectedBetweenSwitchKeywordAndSubject:
+    return "unexpectedBetweenSwitchKeywordAndSubject"
+  case \SpecializeTargetFunctionArgumentSyntax.unexpectedBetweenTargetLabelAndColon:
+    return "unexpectedBetweenTargetLabelAndColon"
+  case \TernaryExprSyntax.unexpectedBetweenThenExpressionAndColon,
+  \UnresolvedTernaryExprSyntax.unexpectedBetweenThenExpressionAndColon:
+    return "unexpectedBetweenThenExpressionAndColon"
+  case \ThenStmtSyntax.unexpectedBetweenThenKeywordAndExpression:
+    return "unexpectedBetweenThenKeywordAndExpression"
+  case \ThrowStmtSyntax.unexpectedBetweenThrowKeywordAndExpression:
+    return "unexpectedBetweenThrowKeywordAndExpression"
+  case \DoStmtSyntax.unexpectedBetweenThrowsClauseAndBody:
+    return "unexpectedBetweenThrowsClauseAndBody"
+  case \ThrowsClauseSyntax.unexpectedBetweenThrowsSpecifierAndLeftParen:
+    return "unexpectedBetweenThrowsSpecifierAndLeftParen"
+  case \FunctionCallExprSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures,
+  \MacroExpansionDeclSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures,
+  \MacroExpansionExprSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures,
+  \SubscriptCallExprSyntax.unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures:
+    return "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures"
+  case \ForStmtSyntax.unexpectedBetweenTryKeywordAndAwaitKeyword:
+    return "unexpectedBetweenTryKeywordAndAwaitKeyword"
+  case \TryExprSyntax.unexpectedBetweenTryKeywordAndQuestionOrExclamationMark:
+    return "unexpectedBetweenTryKeywordAndQuestionOrExclamationMark"
+  case \CompositionTypeElementSyntax.unexpectedBetweenTypeAndAmpersand:
+    return "unexpectedBetweenTypeAndAmpersand"
+  case \LayoutRequirementSyntax.unexpectedBetweenTypeAndColon:
+    return "unexpectedBetweenTypeAndColon"
+  case \ImplementsAttributeArgumentsSyntax.unexpectedBetweenTypeAndComma:
+    return "unexpectedBetweenTypeAndComma"
+  case \EnumCaseParameterSyntax.unexpectedBetweenTypeAndDefaultValue:
+    return "unexpectedBetweenTypeAndDefaultValue"
+  case \ClosureParameterSyntax.unexpectedBetweenTypeAndEllipsis,
+  \FunctionParameterSyntax.unexpectedBetweenTypeAndEllipsis,
+  \TupleTypeElementSyntax.unexpectedBetweenTypeAndEllipsis:
+    return "unexpectedBetweenTypeAndEllipsis"
+  case \ThrowsClauseSyntax.unexpectedBetweenTypeAndRightParen:
+    return "unexpectedBetweenTypeAndRightParen"
+  case \InheritedTypeSyntax.unexpectedBetweenTypeAndTrailingComma:
+    return "unexpectedBetweenTypeAndTrailingComma"
+  case \ForStmtSyntax.unexpectedBetweenTypeAnnotationAndInKeyword:
+    return "unexpectedBetweenTypeAnnotationAndInKeyword"
+  case \MatchingPatternConditionSyntax.unexpectedBetweenTypeAnnotationAndInitializer,
+  \OptionalBindingConditionSyntax.unexpectedBetweenTypeAnnotationAndInitializer,
+  \PatternBindingSyntax.unexpectedBetweenTypeAnnotationAndInitializer:
+    return "unexpectedBetweenTypeAnnotationAndInitializer"
+  case \TypeAliasDeclSyntax.unexpectedBetweenTypealiasKeywordAndName:
+    return "unexpectedBetweenTypealiasKeywordAndName"
+  case \ForStmtSyntax.unexpectedBetweenUnsafeKeywordAndCaseKeyword:
+    return "unexpectedBetweenUnsafeKeywordAndCaseKeyword"
+  case \UnsafeExprSyntax.unexpectedBetweenUnsafeKeywordAndExpression:
+    return "unexpectedBetweenUnsafeKeywordAndExpression"
+  case \UsingDeclSyntax.unexpectedBetweenUsingKeywordAndSpecifier:
+    return "unexpectedBetweenUsingKeywordAndSpecifier"
+  case \DictionaryTypeSyntax.unexpectedBetweenValueAndRightSquare:
+    return "unexpectedBetweenValueAndRightSquare"
+  case \DictionaryElementSyntax.unexpectedBetweenValueAndTrailingComma,
+  \DocumentationAttributeArgumentSyntax.unexpectedBetweenValueAndTrailingComma,
+  \LabeledSpecializeArgumentSyntax.unexpectedBetweenValueAndTrailingComma:
+    return "unexpectedBetweenValueAndTrailingComma"
+  case \_CanImportExprSyntax.unexpectedBetweenVersionInfoAndRightParen:
+    return "unexpectedBetweenVersionInfoAndRightParen"
+  case \ForStmtSyntax.unexpectedBetweenWhereClauseAndBody:
+    return "unexpectedBetweenWhereClauseAndBody"
+  case \CatchItemSyntax.unexpectedBetweenWhereClauseAndTrailingComma,
+  \SwitchCaseItemSyntax.unexpectedBetweenWhereClauseAndTrailingComma:
+    return "unexpectedBetweenWhereClauseAndTrailingComma"
+  case \WhereClauseSyntax.unexpectedBetweenWhereKeywordAndCondition:
+    return "unexpectedBetweenWhereKeywordAndCondition"
+  case \GenericWhereClauseSyntax.unexpectedBetweenWhereKeywordAndRequirements:
+    return "unexpectedBetweenWhereKeywordAndRequirements"
+  case \RepeatStmtSyntax.unexpectedBetweenWhileKeywordAndCondition:
+    return "unexpectedBetweenWhileKeywordAndCondition"
+  case \WhileStmtSyntax.unexpectedBetweenWhileKeywordAndConditions:
+    return "unexpectedBetweenWhileKeywordAndConditions"
+  case \SuppressedTypeSyntax.unexpectedBetweenWithoutTildeAndType:
+    return "unexpectedBetweenWithoutTildeAndType"
+  case \ImplicitlyUnwrappedOptionalTypeSyntax.unexpectedBetweenWrappedTypeAndExclamationMark:
+    return "unexpectedBetweenWrappedTypeAndExclamationMark"
+  case \OptionalTypeSyntax.unexpectedBetweenWrappedTypeAndQuestionMark:
+    return "unexpectedBetweenWrappedTypeAndQuestionMark"
+  case \DifferentiabilityWithRespectToArgumentSyntax.unexpectedBetweenWrtLabelAndColon:
+    return "unexpectedBetweenWrtLabelAndColon"
+  case \YieldStmtSyntax.unexpectedBetweenYieldKeywordAndYieldedExpressions:
+    return "unexpectedBetweenYieldKeywordAndYieldedExpressions"
+  case \ForStmtSyntax.unsafeKeyword,
+  \UnsafeExprSyntax.unsafeKeyword:
+    return "unsafeKeyword"
+  case \UsingDeclSyntax.usingKeyword:
+    return "usingKeyword"
+  case \AvailabilityLabeledArgumentSyntax.value,
+  \DictionaryElementSyntax.value,
+  \DictionaryTypeSyntax.value,
+  \DocumentationAttributeArgumentSyntax.value,
+  \InitializerClauseSyntax.value,
+  \LabeledSpecializeArgumentSyntax.value,
+  \PrecedenceGroupAssignmentSyntax.value,
+  \PrecedenceGroupAssociativitySyntax.value,
+  \TypeInitializerClauseSyntax.value:
+    return "value"
+  case \_CanImportVersionInfoSyntax.version,
+  \PlatformVersionSyntax.version:
+    return "version"
+  case \_CanImportExprSyntax.versionInfo:
+    return "versionInfo"
+  case \CatchItemSyntax.whereClause,
+  \ForStmtSyntax.whereClause,
+  \SwitchCaseItemSyntax.whereClause:
+    return "whereClause"
+  case \GenericWhereClauseSyntax.whereKeyword,
+  \WhereClauseSyntax.whereKeyword:
+    return "whereKeyword"
+  case \RepeatStmtSyntax.whileKeyword,
+  \WhileStmtSyntax.whileKeyword:
+    return "whileKeyword"
+  case \DiscardAssignmentExprSyntax.wildcard,
+  \WildcardPatternSyntax.wildcard:
+    return "wildcard"
+  case \SuppressedTypeSyntax.withoutTilde:
+    return "withoutTilde"
+  case \ImplicitlyUnwrappedOptionalTypeSyntax.wrappedType,
+  \OptionalTypeSyntax.wrappedType:
+    return "wrappedType"
+  case \DifferentiabilityWithRespectToArgumentSyntax.wrtLabel:
+    return "wrtLabel"
+  case \YieldStmtSyntax.yieldKeyword:
+    return "yieldKeyword"
+  case \YieldStmtSyntax.yieldedExpressions:
+    return "yieldedExpressions"
   default:
     return nil
   }
